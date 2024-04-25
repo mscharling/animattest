@@ -1,0 +1,2 @@
+Problemopgaver hvor eleverne skal omdanne teksten til ligning og løse den
+De skal endvidere også indføre repræsentative variable til denne

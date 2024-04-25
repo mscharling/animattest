@@ -1,0 +1,18 @@
+Forståelse af Funktioner af To Variable
+
+Grundlæggende kendskab til og anvendelse af begreber i forbindelse med funktioner af to variable, både med og uden brug af matematiske værktøjsprogrammer.
+Udvikling af Rumlig Forståelse
+
+Dybdegående forståelse af funktionsbegrebet og udvikling af evnen til at tænke og forstå rumligt.
+Grafisk Repræsentation
+
+Evne til at tegne og fortolke grafer af funktioner af to variable, herunder forståelse af niveaukurver og snitkurver.
+Partielle og Andenafledte Funktioner
+
+Færdigheder i at bestemme og anvende partielle afledede og andenafledede i forskellige kontekster.
+Forståelse af Gradienter og Stationære Punkter
+
+Kendskab til begreberne gradienter og stationære punkter samt evnen til at bestemme og analysere disse.
+Identifikation af Særlige Punkttyper
+
+Evne til at identificere og karakterisere forskellige typer af stationære punkter, som saddelpunkter og ekstremumspunkter, og brug af grafisk argumentation for at bestemme disse, især på begrænsede intervaller.

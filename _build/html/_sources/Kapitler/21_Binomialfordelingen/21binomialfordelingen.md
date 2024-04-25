@@ -1,0 +1,2 @@
+(binomialfordelingen)=
+# Binomialfordelingen

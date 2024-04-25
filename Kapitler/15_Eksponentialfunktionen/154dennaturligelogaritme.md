@@ -1,0 +1,1 @@
+# Den naturlige logaritme

@@ -1,0 +1,1 @@
+# Normalfordelte data

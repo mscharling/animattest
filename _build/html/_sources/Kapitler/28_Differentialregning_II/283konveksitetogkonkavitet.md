@@ -1,0 +1,1 @@
+# Konveksitet og konkavitet

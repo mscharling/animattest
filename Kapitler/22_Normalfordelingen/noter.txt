@@ -1,0 +1,11 @@
+Simuleringer og Normalfordelingsapproximation
+
+Anvendelse af simuleringer til forståelse af statistiske sammenhænge.
+Kendskab til normalfordelingsapproximationen af binomialfordelingen.
+Normalfordelingens Tæthedsfunktion
+
+Forståelse af normalfordelingens tætheds- og fordelingsfunktioner.
+Håndtering af middelværdi og spredning i normalfordelingsmodeller.
+Analyse af Data i Normalfordeling
+
+Brug af matematiske værktøjsprogrammer til at analysere og vurdere om datasæt stemmer overens med normalfordeling.

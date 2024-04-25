@@ -1,0 +1,2 @@
+# Linjens ligning
+

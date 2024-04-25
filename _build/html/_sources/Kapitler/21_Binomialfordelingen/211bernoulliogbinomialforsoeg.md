@@ -1,0 +1,1 @@
+# Bernoulli- og binomialforsøg

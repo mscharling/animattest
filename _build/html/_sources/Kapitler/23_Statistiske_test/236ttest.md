@@ -1,0 +1,1 @@
+# t-test for en og to stikprøver

@@ -1,0 +1,1 @@
+# Injektivitet, surjektivitet og bijektivitet

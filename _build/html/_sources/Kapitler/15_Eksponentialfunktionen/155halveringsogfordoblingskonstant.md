@@ -1,0 +1,1 @@
+# Halverings- og fordoblingskonstanten

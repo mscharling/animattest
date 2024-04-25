@@ -1,0 +1,25 @@
+Fortrolighed med Differentiation
+
+Evne til at differentiere elementære funktioner.
+Forståelse og anvendelse af regneregler for differentiation: sum, differens, produkt, multiplikation med konstant, og sammensatte funktioner med lineær indre funktion.
+Bestemmelse af Afledet Funktion og Tangentligning
+
+Færdigheder i at finde den afledte funktion og opstille ligninger for tangenter.
+Sammenhæng mellem Afledet Funktion, Monotoniforhold og Ekstrema
+
+Forståelse af, hvordan den afledte funktion påvirker en funktions monotoniforhold og placering af ekstrema (maksima og minima).
+Differentiation af Sammensatte Funktioner
+
+Evne til at differentiere sammensatte funktioner med ikke-lineære indre funktioner og løse simple problemstillinger relateret til dette.
+Forståelse af Grænseværdi og Kontinuitet
+
+Intuitiv forståelse af grænseværdibegrebet og kontinuitetsbegrebet, særligt i relation til differentialregning.
+Begrebet Differentialkvotient
+
+Fortolkning af differentialkvotienten som væksthastighed i forskellige sammenhænge, både matematisk og anvendelsesorienteret.
+Anvendelsesorienterede Kontekster
+
+Brug af matematiske værktøjsprogrammer til at forstå og fortolke resultater i kontekstuelle anvendelser.
+Anvendelse af CAS i Komplekse Tilfælde
+
+Brug af Computer Algebra Systemer (CAS) til differentiation af mere komplekse udtryk, der går ud over elementære funktioner og standard regneregler for differentiation.

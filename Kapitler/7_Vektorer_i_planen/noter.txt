@@ -1,0 +1,23 @@
+Vektorregningens Formål
+
+Vedligeholde og udvikle algebraiske færdigheder.
+Forstå og løse geometriske problemer med vektorer i et koordinatsystem.
+Anvendelse af Trigonometriske Funktioner
+
+Forståelse af cosinus og sinus som koordinater på enhedscirklen.
+Kendskab til tangens som forholdet mellem sinus og cosinus.
+Grundlæggende Vektoroperationer
+
+Beherskelse af regnereglerne for vektorer: addition, subtraktion, og multiplikation med en konstant.
+Evne til at beregne vektorlængde, tværvektor, skalarprodukt, determinant mellem to vektorer, vinkler mellem vektorer, og projektion af en vektor på en anden.
+Analytisk Udledning og Anvendelse af Vektorregning
+
+Analytisk udledning af vigtige formler som skalarprodukt og projektionsformel.
+Anvendelse af vektorregning i geometrisk modellering og problembehandling.
+Analytisk Geometri
+
+Beherskelse af analytisk beskrivelse af linjer og cirkler.
+Evne til at omskrive mellem ligning og parameterfremstilling for en ret linje, bestemmelse af skæringspunkter, og vinkelbestemmelse mellem linjer.
+Udvidelse til Vektorfunktioner
+
+Forståelse og anvendelse af vektorfunktioner i den analytiske geometri og videre matematiske sammenhænge.

@@ -1,0 +1,1 @@
+# Normalvektorer og linjens ligning

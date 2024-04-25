@@ -1,0 +1,223 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: forord
+
+#options:
+  #numbered: 4
+
+parts:
+  - caption:
+    chapters:
+      - file: indledning
+  - caption: Del 1
+    numbered: true
+    chapters:
+      - file: Kapitler/1_Tal_og_algebra/1talogalgebra
+        sections:
+          - file: Kapitler/1_Tal_og_algebra/11tallene
+          - file: Kapitler/1_Tal_og_algebra/12approksimationer
+          - file: Kapitler/1_Tal_og_algebra/13regnearterne
+          - file: Kapitler/1_Tal_og_algebra/14kvadratsaetninger
+          - file: Kapitler/1_Tal_og_algebra/15faktoriseringogkvadratkomplettering
+          - file: Kapitler/1_Tal_og_algebra/16broeker
+          - file: Kapitler/1_Tal_og_algebra/17potenser
+          - file: Kapitler/1_Tal_og_algebra/18roedder
+          - file: Kapitler/1_Tal_og_algebra/19logaritmer
+          - file: notebooktest/test
+      - file: Kapitler/2_Maengdeteori/2maengdeteori_i
+        sections:
+          - file: Kapitler/2_Maengdeteori/21symbolerimaengdeteorien
+          - file: Kapitler/2_Maengdeteori/22talmaengder
+          - file: Kapitler/2_Maengdeteori/23maengdeoperationer
+          - file: Kapitler/2_Maengdeteori/24intervaller
+      - file: Kapitler/3_Ligninger_og_uligheder/3ligninger
+        sections:
+          - file: Kapitler/3_Ligninger_og_uligheder/31lighedogligevaegt
+          - file: Kapitler/3_Ligninger_og_uligheder/32grundmaengder
+          - file: Kapitler/3_Ligninger_og_uligheder/33enligningenubekendt
+          - file: Kapitler/3_Ligninger_og_uligheder/34toligningertoubekendte
+          - file: Kapitler/3_Ligninger_og_uligheder/35grafernesmuligheder
+          - file: Kapitler/3_Ligninger_og_uligheder/36andengradsligninger
+          - file: Kapitler/3_Ligninger_og_uligheder/37uligheder
+          - file: Kapitler/3_Ligninger_og_uligheder/38numeriskeligninger
+      - file: Kapitler/4_Klassisk_geometri/4klassiskgeometri
+        sections:
+          - file: Kapitler/4_Klassisk_geometri/41omkreds
+          - file: Kapitler/4_Klassisk_geometri/42areal
+          - file: Kapitler/4_Klassisk_geometri/43overfladeareal
+          - file: Kapitler/4_Klassisk_geometri/44rumfang
+      - file: Kapitler/5_Trigonometri/5trigonometri
+        sections:
+          - file: Kapitler/5_Trigonometri/51sinusogcosinus
+          - file: Kapitler/5_Trigonometri/52enhedscirklen
+          - file: Kapitler/5_Trigonometri/53tangens
+          - file: Kapitler/5_Trigonometri/54sinusrelationen
+          - file: Kapitler/5_Trigonometri/55cosinusrelationen
+          - file: Kapitler/5_Trigonometri/56arealberegning
+      - file: Kapitler/6_Analytisk_plangeometri/6analytiskplangeometri
+        sections:
+          - file: Kapitler/6_Analytisk_plangeometri/61laengdeogafstandsformlen
+          - file: Kapitler/6_Analytisk_plangeometri/62linjensligning
+          - file: Kapitler/6_Analytisk_plangeometri/63skaeringmellemtolinjer
+          - file: Kapitler/6_Analytisk_plangeometri/64vinkelmellemtolinjer
+          - file: Kapitler/6_Analytisk_plangeometri/65ortogonalelinjer
+          - file: Kapitler/6_Analytisk_plangeometri/66cirklensligning
+          - file: Kapitler/6_Analytisk_plangeometri/67cirklenoglinjer_i
+      - file: Kapitler/7_Vektorer_i_planen/7vektoreriplanet
+        sections:
+          - file: Kapitler/7_Vektorer_i_planen/71vektorer
+          - file: Kapitler/7_Vektorer_i_planen/72laengdeogafstandsformlen
+          - file: Kapitler/7_Vektorer_i_planen/73sumvektorer
+          - file: Kapitler/7_Vektorer_i_planen/74regnearternesegenskaberforvektorer
+          - file: Kapitler/7_Vektorer_i_planen/75modsatrettedevektorer
+          - file: Kapitler/7_Vektorer_i_planen/76komposanter
+          - file: Kapitler/7_Vektorer_i_planen/77enhedsvektorer
+          - file: Kapitler/7_Vektorer_i_planen/78skalarproduktet
+          - file: Kapitler/7_Vektorer_i_planen/79vektorprojektion
+          - file: Kapitler/7_Vektorer_i_planen/710determinanter
+          - file: Kapitler/7_Vektorer_i_planen/711normalvektoreroglinjensligning
+          - file: Kapitler/7_Vektorer_i_planen/712linjensparameterfremstilling
+          - file: Kapitler/7_Vektorer_i_planen/713afstandmellempunktoglinje
+          - file: Kapitler/7_Vektorer_i_planen/714cirklenoglinjer_ii
+      - file: Kapitler/8_Funktioner_I/8funktioner_i
+      - file: Kapitler/9_Den_lineære_funktion/9denlineaerefunktion
+        sections:
+          - file: Kapitler/9_Den_lineære_funktion/91funktionsforskrift
+          - file: Kapitler/9_Den_lineære_funktion/92denkonstantefunktion
+          - file: Kapitler/9_Den_lineære_funktion/93topunkter
+          - file: Kapitler/9_Den_lineære_funktion/94proportionalitet
+      - file: Kapitler/10_Polynomier/10polynomier
+        sections:
+          - file: Kapitler/10_Polynomier/101andengradspolynomiet
+          - file: Kapitler/10_Polynomier/102parablen
+          - file: Kapitler/10_Polynomier/103ntegradspolynomiet
+          - file: Kapitler/10_Polynomier/104kurvetilpasning
+      - file: Kapitler/11_Funktioner_II/11funktioner_ii
+        sections:
+          - file: Kapitler/11_Funktioner_II/111uendelighedsbegrebet
+          - file: Kapitler/11_Funktioner_II/112graensevaerdier
+          - file: Kapitler/11_Funktioner_II/113asymptoter
+          - file: Kapitler/11_Funktioner_II/114kontinuitet
+      - file: Kapitler/12_Deskriptiv_statistik/12deskriptivstatistik
+        sections:
+          - file: Kapitler/12_Deskriptiv_statistik/121grundlaeggendebegreber
+          - file: Kapitler/12_Deskriptiv_statistik/122grupperet
+          - file: Kapitler/12_Deskriptiv_statistik/123statistiskedeskriptorer
+          - file: Kapitler/12_Deskriptiv_statistik/124deskriptiveplots
+          - file: Kapitler/12_Deskriptiv_statistik/125outliers
+          - file: Kapitler/12_Deskriptiv_statistik/126estimationafpopulationen
+          - file: Kapitler/12_Deskriptiv_statistik/127bias
+      - file: Kapitler/13_Sandsynlighedsregning_I/13sandsynlighedsregning_i
+        sections:
+          - file: Kapitler/13_Sandsynlighedsregning_I/131grundlaeggendebegreber
+          - file: Kapitler/13_Sandsynlighedsregning_I/132sandsynlighedsrum
+          - file: Kapitler/13_Sandsynlighedsregning_I/133multiplikationogadditionsprincip
+          - file: Kapitler/13_Sandsynlighedsregning_I/134fakultetsfunktionen
+          - file: Kapitler/13_Sandsynlighedsregning_I/135kombinationerogpermutationer
+          - file: Kapitler/13_Sandsynlighedsregning_I/136tilbagelaegning
+  - caption: Del 2
+    numbered: true
+    chapters:
+      - file: Kapitler/14_Potensfunktionen/14potensfunktionen
+        sections:
+          - file: Kapitler/14_Potensfunktionen/141potensfunktionen
+          - file: Kapitler/14_Potensfunktionen/142heltalligeeksponenter
+          - file: Kapitler/14_Potensfunktionen/143ikkeheltalligeeksponenter
+      - file: Kapitler/15_Eksponentialfunktionen/15eksponentialfunktionen
+        sections:
+          - file: Kapitler/15_Eksponentialfunktionen/151eksponentialet
+          - file: Kapitler/15_Eksponentialfunktionen/152tallete
+          - file: Kapitler/15_Eksponentialfunktionen/153logaritmefunktionen
+          - file: Kapitler/15_Eksponentialfunktionen/154dennaturligelogaritme
+          - file: Kapitler/15_Eksponentialfunktionen/155halveringsogfordoblingskonstant
+          - file: Kapitler/15_Eksponentialfunktionen/156vaekst
+      - file: Kapitler/16_Opsparing_og_annuiteter/16opsparingogannuiteter
+        sections:
+          - file: Kapitler/16_Opsparing_og_annuiteter/161procentogpromille
+          - file: Kapitler/16_Opsparing_og_annuiteter/162rentesregning
+          - file: Kapitler/16_Opsparing_og_annuiteter/163opsparingsannuitet
+          - file: Kapitler/16_Opsparing_og_annuiteter/164gaeldsannuitet
+      - file: Kapitler/17_Trigonometriske_funktioner/17trigonometriskefunktioner
+        sections:
+          - file: Kapitler/17_Trigonometriske_funktioner/171sinuscosinusogtangens
+          - file: Kapitler/17_Trigonometriske_funktioner/172enhedscirklen
+          - file: Kapitler/17_Trigonometriske_funktioner/173radianerogvinkler
+          - file: Kapitler/17_Trigonometriske_funktioner/174trigonometriskegrundligninger
+          - file: Kapitler/17_Trigonometriske_funktioner/175trigonometriskeuligheder
+          - file: Kapitler/17_Trigonometriske_funktioner/176trigonometriskerelationer
+          - file: Kapitler/17_Trigonometriske_funktioner/177periodicitet
+          - file: Kapitler/17_Trigonometriske_funktioner/178harmonisksvingning
+      - file: Kapitler/18_Funktioner_III/18funktioner_iii
+        sections:
+          - file: Kapitler/18_Funktioner_III/181sammensattefunktioner
+          - file: Kapitler/18_Funktioner_III/182omvendtefunktioner
+          - file: Kapitler/18_Funktioner_III/183injektivitet
+      - file: Kapitler/19_Differentialregning/19differentialregning_i
+        sections:
+          - file: Kapitler/19_Differentialregning/191vaeksthastighed
+          - file: Kapitler/19_Differentialregning/192infinitesimaler
+          - file: Kapitler/19_Differentialregning/193sekantogtangent
+          - file: Kapitler/19_Differentialregning/194tretrinsreglen
+          - file: Kapitler/19_Differentialregning/195afledtefunktioner
+          - file: Kapitler/19_Differentialregning/196sumproduktogkvotientreglen
+          - file: Kapitler/19_Differentialregning/197differentiationafsammensatfunktion
+          - file: Kapitler/19_Differentialregning/198optimering
+      - file: Kapitler/20_Sandsynlighedsregning_II/20sandsynlighedsregning_ii
+        sections:
+          - file: Kapitler/20_Sandsynlighedsregning_II/201stokvar
+          - file: Kapitler/20_Sandsynlighedsregning_II/202uafhaengighed
+          - file: Kapitler/20_Sandsynlighedsregning_II/203introtilintegral
+          - file: Kapitler/20_Sandsynlighedsregning_II/204sandsynlighedsfordeling
+          - file: Kapitler/20_Sandsynlighedsregning_II/205momenter
+      - file: Kapitler/21_Binomialfordelingen/21binomialfordelingen
+        sections:
+          - file: Kapitler/21_Binomialfordelingen/211bernoulliogbinomialforsoeg
+          - file: Kapitler/21_Binomialfordelingen/212binomialkoefficient
+          - file: Kapitler/21_Binomialfordelingen/213binomialfordelingen
+          - file: Kapitler/21_Binomialfordelingen/214binomialfordelingensmomenter
+      - file: Kapitler/22_Normalfordelingen/22normalfordelingen
+        sections:
+          - file: Kapitler/22_Normalfordelingen/221taethedsfunktion
+          - file: Kapitler/22_Normalfordelingen/222normalfordelingensparametre
+          - file: Kapitler/22_Normalfordelingen/223sandsynlighedsberegning
+          - file: Kapitler/22_Normalfordelingen/224normalfordeltdata
+          - file: Kapitler/22_Normalfordelingen/225normalfordelingensrelationtilbinomialfordelingen
+      - file: Kapitler/23_Statistiske_test/23statistiske_test
+        sections:
+          - file: Kapitler/23_Statistiske_test/231stikproeveroghyptest
+          - file: Kapitler/23_Statistiske_test/232signifikansogkonfint
+          - file: Kapitler/23_Statistiske_test/233binomialtest
+          - file: Kapitler/23_Statistiske_test/234chitestgof
+          - file: Kapitler/23_Statistiske_test/235chitestuafh
+          - file: Kapitler/23_Statistiske_test/236ttest
+          - file: Kapitler/23_Statistiske_test/237korrelationogaarsagssammenhaeng
+      - file: Kapitler/24_Regression/24regression
+  - caption: Del 3
+    numbered: true
+    chapters:
+      - file: Kapitler/25_Ikke-euklidisk_geometri/25ikkeeuklidisk
+      - file: Kapitler/26_Vektorer_i_rummet/26vektorirummet
+      - file: Kapitler/27_Vektorfunktioner/27vektorfunktioner
+      - file: Kapitler/28_Differentialregning_II/28differentialregning_ii
+        sections:
+          - file: Kapitler/28_Differentialregning_II/281implicitdifferentiation
+          - file: Kapitler/28_Differentialregning_II/282skraavendetangenter
+          - file: Kapitler/28_Differentialregning_II/283konveksitetogkonkavitet
+      - file: Kapitler/29_Integralregning/29integralregning
+        sections:
+          - file: Kapitler/29_Integralregning/291bestemtogubestemtintegral
+          - file: Kapitler/29_Integralregning/292stamfunktioner
+          - file: Kapitler/29_Integralregning/293regnereglerforintegraler
+          - file: Kapitler/29_Integralregning/294integrationvedsubstitution
+          - file: Kapitler/29_Integralregning/295partielintegration
+          - file: Kapitler/29_Integralregning/296arealberegning
+          - file: Kapitler/29_Integralregning/297rotationslegemer
+      - file: Kapitler/30_Funktioner_af_to_variable/30funktioneritovar
+      - file: Kapitler/31_Differentialligninger/31diffligninger
+  - caption: Værktøjer
+    numbered: false
+    chapters:
+      - file: symboler
+      - file: hoverrefs

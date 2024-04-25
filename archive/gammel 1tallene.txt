@@ -1,0 +1,200 @@
+# Tallene
+
+Det kan virke underligt at skulle lære om tal i gymnasiet, når man har brugt mindst ni år i folkeskolen på at lære at håndtere tal. Men det betyder jo ikke, at du rent faktisk har lært den bagvedliggende talteori, der ligger til grund for de talsystemer, som vi bruger i dag.
+
+Talteori er teorien om tal og vi kommer ganske kort til at snuse til, hvad den del af matematikken går ud på her. Vi skal f.eks. lære forskellen på tallet 3,14 og $\pi$, men også hvorfor det er vigtigt, at vi har et tal, som repræsenterer størrelsen ”ingen ting”.
+
+Senere i Kapitel 2 kigger vi mere på den mængdeteoretiske inddeling af forskellige tal. Det, vi vil se, er, at tal kan have samme egenskaber, og derfor giver det mening at samle disse i mængder.
+
+## Approksimationer
+
+Når vi arbejder med tal, så kan det nogle gange være meningsfuldt at bruge approksimationer. Approksimationer, eller tilnærmelser, danner vi, når vi runder tal op eller ned og alt efter, hvor meget vi afrunder jo grovere en approksimation får vi.
+
+Vi bruger ofte approksimationer, når vi laver overslagsregning på en indkøbstur i supermarkedet, så ikke vi bliver overraskede over, hvor meget vi handler for. Det er oftest nemmere at lægge runde tal sammen end kommatal. F.eks. hvis vi køber en sodavand til 19,99 kr. og to pakker tyggegummi til stykprisen 8,99 kr., så skal vi i alt af med
+
+$$
+    19{,}99\,\text{kr.}+2 \cdot 8{,}99\,\text{kr.} = 37{,}97\,\text{kr.}
+$$
+
+Det kunne vi have sjusset os frem til ved at lave en overslagsregning ved at runde 19,99 kr. op til 20 kr. og 8,99 kr. op til 9 kr. eller endda op til 10 kr. Så havde regnestykket været meget nemmere at regne i hovedet:
+
+$$
+    20\,\text{kr.} + 2 \cdot 10\,\text{kr.} = 40\,\text{kr.}
+$$
+
+Kigger vi på de to resultater, så kan vi også se, at 40 kr. er et godt bud på, hvor meget vi handler for. De 40 kr. er netop en approksimation for det samlede beløb. Fordi vi rundede 8,99 kr. op til 10 kr., så får vi selvfølgelig en grovere approksimation af det samlede resultat, end hvis vi havde rundet op til 9 kr.
+
+Vi bruger også approksimationer, når vi snakker om klokken, for selvom klokken nu er 11:32, så kan vi godt finde på at sige: ”Klokken er halv 12”.
+
+```{margin}
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+Det matematiske symbol $\approx$ betyder *tilnærmelsesvis lig med* eller *er approksimativt*.
+
+```
+
+```{prf:eksempel}
+
+Tallet 3,14 og tallet $\pi$ er af hver sin natur. Vi siger, at 3,14 er et rational tal, da det kan skrives som brøken
+
+$$
+    \frac{314}{100} \text{,}
+$$
+    
+men tallet $\pi$ kan ikke skrives som en brøk og derfor siger vi, at det er irrationalt. Netop disse egenskaber vender vi tilbage til i Kapitel 2.
+
+Vi ved dog, at $\pi$ har de første fire decimaltal 3,1415..., og derfor lærer vi i folkeskolen at 3,14 er en fin nok approksimation af $\pi$. Vi runder af til to decimaler ved at betragte tredje decimal, 1-tallet, og eftersom det er under fem, så runder vi ikke anden decimal op. Så, approksimationen, som vi lærer i folkeskolen skrives
+
+$$
+    \pi \approx 3{,}14\text{.}
+$$
+    
+```
+
+Faktisk bruger computerprogrammer og lommeregnere også en approksimation af $\pi$, når der ønskes at regne med dette tal. For eftersom $\pi$ ikke kan skrives som en brøk, så har tallet en uendelig decimaludvidelse, hvor decimalerne ikke optræder i et mønster (beviset for dette kan findes i Kapitel 2). Computere og lommeregnere i dag bruger dog så mange decimaler af $\pi$, at approksimationen er så tæt på det rigtige tal.
+
+### Approksimationens afvigelse
+
+Bruger vi approksimationer, så kan det være en god idé at vide, hvor meget vores approksimation afviger fra det rigtige resultat. Her snakker vi om *den absolutte afvigelse* og *den relative afvigelse*.
+
+Den absolutte afvigelse angiver, hvor langt væk vores approksimation ligger fra vores rigtige tal på tallinjen. Kigger vi på eksemplet fra før med sodavanden og tyggegummipakkerne, så kan vi se, at vores overslagsregning gav resultatet 40 kr., men at det rigtige resultat var 37,97 kr., hvilket giver en absolut afvigelse på 2,03 kr.
+
+$$
+    40 \, \text{kr.} - 37{,}97 \, \text{kr.} = 2{,}03 \, \text{kr.}
+$$
+
+Den relative afvigelse angiver en procentuel afvigelse fra vores rigtige tal. Den bruger faktisk den absolutte afvigelse, men relaterer det til det rigtige resultat. Kigger vi igen på samme eksempel, så kan vi se, at overslagsregningen giver en relativ afvigelse på ca. 5,35 %.
+
+$$
+    \frac{40 \, \text{kr.} - 37{,}97 \, \text{kr.}}{37{,}97 \, \text{kr.}} = \frac{2{,}03 \, \text{kr.}}{37{,}97 \, \text{kr.}} = 0{,}05346326046 \approx 5{,}35 \, \%
+$$
+
+Havde vi ikke rundet stykprisen på tyggegummipakkerne op til 10 kr., men rundet op til 9 kr., så ville vi få en mindre grov approksimation, hvilket vi kan måle på afvigelserne.
+
+$$
+    38 \, \text{kr.} - 37,97 \, \text{kr.} = 0,03 \, \text{kr.}
+$$
+$$
+    \frac{38 \, \text{kr.} - 37{,}97 \, \text{kr.}}{37{,}97 \, \text{kr.}} = \frac{0{,}03 \, \text{kr.}}{37{,}97 \, \text{kr.}} = 0{,}00079009744 \approx 5{,}35 \, \%
+$$
+
+### Hvilken approksimation?
+
+Det er altid et godt spørgsmål at stille sig selv i situationer, hvor det kan være oplagt at bruge approksimationer, om hvilken approksimation man skal bruge. Regner vi f.eks. gangestykket
+
+$$
+    2{,}5 \cdot 5{,}25 = 12{,}8625\text{,}
+$$
+
+så kan vi se, at vi får fire decimaler, men en god huskeregel i opgaver, hvor der fås flere decimaler end i de angivne tal i opgaven, så kan man runde tallet af, så der er lige så mange decimaler i resultatet. Det betyder, at vi i gangestykket ovenfor kunne runde af til 12,86, eftersom de tal, som vi regner med, kun er angivet med to decimaler. Det er bare vigtigt, at man så skriver, at det er et tilnærmelsesvist rigtigt resultat. Enten kan man skrive: ”Det er ca. 12,86”, eller man kan angive det med symbolet, altså
+
+$$
+    2{,}45 \cdot 5{,}25 \approx 12{,}86\text{,}
+$$
+
+for på den måde viser du, at du godt ved, at dit resultat, som du har angivet, ikke er fuldstændigt korrekt, men at det er så tæt på, at det godt kan tillades som et svar på opgaven. Afvigelsen er jo relativ lav:
+
+$$
+    \frac{12{,}8625 - 12{,}86}{12{,}86} = \frac{0{,}0025}{12{,}8625} = 0{,}00019436345 \approx 0{,}02 \, \%.
+$$
+
+## Tallet $0$
+Hvis du ikke har nogle bananer, så kan vi kvantificere det til, at du har nul bananer. Nul er tallet for *ingenting*. Det er et meget vigtigt tal for både talteorien og mængdeteorien. Nul er det, der adskiller alle positive og negative tal fra hinanden og nul bærer egenskaber, som vi kommer til at bruge til at bevise nogle af de sætninger, som du skal lære her. Vi har samlet nogle af egenskaberne nedenfor:
+
+```{margin}
+\
+\
+Vi kan skrive "Et vilkårligt tal $a$" matematisk som $a \in \mathbb{R}$. 
+
+
+Det matematiske symbol $\in$ betyder *element i* og symbolet $\mathbb{R}$ er mængden af alle de tal, som du kan komme i tanke om.
+
+```
+
+```{prf:egenskaber}
+
+For et vilkårligt tal $a$ har $0$ følgende egenskaber:
+
+1. $a + (-a) = 0$ (nulreglen)
+2. $a + 0 = a$
+3. $a \cdot 0 = 0$
+
+```
+
+Den første egenskab kaldes *nulreglen* og eftersom den har et navn, så kan du sikkert forestille dig, at den vil vise sig brugbar senere. Egenskaben siger nemlig, at hvis vi taget et tal og lægger det modsatte tal til (eller trækker det samme tal fra), så ender vi op med ingenting. Men for, at vi kan snakke om modsatte tal, så bliver vi også nødt til at vide, hvordan vi håndterer dem.
+
+## Negative tal
+
+De negative tal skal repræsentere idéen om modsatte tal. Hvis du får penge ind, så er det modsatte at give penge væk. Den pengestrøm kan beskrives i to modsatte bevægelser. Hvis du får penge ind, så bliver din bankkonto større, og hvis du giver penge væk, så bliver din bankkonto mindre. Denne strøm kan nedskrives matematisk med brugen af negative tal, og netop derfor er de så anvendelige. De finder sig faktisk også anvendelige på temperaturskalaerne.
+
+Lad os vende tilbage til begrebet *modsatte tal*. Det modsatte tal af $4$ er $-4$, og det ved vi som en konsekvens af nulreglen. Hvad er det modsatte tal af $-2$? Igen kan vi bruge nulreglen til at vise, at det modsatte tal af $-2$ er $2$. Derfor har vi følgende definition af et modsat tal:
+
+```{prf:definition}
+
+Lad $a$ være et vilkårligt tal, da er $-a$ dets *modsatte tal*. Ligeledes vil det modsatte tal af $-a$ være $-(-a)=a$. 
+
+```
+
+Kigger vi på en tallinje, så befinder alle de negative tal sig til venstre for 0. Når vi regner med de negative tal, så skal vi være ekstra opmærksomme, da der ikke helt gælder de samme regler, som når vi regner med positive tal. Vi starter med at kigge på addition og subtraktion af negative tal. Husk, at når vi lægger noget til (addition), så svarer det til at gå til højre på tallinjen, og når vi trækker noget fra (subtraktion), så svarer det til at gå til venstre på tallinjen.
+
+```{prf:regneregler}
+
+Lad $a$, $b$ og $c$ være vilkårlige tal, da gælder
+
+1. $a + (-b) = a - b$
+2. $a - (-b) = a + b$
+3. $a - (b + c) = a - b - c$
+
+```
+
+Lad os bruge regnereglerne i et eksempel.
+
+```{prf:eksempel}
+
+Lad os sige, at $a = 3$ og $b = 8$, så har vi
+
+&nbsp; &nbsp; 1. $3 + (-8) = 3 - 8$
+
+Vi kan vise dette ved at betragte tilfældet $3 + (-8)$ og $3 - 8$ på samme tallinje, og hvis vi havner samme sted, så ved vi, at udtrykkene er identiske.
+
+INDSÆT ANIMATION
+
+Begge udtryk er lig $-5$, så ergo er udtrykkene identiske.
+
+&nbsp; &nbsp; 2. $3 - (-8) = 3 + 8$
+
+Vi ved, at $3 - (-8)$ kan læses som "forskellen mellem 3 og -8 eftersom et minusstykke angiver en differens, der er afledt af den engelske "difference". Netop denne fortolkning kan vi vise på en tallinje. Husk, at de positive og negative tal adskilles af 0, så den samlede afstand (eller forskel) mellem $3$ og $-8$, må være afstanden fra $3$ til $0$ og fra $0$ til $-8$
+
+INDSÆT ANIMATION
+
+Denne fortolkning giver netop plusset fra reglen, ergo er udtrykkene identiske. 
+
+Lad os introducere $c = 2$, da er
+
+&nbsp; &nbsp; 3. $3 - (8 + 2) = 3 - 8 - 2$
+
+Vi kan også blot regne venstre- og højresiden af ligheden til at konkludere ligheden:
+
+$$
+    3 - (8 + 2) = 3 - 10 = -7
+$$
+$$
+    3 - 8 - 2 = -5 - 2 = -7
+$$
+
+```

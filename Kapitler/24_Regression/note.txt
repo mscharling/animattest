@@ -1,0 +1,19 @@
+hvad med potens og eksponential regression
+mindste kvadraters metode
+loss funktioner?
+
+--
+
+Modellering og Regression
+
+Opstilling af modeller ved brug af lineær, eksponentiel og potensregression.
+Forståelse og anvendelse af residualer i lineær regression.
+Kvalitativ vurdering af en lineær models gyldighed og residualplotanalyse.
+Udvikling af Statistiske Modeller
+
+Polynomiel regression og tegning af det tilhørende residualplot.
+Forståelse af mindste kvadraters metode og dens anvendelse i lineære modeller.
+Kendskab til Normalfordeling og Konfidensintervaller
+
+Analyse af om residualer er normalfordelte.
+Anvendelse af konfidensintervaller for hældningskoefficienten i en lineær model.

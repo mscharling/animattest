@@ -1,0 +1,31 @@
+Ja, det lyder som en fremragende tilføjelse til din Del 3 for at udvide AniMat-bogen til at dække Matematik A-niveauet på STX. Disse emner introducerer mere avancerede og abstrakte koncepter, der er typiske for Matematik A. Her er en kort beskrivelse af, hvad hvert emne kunne indeholde:
+
+Ikke-Euklidisk Geometri
+
+Introduktion til forskellige typer af ikke-euklidisk geometri, såsom hyperbolsk og sfærisk geometri.
+Diskussion af de grundlæggende forskelle mellem ikke-euklidisk og euklidisk geometri.
+Anvendelser og historisk betydning af ikke-euklidisk geometri.
+Vektorer i Rummet
+
+Udvidelse af vektorbegrebet til tre dimensioner.
+Vektoroperationer i rummet, herunder skalar- og vektorprodukt.
+Anvendelser af rumlige vektorer i fysik og ingeniørvidenskab.
+Vektorfunktioner
+
+Definition og egenskaber af vektorfunktioner.
+Differentiering og integration af vektorfunktioner.
+Anvendelser, såsom bevægelse i rummet og feltteorier.
+Integralregning
+
+Avancerede teknikker i integralregning, såsom ubestemte integraler, integration ved substitution og delvis integration.
+Anvendelser af integralregning i beregning af arealer, volumener og andre fysiske størrelser.
+Funktioner af To Variable
+
+Introduktion til multivariable funktioner, herunder deres grænser og kontinuitet.
+Partielle derivater og differentierbarhed.
+Anvendelser i økonomi, naturvidenskab og ingeniørvidenskab.
+Differentialligninger
+
+Grundlæggende om ordinære differentialligninger (ODE'er) og deres løsninger.
+Metoder til at løse forskellige typer af differentialligninger.
+Anvendelser af differentialligninger i naturvidenskab og teknik.

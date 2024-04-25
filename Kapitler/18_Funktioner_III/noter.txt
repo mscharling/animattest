@@ -1,0 +1,7 @@
+Sammensatte Funktioner
+
+Evne til at håndtere sammensatte funktioner på et instrumentelt niveau.
+
+Invers Funktioner
+
+Kendskab til konceptet af invers funktioner, både som matematisk proces og som begreb.

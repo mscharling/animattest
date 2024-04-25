@@ -1,0 +1,10 @@
+Kendskab til Elementære Funktioner
+
+Viden om lineære, eksponentielle og potensfunktioner, herunder deres grafiske forløb og egenskaber.
+Forståelse af konstanter i regneforskrifter og deres påvirkning på funktioners grafiske forløb.
+
+
+Anvendelse og Modellering med Funktioner
+
+Anvendelse af de elementære funktioner i modellering.
+Forståelse af modelidealisationer og begrænsninger.

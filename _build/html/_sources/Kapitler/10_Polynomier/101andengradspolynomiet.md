@@ -1,0 +1,3 @@
+# Andengradspolynomiet
+
+## Rødder

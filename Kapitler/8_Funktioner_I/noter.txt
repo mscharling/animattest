@@ -1,0 +1,13 @@
+Forståelse af Funktionsbegrebet
+
+Elever skal forstå forskellen mellem funktioner som symbolmanipulationer og som matematiske objekter.
+Evne til at skelne mellem regneforskrifter og ligninger.
+Repræsentation af Funktioner
+
+Forståelse af, at en funktion kan repræsenteres på flere måder.
+Intuitiv forståelse af funktioners input-output relationer.
+
+Analyse og Forskydning af Funktioner
+
+Arbejde med vandret og lodret forskydning af funktioner.
+Håndtering af forskellige typer af funktioner og relationer, der ikke er funktioner.

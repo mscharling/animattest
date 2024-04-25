@@ -1,0 +1,8 @@
+Forståelse og Anvendelse af Binomialfordelingen
+
+Indførelse og anvendelse af begrebet stokastisk variabel i binomialfordelingen.
+Beregning af punkt- og kumulerede sandsynligheder, middelværdi og spredning i binomialfordeling.
+
+Grafisk Repræsentation og Statistisk Analyse
+
+Evne til at tegne og aflæse søjlediagrammer baseret på binomialfordeling.

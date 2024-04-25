@@ -1,0 +1,15 @@
+Forståelse af Stamfunktionsbegrebet
+
+Introduktion til integralregning gennem stamfunktionsbegrebet, forståelse af det som omvendt proces til differentiation.
+Regneregler for Integralregning
+
+Fortrolighed med bestemmelse af stamfunktioner for elementære funktioner og anvendelse af regneregler for bestemte og ubestemte integraler (herunder sum, differens, multiplikation med konstant, og substitution).
+Anvendelse af Computer-Algebra Systemer (CAS)
+
+Brug af CAS for integration af komplekse udtryk, der går ud over elementære funktioner og standard regneregler.
+Sammenhæng mellem Areal og Stamfunktion
+
+Særlig fokus på sammenhængen mellem arealer og stamfunktioner, og integration af dette med supplerende stof om deduktive metoder og bevisførelse.
+Anvendelser af Integralregning
+
+Anvendelse af integraler i praktiske problemstillinger, som beregning af arealer afgrænset af funktioner, rumfang af omdrejningslegemer, og bestemmelse af kurvelængder.

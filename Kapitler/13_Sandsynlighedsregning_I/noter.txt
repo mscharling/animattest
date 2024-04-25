@@ -1,0 +1,4 @@
+Anvendelse af Kombinatorik
+
+Anvendelse af fakultet, permutation og kombination i sandsynlighedsberegninger.
+Brug af additions- og multiplikationsprincippet, herunder tælletræer og Pascals trekant.

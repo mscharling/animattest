@@ -1,0 +1,1 @@
+# Chi-test for uafhængighed

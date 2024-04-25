@@ -1,0 +1,3 @@
+# Normalfordelingens parametre
+
+## Standard normalfordeling

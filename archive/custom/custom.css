@@ -1,0 +1,28 @@
+/* This part changes the color of the left-margin border and the background  */
+
+.hint {
+border-left-color:#9e9e9e;
+background-color:hsla(0,0%,62%,.1);
+}
+
+/* This part changes the color of the symbol  */
+
+.hint::before {
+color:#ffffff;
+}
+
+/* This part changes the color of the label  */
+
+.hint h3 {
+color:#ffffff;
+}
+
+/* This part changes the color of the body text  */
+
+.hint > p {
+color:#ffffff;
+}
+
+div.proof .admonition-title::before {
+    content: none !important;
+}

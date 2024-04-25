@@ -1,0 +1,27 @@
+Anvendelse af Funktionsudtryk til Modellering
+
+Evne til at bruge funktionsudtryk til at modellere geometriske og statistiske fænomener samt variabelsammenhænge.
+Forståelse af Modelleringscyklus
+
+Kendskab til forskellige faser i en modelleringscyklus, især fokus på den indledende og matematiseringsfasen.
+Metoder til Problemløsning og Matematisering
+
+Evne til at identificere relevante matematiske værktøjer til at starte en problemstilling og matematisere denne.
+Områdebestemt Modellering
+
+Kompetence i at udarbejde modeller baseret på forskellige kontekster som økonomi eller naturvidenskab, herunder forståelse for statiske og dynamiske systemer.
+Overvejelser om Idealisering og Rækkevidde
+
+Forståelse af idealiseringer og rækkevidde af modeller relateret til deres specifikke kontekster.
+Oprettelse af Simple Matematiske Modeller
+
+Evne til at opstille matematiske modeller fra talmateriale, figurer eller beskrivende tekster, under anvendelse af elementære funktioner.
+Fremskrivning og Fortolkning i Modellering
+
+Færdigheder i fremskrivning, prognoser og fortolkning af formeludtryk samt regneforskrifter genereret af modeller.
+Argumentation og Beregning af Afvigelse
+
+Kompetence i at argumentere for modelbaserede konklusioner, herunder beregning af absolut eller relativ afvigelse afhængig af situationen.
+Fokus på Lineære Modeller i Grundforløbet
+
+Forståelse og anvendelse af lineære modeller som en obligatorisk del af grundforløbet.

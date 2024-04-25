@@ -1,0 +1,25 @@
+Håndtering af Specifikke Typer Differentialligninger
+
+Evnen til at løse logistiske og lineære første ordens differentialligninger, inklusiv eksponentiel vækst og forskudt eksponentiel vækst.
+Evne til at løse simple separable differentialligninger.
+Anvendelse af Computer-Algebra Systemer (CAS)
+
+Brug af CAS til at løse begyndelsesværdiproblemer og separable differentialligninger.
+Grundlæggende Analyse af Differentialligninger
+
+Forståelse af hvordan en model kan anvendes uden direkte at løse ligningen.
+Opstilling af Differentialligninger fra Sproglige Beskrivelser
+
+Evnen til at omsætte sproglige formuleringer til differentialligninger, især for de tre vækstmodeller (eksponentiel, forskudt eksponentiel, logistisk vækst).
+Anvendelse af Løsningsformler og Forståelse af Løsninger
+
+Kendskab til og anvendelse af standardløsningsformler for nævnte vækstmodeller og evnen til at bestemme om en funktion er løsning til en givet differentialligning.
+Tangentbestemmelse og Linjeelementer
+
+Evne til at bestemme tangentligningen for en løsningskurve og kendskab til linjeelementer i differentialligninger.
+Numeriske Metoder og Grafisk Repræsentation
+
+Forståelse af og evnen til at bruge numeriske metoder til at løse differentialligninger, samt at tegne og afkode grafiske repræsentationer af løsninger, herunder hældningsfelter.
+Analyse af Numeriske Løsninger
+
+Evnen til at aflæse og fortolke information fra numeriske løsninger til differentialligninger i forskellige kontekster.

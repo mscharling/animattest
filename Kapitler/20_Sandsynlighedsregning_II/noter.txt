@@ -1,0 +1,7 @@
+Forståelse af Sandsynlighedstyper
+
+Kendskab til a priori (teoretiske) og frekventielle (baseret på observationer) sandsynligheder.
+Skelnen mellem disse sandsynlighedstyper.
+Sandsynlighedsfelter og Stokastiske Eksperimenter
+
+Forståelse af sandsynlighedsfelter, herunder symmetriske, som modeller for tilfældige eksperimenter.

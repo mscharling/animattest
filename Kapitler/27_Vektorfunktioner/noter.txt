@@ -1,0 +1,18 @@
+Integration af Viden fra Funktioner og Vektorregning
+
+Anvendelse af begreber og procedurer fra både funktioner og vektorregning for at skabe en sammenhængende forståelse.
+Kendskab til Repræsentationsformer for Vektorfunktioner
+
+Evne til at forstå og skifte mellem forskellige repræsentationsformer af vektorfunktioner.
+Bestemmelse af Skæringspunkter og Dobbeltpunkter
+
+Færdigheder i at finde skæringspunkter med koordinataksene og dobbeltpunkter baseret på specifikke parameterværdier.
+Forståelse af Tangent og Retningsvektor
+
+Kompetence i at bestemme retningsvektorer for tangenter og tangentligninger, inklusive vandrette og lodrette tangenter.
+Anvendelse i Bevægelsesmodeller
+
+Evne til at anvende vektorfunktioner i modellering af objekters bevægelse, hvor tid er input, og stedkoordinater er output.
+Forståelse af Hastigheds- og Accelerationsvektorer
+
+Kendskab til begreberne hastighedsvektor og accelerationsvektor i forbindelse med bevægelsesmodellering.

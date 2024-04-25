@@ -1,0 +1,91 @@
+```{prf:lemma}
+
+Lad $a\neq 0$. Betragt ligningen
+
+$$
+
+    ax^n + b = c.
+
+$$ 
+
+* Hvis $n$ er lige og $\frac{c-b}{a}>0$, så har ligningen to reelle løsninger givet ved 
+
+$$
+
+    x = \pm \sqrt[n]{\frac{c-b}{a}}.
+
+$$
+
+* Hvis $n$ er ulige, så har ligningen én reel løsning givet ved
+
+$$
+
+    x = \sqrt[n]{\frac{c-b}{a}}.
+
+$$
+
+```
+
+<details style = "margin-block-end: 1em">
+
+<summary>Bevis</summary>
+
+<p>
+
+Lemmaet er et resultat af {prf:ref}`negativegrundtalthm<negativegrundtalthm>`, så vi vil beviset for denne til at bevise dette lemma. 
+
+```{prf:bevis}
+:class: text
+
+Antag $a\neq 0$ og at vi har ligningen
+
+$$
+
+    ax^n + b = c.
+
+$$ 
+
+Ved brug af de elementære operationer, kan vi komme frem til, at 
+
+$$
+\begin{align*}
+&   &   ax^n + b &= c \\
+&\Leftrightarrow &  x^n &= \frac{c-b}{a} 
+\end{align*}
+$$
+
+på samme måde, som vi gjorde i beviset for {prf:ref}`loesningfoerstegrad<loesningfoerstegrad>`.
+
+Vi viser første punkt: Antag $n$ er et {prf:ref}`lige tal<ligeoguligetal>`. Det betyder, at vi kan skrive $n=2m$, hvor $m$ er et heltal forskelligt fra 0. Antag, at løsningen er givet ved 
+
+$$
+    
+    x = \pm \sqrt[n]{\frac{c-b}{a}},
+    
+$$
+
+hvor $\frac{c-b}{a}>0$ og lad os vise, at den opfylder den oprindelige ligning. Det er åbenlyst, at den gælder for $x = \sqrt[n]{\frac{c-b}{a}}$. Lad os vise den for $x = -\sqrt[n]{\frac{c-b}{a}}$
+
+$$
+\begin{align*}
+ a\bigg(-\sqrt[n]{\frac{c-b}{a}} \bigg)^n + b &= a\bigg(-\sqrt[n]{\frac{c-b}{a}} \bigg)^{2m} + b\\ 
+    &= a \bigg( \bigg(-\sqrt[n]{\frac{c-b}{a}} \bigg)^2 \bigg)^m + b \\
+    &= a \bigg( \bigg(-1 \cdot \sqrt[n]{\frac{c-b}{a}} \bigg)^2 \bigg)^m + b\\
+    &= a \bigg( (-1)^2 \cdot \bigg( \sqrt[n]{\frac{c-b}{a}} \bigg)^2 \bigg)^m + b\\
+    &= a \bigg( 1 \cdot \bigg( \sqrt[n]{\frac{c-b}{a}} \bigg)^2 \bigg)^m + b\\
+    &= a \bigg( \bigg( \sqrt[n]{\frac{c-b}{a}} \bigg)^{2m} + b\\
+    &= a \bigg( \sqrt[n]{\frac{c-b}{a}} \bigg)^{n} + b\\
+    &= a \cdot \frac{c-b}{a} + b\\
+    &= c - b + b \\
+    &= c
+\end{align*}
+$$
+
+Det viser dermed, at for $n$ lige, så har vi to reelle løsninger til ligningen.
+
+Vi viser anden punkt: Antag $n$ er et {prf:ref}`lige tal<ligeoguligetal>`. Fra {prf:ref}`ligeoguligeroedder<ligeoguligeroedder>` ved vi, at $\sqrt[n]{\frac{c-b}{a}}\in\mathbb{R}$ for $\frac{c-b}{a}\in\mathbb{R}$ og derfor kan det let vises, at 
+
+```
+</p>
+
+</details>

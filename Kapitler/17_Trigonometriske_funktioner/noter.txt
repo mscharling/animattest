@@ -1,0 +1,3 @@
+Trigonometriske Funktioner
+
+Dybdegående behandling af trigonometriske funktioner, herunder radianbegrebet, amplitude, periode, og ligevægtsværdi.

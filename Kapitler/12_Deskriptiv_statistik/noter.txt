@@ -1,0 +1,19 @@
+Forståelse af Statistisk Modellering
+
+Indsigt i statistikkens rolle i at modellere systemer med stokastisk (tilfældig) komponent.
+Evnen til at skelne mellem statistisk og matematisk ræsonnement.
+Oversættelse af Virkelighedsnære Problemer til Statistiske Problemer
+
+Oversætte praktiske problemstillinger til statistiske problemer og fortolke resultaterne.
+Anvendelse af Værktøjsprogrammer til Statistik
+
+Behandling af stikprøver og diskussion af deres repræsentativitet.
+Anvendelse af regnearkskommandoer til behandling af store datasæt.
+Forståelse og Anvendelse af Statistiske Deskriptorer
+
+Bestemmelse og fortolkning af statistiske mål som hyppighed, middelværdi, median, kvartiler, maksimum og minimum.
+Evnen til at lave og aflæse boksplot og sumkurver.
+Analyse og Sammenligning af Grafiske Repræsentationer
+
+Anvendelse af spredningsbegreber som kvartilbredde og standardafvigelse.
+Forståelse af konceptet 'outlier' og dets relevans.

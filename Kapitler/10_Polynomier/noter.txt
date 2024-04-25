@@ -1,0 +1,8 @@
+Viden om Andengradspolynomier og Logaritmefunktioner
+
+Kendskab til andengradspolynomier og polynomier af højere grad.
+Forståelse af logaritmefunktioner og deres egenskaber.
+Forståelse af Rødder og Faktorisering
+
+Håndtering af rødder i polynomier, især i forhold til andengradspolynomier.
+Forståelse af diskriminantens og konstanternes rolle i andengradspolynomier.
