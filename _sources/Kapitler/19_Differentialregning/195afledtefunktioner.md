@@ -1,0 +1,3 @@
+# Afledte funktioner
+
+

@@ -1,0 +1,102 @@
+:root {
+  --note-title-color: rgba(0,114,163,.1);
+  --note-border-color: #0072A3;
+  --grey-border-color: #ccc;
+  --warning-title-color: rgba(186,20,59,.1);
+  --warning-border-color: #BA143B;
+  --hint-title-color: rgba(201,181,2,.2);
+  --hint-border-color: #C9B502;
+  --caution-title-color: rgba(214,121,0,.2);
+  --caution-border-color: #D67900;
+  --grey-title-color: rgba(204,204,204,.2);
+  --black-border-color: #000;
+  --grey1: #f5f5f5;
+  --grey2: #9e9e9e;
+  --black1: #000;
+  --white1: #fff; 
+  --pst-color-primary: rgba(165,199,67,1);
+  --animat-color-primary: rgba(165,199,67,1);
+}
+
+/* ======================================= */
+/* ==========  General layout   ========== */
+/* ======================================= */
+
+/* TOC */
+nav.bd-links .current>a {
+    box-shadow: inset max(3px, 0.1875rem, 0.12em) 0 0 var(--animat-color-primary) !important;
+    color: var(--animat-color-primary) !important;
+}
+nav.bd-links li>a:hover {
+    color: var(--animat-color-primary);
+}
+.toc-entry a.nav-link.active {
+    box-shadow: inset max(3px, .1875rem, .12em) 0 0 var(--animat-color-primary);
+    color: var(--animat-color-primary);
+}
+a.headerlink {
+    color: var(--animat-color-primary);
+}
+
+
+/* Previous and next page */
+.prev-next-area a:visited p.prev-next-title {
+    color: var(--animat-color-primary) !important;
+}
+.prev-next-area a {
+    color: var(--animat-color-primary) !important;
+}
+
+/* Back to the top */
+#pst-back-to-top {
+    background-color: var(--animat-color-primary) !important;
+}
+
+/* Links */
+a {
+    word-wrap: break-word;
+    color: var(--animat-color-primary);
+    text-decoration: underline;
+    text-decoration-thickness: max(1px, 0.0625rem);
+    text-underline-offset: 0.1578em;
+}
+a:hover {
+    text-decoration-skip: none;
+    color: var(--animat-color-primary);
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
+}
+a:active, a:visited {
+    color: var(--animat-color-primary);
+}
+
+
+/* ======================================= */
+/* ==========    Don't know     ========== */
+/* ======================================= */
+.bg-info{background-color:#800000;}
+
+
+.card-body{background-color: var(--hint-title-color) ;}
+
+
+.card{background-color: var(--hint-title-color) !important;}
+
+
+.bg-primary{background-color: var(--hint-title-color) ;}
+
+
+/*```{admonition} Hint
+:class: dropdown, tip
+*/
+
+button.toggle-button {
+  background: none;
+}
+
+div.exercise p.admonition-title::before {
+  color: rgb(51, 51, 51);
+}
+
+
+

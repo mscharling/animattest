@@ -1,0 +1,1 @@
+# Modsatrettede vektorer og ligevægt

@@ -1,0 +1,2 @@
+# Tæthedsfunktionen og Gauss-kurven
+

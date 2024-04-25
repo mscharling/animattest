@@ -1,0 +1,1 @@
+# Signifikans og konfidensintervaller

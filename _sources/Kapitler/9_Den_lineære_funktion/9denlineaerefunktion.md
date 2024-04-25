@@ -1,0 +1,1 @@
+# Den lineære funktion

@@ -1,0 +1,1 @@
+# Omvendte funktioner
