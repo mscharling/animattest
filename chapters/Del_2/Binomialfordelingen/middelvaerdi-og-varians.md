@@ -1,0 +1,1 @@
+# Middelværdi og varians

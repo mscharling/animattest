@@ -1,0 +1,1 @@
+# Variablernes sandsynlighedsfordeling

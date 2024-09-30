@@ -1,0 +1,3 @@
+# Stokastiske variabler I
+
+

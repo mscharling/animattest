@@ -1,1 +1,0 @@
-# Funktioner i to variable

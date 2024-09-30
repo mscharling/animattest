@@ -37,14 +37,32 @@ nav.bd-links li>a:hover {
 a.headerlink {
     color: var(--animat-color-primary);
 }
-
+.toc-entry a.nav-link:hover {
+    color: var(--animat-color-primary);
+}
+.navbar-nav .toctree-checkbox~label .fa-chevron-down {
+    transform: rotate(0deg);
+    transition: transform 0.4s ease-in-out; 
+}
+.navbar-nav .toctree-checkbox:checked~label .fa-chevron-down {
+    transform: rotate(180deg);
+}
 
 /* Previous and next page */
 .prev-next-area a:visited p.prev-next-title {
-    color: var(--animat-color-primary) !important;
+    color: var(--animat-color-primary);
 }
 .prev-next-area a {
-    color: var(--animat-color-primary) !important;
+    color: var(--animat-color-primary);
+}
+.prev-next-area a p.prev-next-title {
+    color: var(--animat-color-primary);
+}
+.prev-next-area a:visited p.prev-next-title:hover {
+    color: var(--animat-color-primary);
+}
+a:visited:hover {
+    color: var(--animat-color-primary);
 }
 
 /* Back to the top */
@@ -71,19 +89,83 @@ a:active, a:visited {
 }
 
 
+/* Notebook blocks */
+.cell_output .output.stderr {
+    display: none;
+}
+div.cell_input>div, div.cell_output div.output>div.highlight {
+    display: none;
+}
+div.highlight pre, table.highlighttable pre {
+    display: none;
+}
+div.cell div.cell_input, div.cell details.above-input>summary {
+    display: none;
+}
+
+/* IPython cell outputs */
+.docutils.container {
+    text-align: center;
+}
+
+
+/* Prevent download gif */
+/* https://stackoverflow.com/questions/21110130/protect-image-download */
+img {
+    pointer-events: none;
+}
+
+
+/* Details to use for proof and hints */
+details {
+  display: flex;
+}
+
+details summary {
+  cursor: pointer;
+}
+
+summary {
+  cursor: pointer;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin-left: 0;
+  padding: 0;
+  outline: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+:root {
+  --fontColor: inherit;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='tb-icon toggle-chevron-right' width='44' height='44' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23000000' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath stroke='none' d='M0 0h24v24H0z' fill='none'%3E%3C/path%3E%3Cpolyline points='9 6 15 12 9 18'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+summary::before {
+  content: "";
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  mask-image: var(--svg);
+  mask-size: cover;
+  -webkit-mask-image: var(--svg);
+  -webkit-mask-size: cover;
+  background-color: var(--pst-color-text-base);
+  transition: 0.2s;
+}
+
+details[open]>summary::before {
+  transform: rotate(90deg);
+}
+
+
+
 /* ======================================= */
 /* ==========    Don't know     ========== */
 /* ======================================= */
-.bg-info{background-color:#800000;}
-
-
-.card-body{background-color: var(--hint-title-color) ;}
-
-
-.card{background-color: var(--hint-title-color) !important;}
-
-
-.bg-primary{background-color: var(--hint-title-color) ;}
 
 
 /*```{admonition} Hint

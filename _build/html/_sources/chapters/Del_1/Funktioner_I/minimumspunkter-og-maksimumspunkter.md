@@ -1,0 +1,1 @@
+# Minimumspunkter og maksimumspunkter

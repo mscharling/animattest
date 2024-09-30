@@ -1,0 +1,1 @@
+# Stykvis lineær funktion

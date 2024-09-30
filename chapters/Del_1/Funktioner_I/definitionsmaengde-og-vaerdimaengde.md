@@ -1,0 +1,1 @@
+# Definitionsmængde og værdimængde

@@ -1,0 +1,23 @@
+from scipy.stats import norm, uniform
+import numpy as np
+import matplotlib.pyplot as plt 
+from myst_nb import glue
+
+# Set the seed for reproducibility
+rng = np.random.default_rng(seed=4)
+
+# Generate dataset
+n = 10
+
+x = uniform.rvs(size=n, loc=0, scale=15, random_state=rng)
+z = norm.rvs(size=n, random_state=rng)
+y = x + z
+
+# Scatter plot
+fig, ax = plt.subplots()
+ax.scatter(x=x,y=y, color='#a5c743')
+ax.set_xlabel('x')
+ax.set_ylabel('y')
+plt.close(fig)
+
+glue('scatter', fig)

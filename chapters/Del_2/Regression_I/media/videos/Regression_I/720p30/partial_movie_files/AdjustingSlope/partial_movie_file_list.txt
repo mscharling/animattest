@@ -1,0 +1,9 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Users/ms/Documents/Zedus Company/matakademiet/jupyter/animat/chapters/Del_2/Regression_I/media/videos/Regression_I/720p30/partial_movie_files/AdjustingSlope/151669302_2426445184_4066592547.mp4'
+file 'file:C:/Users/ms/Documents/Zedus Company/matakademiet/jupyter/animat/chapters/Del_2/Regression_I/media/videos/Regression_I/720p30/partial_movie_files/AdjustingSlope/1959534363_1924862169_3511262767.mp4'
+file 'file:C:/Users/ms/Documents/Zedus Company/matakademiet/jupyter/animat/chapters/Del_2/Regression_I/media/videos/Regression_I/720p30/partial_movie_files/AdjustingSlope/1959534363_205947734_947536793.mp4'
+file 'file:C:/Users/ms/Documents/Zedus Company/matakademiet/jupyter/animat/chapters/Del_2/Regression_I/media/videos/Regression_I/720p30/partial_movie_files/AdjustingSlope/1959534363_3420339324_3184334844.mp4'
+file 'file:C:/Users/ms/Documents/Zedus Company/matakademiet/jupyter/animat/chapters/Del_2/Regression_I/media/videos/Regression_I/720p30/partial_movie_files/AdjustingSlope/1959534363_2020890503_2622220120.mp4'
+file 'file:C:/Users/ms/Documents/Zedus Company/matakademiet/jupyter/animat/chapters/Del_2/Regression_I/media/videos/Regression_I/720p30/partial_movie_files/AdjustingSlope/1959534363_3420339324_3411397604.mp4'
+file 'file:C:/Users/ms/Documents/Zedus Company/matakademiet/jupyter/animat/chapters/Del_2/Regression_I/media/videos/Regression_I/720p30/partial_movie_files/AdjustingSlope/1959534363_2577869689_814438763.mp4'
+file 'file:C:/Users/ms/Documents/Zedus Company/matakademiet/jupyter/animat/chapters/Del_2/Regression_I/media/videos/Regression_I/720p30/partial_movie_files/AdjustingSlope/1959534363_3941392960_3741361233.mp4'

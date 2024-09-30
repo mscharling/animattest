@@ -1,0 +1,1 @@
+# Parallelforskydninger langs akserne

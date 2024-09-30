@@ -1,0 +1,1 @@
+# Binomialfordelingens relation til normalfordeling

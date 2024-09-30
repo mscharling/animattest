@@ -1,0 +1,746 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="da" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>22.2. Binomialkoefficienten &#8212; AniMAT</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom_proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom_exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom_panels.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom_tippy.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom_exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom_panels.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom_proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom_tippy.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/archive/index.ff1ffe594081f20da1ef19478df9384b.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/archive/myadmonitions.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/archive/mystyles.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom_exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom_panels.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom_proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom_tippy.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/archive/index.ff1ffe594081f20da1ef19478df9384b.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/archive/myadmonitions.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/archive/mystyles.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-bootstrap.5fd3999ee7762ccc51105388f4a9d115.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Fold ud';</script>
+    <script>let toggleHintHide = 'Skjul';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/custom.js"></script>
+    <script src="../../../_static/custom.js"></script>
+    <script src="../../../_static/custom.js"></script>
+    <script src="../../../_static/translations.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script defer="defer" src="https://unpkg.com/@popperjs/core@2"></script>
+    <script defer="defer" src="https://unpkg.com/tippy.js@6"></script>
+    <script defer="defer" src="../../../_static/tippy\chapters\Del_2\Binomialfordelingen\binomialkoefficienten.060117a8-226f-435a-a462-f72c563886a6.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/Del_2/Binomialfordelingen/binomialkoefficienten';</script>
+    <link rel="index" title="Indeks" href="../../../genindex.html" />
+    <link rel="search" title="Søg" href="../../../search.html" />
+    <link rel="next" title="22.3. Binomialfordelingen" href="binomialfordelingen.html" />
+    <link rel="prev" title="22.1. Bernoulli- og binomialforsøg" href="bernoulli-og-binomialforsoeg.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="da"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../forord.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/animat-black.png" class="logo__image only-light" alt="AniMAT - Home"/>
+    <script>document.write(`<img src="../../../_static/animat-white.png" class="logo__image only-dark" alt="AniMAT - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Indledning</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Indledning/til-dig-som-elev.html">Til dig som elev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Indledning/til-dig-som-laerer.html">Til dig som lærer</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Del 1</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Del_1/Tal_og_algebra/tal-og-algebra.html">1. Tal og algebra</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Tal_og_algebra/tallene.html">1.1. Tallet 0 og negative tal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Tal_og_algebra/approksimationer.html">1.2. Approksimationer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Tal_og_algebra/regnearterne.html">1.3. Regnearterne</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Tal_og_algebra/kvadratsaetninger.html">1.4. Kvadratsætninger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Tal_og_algebra/faktorisering-og-kvadratkomplettering.html">1.5. Faktorisering og kvadratkomplettering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Tal_og_algebra/broeker.html">1.6. Brøker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Tal_og_algebra/potenser.html">1.7. Potenser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Tal_og_algebra/roedder.html">1.8. Rødder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Tal_og_algebra/logaritmer.html">1.9. Logaritmer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Tal_og_algebra/summer-og-produkter.html">1.10. Summer og produkter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../notebooktest/test.html">1.11. Overskrift</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Del_1/Maengdeteori/maengdeteori.html">2. Mængdeteori I</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Maengdeteori/symboler-i-maengdeteorien.html">2.1. Elementære mængdesymboler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Maengdeteori/talmaengder.html">2.2. Talmængder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Maengdeteori/maengdeoperationer.html">2.3. Mængdeoperationer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Maengdeteori/intervaller.html">2.4. Intervaller</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Del_1/Ligninger_og_uligheder/ligninger-og-uligheder.html">3. Ligninger og uligheder</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Ligninger_og_uligheder/lighed-og-ligevaegt.html">3.1. Lighed, ligevægtsprincip og ækvivalens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Ligninger_og_uligheder/grundmaengder.html">3.2. Grundmængder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Ligninger_og_uligheder/en-ligning-med-en-ubekendt.html">3.3. En ligning med en ubekendt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Ligninger_og_uligheder/to-ligninger-med-to-ubekendte.html">3.4. To ligninger med to ubekendte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Ligninger_og_uligheder/grafernes-muligheder.html">3.5. Grafernes muligheder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Ligninger_og_uligheder/andengradsligninger.html">3.6. Andengradsligninger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Ligninger_og_uligheder/uligheder.html">3.7. Uligheder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Ligninger_og_uligheder/numeriske-ligninger.html">3.8. Numeriske ligninger</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Del_1/Klassisk_geometri/klassisk-geometri.html">4. Klassisk geometri</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Klassisk_geometri/euklid.html">4.1. Euklid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Klassisk_geometri/de-tre-dimensioner.html">4.2. De tre dimensioner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Klassisk_geometri/polygoner.html">4.3. Polygoner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Klassisk_geometri/cirklen.html">4.4. Cirklen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Klassisk_geometri/rumlige-figurer.html">4.5. Rumlige figurer</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Del_1/Trigonometri/trigonometri.html">5. Trigonometri</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Trigonometri/sinus-og-cosinus.html">5.1. Sinus og cosinus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Trigonometri/tangens.html">5.2. Tangens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Trigonometri/sinusrelationen.html">5.3. Sinusrelationen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Trigonometri/cosinusrelationen.html">5.4. Cosinusrelationen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Trigonometri/arealberegning.html">5.5. Arealberegning</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Del_1/Analytisk_plangeometri/analytisk-plangeometri.html">6. Analytisk plangeometri</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Analytisk_plangeometri/laengde-og-afstandsformlen-i.html">6.1. Længde- og afstandsformlen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Analytisk_plangeometri/linjens-ligning.html">6.2. Linjens ligning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Analytisk_plangeometri/skaering-mellem-to-linjer.html">6.3. Skæring mellem to linjer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Analytisk_plangeometri/vinkel-mellem-to-linjer.html">6.4. Vinkel mellem to linjer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Analytisk_plangeometri/ortogonale-linjer.html">6.5. Ortogonale linjer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Analytisk_plangeometri/cirklens-ligning.html">6.6. Cirklens ligning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Analytisk_plangeometri/cirklen-og-linjer-i.html">6.7. Cirklen og linjer I</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Del_1/Vektorer_i_planen/vektorer-i-planen.html">7. Vektorer i planen</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Vektorer_i_planen/vektorer.html">7.1. Vektorer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Vektorer_i_planen/laengde-og-afstandsformlen-ii.html">7.2. Længde- og afstandsformlen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Vektorer_i_planen/sum-vektorer.html">7.3. Sumvektorer, differensvektorer og skalering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Vektorer_i_planen/regnearternes-egenskaber-for-vektorer.html">7.4. Regnearternes egenskaber for vektorer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Vektorer_i_planen/modsatrettede-vektorer.html">7.5. Modsatrettede vektorer og ligevægt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Vektorer_i_planen/komposanter.html">7.6. Komposanter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Vektorer_i_planen/enhedsvektorer.html">7.7. Enhedsvektorer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Vektorer_i_planen/skalarproduktet.html">7.8. Skalarproduktet og vinkel mellem to vektorer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Vektorer_i_planen/vektorprojektion.html">7.9. Vektorprojektion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Vektorer_i_planen/determinanter.html">7.10. Determinanter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Vektorer_i_planen/normal-vektorer-og-linjens-ligning.html">7.11. Normalvektorer og linjens ligning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Vektorer_i_planen/linjens-parameterfremstilling.html">7.12. Linjens parameterfremstilling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Vektorer_i_planen/afstand-mellem-punkt-og-linje.html">7.13. Afstand mellem punkt og linje</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Vektorer_i_planen/cirklen-og-linjer-ii.html">7.14. Cirklen og linjer II</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Del_1/Funktioner_I/funktioner-i.html">8. Funktioner I</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Funktioner_I/koordinatsystemet.html">8.1. Koordinatsystemet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Funktioner_I/funktionsbegrebet.html">8.2. Funktionsbegrebet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Funktioner_I/grafen-for-en-funktion.html">8.3. Grafen for en funktion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Funktioner_I/definitionsmaengde-og-vaerdimaengde.html">8.4. Definitionsmængde og værdimængde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Funktioner_I/minimumspunkter-og-maksimumspunkter.html">8.5. Minimumspunkter og maksimumspunkter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Funktioner_I/monotoniforhold.html">8.6. Monotoniforhold</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Funktioner_I/parallelforskydninger-langs-akserne.html">8.7. Parallelforskydninger langs akserne</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Del_1/Den_lineaere_funktion/den-lineaere-funktion.html">9. Den lineære funktion</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-9"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Den_lineaere_funktion/funktionsforskriften.html">9.1. Funktionsforskrift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Den_lineaere_funktion/den-konstante-funktion.html">9.2. Den konstante funktion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Den_lineaere_funktion/to-punkter.html">9.3. To punkter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Den_lineaere_funktion/proportionalitet.html">9.4. Proportionalitet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Den_lineaere_funktion/stykvis-lineaer-funktion.html">9.5. Stykvis lineær funktion</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Del_1/Polynomier/polynomier.html">10. Polynomier</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-10"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Polynomier/andengradspolynomiet.html">10.1. Andengradspolynomiet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Polynomier/parablen.html">10.2. Parablen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Polynomier/ntegradspolynomiet.html">10.3. <span class="math notranslate nohighlight">\(n\)</span>’te-gradspolynomiet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Polynomier/kurvetilpasning.html">10.4. Kurvetilpasning</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Del_1/Funktioner_II/funktioner-ii.html">11. Funktioner II</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Funktioner_II/uendelighedsbegrebet.html">11.1. Uendelighedsbegrebet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Funktioner_II/graensevaerdier.html">11.2. Grænseværdier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Funktioner_II/grafers-asymptoter.html">11.3. Asymptoter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Funktioner_II/kontinuerte-funktioner.html">11.4. Kontinuerte funktioner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Funktioner_II/stykvis-kontinuerte-funktioner.html">11.5. Stykvis kontinuerte funktioner</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Del_1/Deskriptiv_statistik/deskriptiv-statistik.html">12. Deskriptiv statistik</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Deskriptiv_statistik/grundlaeggende-begreber-deskriptiv-statistik.html">12.1. Grundlæggende begreber</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Deskriptiv_statistik/ugrupperede-og-grupperede-observationer.html">12.2. Ugrupperede og grupperede observationer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Deskriptiv_statistik/statistiske-deskriptorer.html">12.3. Statistiske deskriptorer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Deskriptiv_statistik/deskriptive-plots.html">12.4. Deskriptive plots</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Deskriptiv_statistik/outliers.html">12.5. Outliers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Deskriptiv_statistik/estimation-af-populationen.html">12.6. Estimering af populationen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Deskriptiv_statistik/bias.html">12.7. Bias</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Del_1/Sandsynlighedsregning_I/sandsynlighedsregning-i.html">13. Sandsynlighedsregning I</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Sandsynlighedsregning_I/grundlaeggende-begreber.html">13.1. Grundlæggende begreber</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Sandsynlighedsregning_I/sandsynlighedsrum-i.html">13.2. Sandsynlighedsrum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Sandsynlighedsregning_I/additionsprincippet-og-multiplikationsprincippet.html">13.3. Additionsprincippet og multiplikationsprincippet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Sandsynlighedsregning_I/fakultetsfunktionen.html">13.4. Fakultetsfunktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Sandsynlighedsregning_I/kombinationer-og-permutationer.html">13.5. Kombinationer og permutationer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_1/Sandsynlighedsregning_I/tilbagelaegning.html">13.6. Tilbagelægning</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Del 2</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Potensfunktionen/potensfunktionen.html">14. Potensfunktionen</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Potensfunktionen/funktionsforskriften.html">14.1. Funktionsforskriften</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Potensfunktionen/heltallige-eksponenter.html">14.2. Heltallige eksponenter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Potensfunktionen/ikke-heltallige-eksponenter.html">14.3. Ikke-heltallige eksponenter</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Eksponentialfunktionen/eksponentialfunktionen.html">15. Eksponentialfunktionen</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Eksponentialfunktionen/funktionsforskriften.html">15.1. Funktionsforskriften</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Eksponentialfunktionen/eksponentialet.html">15.2. Eksponentialet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Eksponentialfunktionen/tallet-e.html">15.3. Tallet <span class="math notranslate nohighlight">\(e\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Eksponentialfunktionen/logaritmefunktionen.html">15.4. Logaritmefunktionen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Eksponentialfunktionen/den-naturlige-logaritme.html">15.5. Den naturlige logaritme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Eksponentialfunktionen/halverings-og-fordoblingskonstant.html">15.6. Halverings- og fordoblingskonstanten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Eksponentialfunktionen/vaekst.html">15.7. Vækst</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Opsparing_og_annuiteter/opsparing-og-annuiteter.html">16. Opsparing og annuiteter</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Opsparing_og_annuiteter/procent-og-promille.html">16.1. Procent og promille</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Opsparing_og_annuiteter/rentesregning.html">16.2. Rentesregning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Opsparing_og_annuiteter/opsparingsannuitet.html">16.3. Opsparingsannuitet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Opsparing_og_annuiteter/gaeldsannuitet.html">16.4. Gældsannuitet</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Trigonometriske_funktioner/trigonometriske-funktioner.html">17. Trigonometriske funktioner</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Trigonometriske_funktioner/sinus-cosinus-og-tangens-som-funktion.html">17.1. Sinus, cosinus og tangens som funktion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Trigonometriske_funktioner/enhedscirklen-ii.html">17.2. Enhedscirklen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Trigonometriske_funktioner/radianer-og-vinkler.html">17.3. Radianer og vinkler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Trigonometriske_funktioner/trigonometriske-grundligninger.html">17.4. Trigonometriske grundligninger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Trigonometriske_funktioner/trigonometriske-uligheder.html">17.5. Trigonometriske uligheder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Trigonometriske_funktioner/trigonometriske-relationer.html">17.6. Trigonometriske relationer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Trigonometriske_funktioner/periodicitet.html">17.7. Periodicitet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Trigonometriske_funktioner/harmoniske-svingninger.html">17.8. Harmoniske svingninger</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Funktioner_III/funktioner-iii.html">18. Funktioner III</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Funktioner_III/sammensatte-funktioner.html">18.1. Sammensatte funktioner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Funktioner_III/omvendte-funktioner.html">18.2. Omvendte funktioner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Funktioner_III/injektivitet-surjektivitet-og-bijektivitet.html">18.3. Injektivitet, surjektivitet og bijektivitet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Funktioner_III/lige-og-ulige-funktioner.html">18.4. Sammensatte funktioner</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Differentialregning/differentialregning-i.html">19. Differentialregning I</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Differentialregning/vaeksthastighed-i.html">19.1. Væksthastighed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Differentialregning/infinitesimaler.html">19.2. Infinitesimaler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Differentialregning/sekant-og-tangent.html">19.3. Sekant og tangent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Differentialregning/tre-trinsreglen.html">19.4. Tre-trinsreglen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Differentialregning/afledte-funktioner.html">19.5. Afledte funktioner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Differentialregning/sumreglen-produktreglen-og-kvotientreglen.html">19.6. Sum-, produkt- og kvotientreglen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Differentialregning/differentiation-af-en-sammensat-funktion.html">19.7. Differentiation af sammensatte funktioner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Differentialregning/differentiabilitet-og-kontinuitet.html">19.8. Differentiabilitet og kontinuitet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Differentialregning/optimering.html">19.9. Optimering</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Sandsynlighedsregning_II/sandsynlighedsregning-ii.html">20. Sandsynlighedsregning II</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Sandsynlighedsregning_II/haendelser.html">20.1. Hændelser</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sandsynlighedsregning_II/regneregler-for-sandsynligheder.html">20.2. Regneregler for sandsynligheder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sandsynlighedsregning_II/betingede-sandsynligheder.html">20.3. Betingede sandsynligheder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sandsynlighedsregning_II/bayes-saetning.html">20.4. Bayes‹ sætning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Sandsynlighedsregning_II/uafhaengige-haendelser.html">20.5. Uafhængige hændelser</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Stokastiske_variabler_I/stokastiske-variabler-i.html">21. Stokastiske variabler I</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-21"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Stokastiske_variabler_I/stokastiske-variabler.html">21.1. Stokastiske variabler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Stokastiske_variabler_I/variablernes-sandsynlighedsfordeling.html">21.2. Variablernes sandsynlighedsfordeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Stokastiske_variabler_I/empiriske-estimatorer.html">21.3. Empiriske estimatorer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Stokastiske_variabler_I/uafhaengighed-mellem-variabler.html">21.4. Uafhængighed mellem variabler</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="0binomialfordelingen.html">22. Binomialfordelingen</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="bernoulli-og-binomialforsoeg.html">22.1. Bernoulli- og binomialforsøg</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">22.2. Binomialkoefficienten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="binomialfordelingen.html">22.3. Binomialfordelingen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="middelvaerdi-og-varians.html">22.4. Middelværdi og varians</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Normalfordelingen/normalfordelingen.html">23. Normalfordelingen</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-23"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Normalfordelingen/taethedsfunktionen-og-gauss-kurven.html">23.1. Tæthedsfunktionen og Gauss-kurven</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Normalfordelingen/normalfordelingens-parametre.html">23.2. Normalfordelingens parametre</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Normalfordelingen/sandsynlighedsberegning.html">23.3. Sandsynlighedsberegning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Normalfordelingen/normalfordelte-data.html">23.4. Normalfordelte data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Normalfordelingen/binomialfordelingens-relation-til-normalfordelingen.html">23.5. Binomialfordelingens relation til normalfordeling</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Statistiske_test/statistiske-test.html">24. Statistiske test</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-24"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Statistiske_test/stikproever-og-hypotesetest.html">24.1. Stikprøver og hypotesetest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Statistiske_test/signifikans-og-konfidensintervaller.html">24.2. Signifikans og konfidensintervaller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Statistiske_test/binomialtest.html">24.3. Binomialtest</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Statistiske_test/chi-test-for-godness-of-fit.html">24.4. Chi-test for goodness of fit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Statistiske_test/chi-test-for-uafhaengighed.html">24.5. Chi-test for uafhængighed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Statistiske_test/t-test-for-en-og-to-stikproever.html">24.6. t-test for en og to stikprøver</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../Regression_I/regression-i.html">25. Regression I</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Regression_I/datamaessige-sammenhaenge.html">25.1. Datamæssige sammenhænge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Regression_I/simpel-lineaer-regression.html">25.2. Simpel lineær regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Regression_I/residualer.html">25.3. Residualer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Regression_I/forklaringsgrad-i.html">25.4. Forklaringsgrad I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Regression_I/simpel-ikke-lineaer-regression.html">25.5. Simpel ikke-lineær regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Regression_I/logistisk-regression.html">25.6. Logistisk regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Regression_I/matematisk-modellering-i.html">25.7. Matematisk modellering I</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Del 3</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Del_3/Ikke-euklidisk_geometri/ikke-euklidisk-geometri.html">26. Ikke-euklidisk geometri</a><input class="toctree-checkbox" id="toctree-checkbox-26" name="toctree-checkbox-26" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-26"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Ikke-euklidisk_geometri/euklids-femte-postulat.html">26.1. Euklids femte postulat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Ikke-euklidisk_geometri/elliptisk-geometri.html">26.2. Elliptisk geometri</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Ikke-euklidisk_geometri/hyperbolsk-geometri.html">26.3. Hyperbolsk geometri</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Del_3/Vektorer_i_rummet/vektorer-i-rummet.html">27. Vektorer i rummet</a><input class="toctree-checkbox" id="toctree-checkbox-27" name="toctree-checkbox-27" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-27"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Vektorer_i_rummet/rummets-koordinatsystem.html">27.1. Rummets koordinatsystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Vektorer_i_rummet/tre-dimensionelle-vektorer.html">27.2. Tre-dimensionelle vektorer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Vektorer_i_rummet/den-euklidiske-norm.html">27.3. Den euklidiske norm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Vektorer_i_rummet/regneregler.html">27.4. Regneregler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Vektorer_i_rummet/krydsproduktet.html">27.5. Krydsproduktet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Vektorer_i_rummet/linjer-i-rummet.html">27.6. Linjer i rummet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Vektorer_i_rummet/planer-i-rummet.html">27.7. Planer i rummet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Vektorer_i_rummet/planens-ligning.html">27.8. Planens ligning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Vektorer_i_rummet/planens-parameterfremstilling.html">27.9. Planens parameterfremstilling</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Del_3/Vektorfunktioner/vektorfunktioner.html">28. Vektorfunktioner</a><input class="toctree-checkbox" id="toctree-checkbox-28" name="toctree-checkbox-28" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-28"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Vektorfunktioner/hvorfor-vektorfunktioner.html">28.1. Hvorfor vektorfunktioner?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Vektorfunktioner/parameterfremstillingen.html">28.2. Parameterfremstillingen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Vektorfunktioner/skaering-med-akserne.html">28.3. Skæring med akserne</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Vektorfunktioner/differentiation-af-en-vektorfunktion.html">28.4. Differentiation af en vektorfunktion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Vektorfunktioner/lodrette-og-vandrette-tangenter.html">28.5. Lodrette og vandrette tangenter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Vektorfunktioner/afstand-mellem-kurve-og-punkt.html">28.6. Afstand mellem kurve og punkt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Vektorfunktioner/fra-vektorfunktion-til-almindelig-funktion.html">28.7. Fra vektorfunktion til almindelig funktion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Vektorfunktioner/kurvelaengde.html">28.8. Kurvelængde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Vektorfunktioner/banekurve-hastighedsvektor-og-accelerationsvektor.html">28.9. Banekurve, hastighedsvektor og accelerationsvektor</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Del_3/Differentialregning_II/differentialregning-ii.html">29. Differentialregning II</a><input class="toctree-checkbox" id="toctree-checkbox-29" name="toctree-checkbox-29" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-29"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Differentialregning_II/implicit-differentiation.html">29.1. Implicit differentiation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Differentialregning_II/dobbeldifferentiation.html">29.2. Dobbeldifferentiation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Differentialregning_II/skraa-vendetangenter.html">29.3. Skrå vendetangenter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Differentialregning_II/konveksitet-og-konkavitet.html">29.4. Konveksitet og konkavitet</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Del_3/Integralregning/integralregning.html">30. Integralregning</a><input class="toctree-checkbox" id="toctree-checkbox-30" name="toctree-checkbox-30" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-30"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Integralregning/bestemte-og-ubestemte-integraler.html">30.1. Bestemte og ubestemte integraler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Integralregning/stamfunktioner.html">30.2. Stamfunktioner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Integralregning/regneregler-for-integraler.html">30.3. Regneregler for integraler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Integralregning/integration-ved-substitution.html">30.4. Integration ved substitution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Integralregning/partiel-integration.html">30.5. Partiel integration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Integralregning/arealberegning.html">30.6. Arealberegning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Integralregning/rotationslegemer.html">30.7. Rotationslegemer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Integralregning/kurvelaengde.html">30.8. Integralregning</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Del_3/Funktioner_af_to_variabler/funktioner-af-to-variabler.html">31. Funktioner i to variabler</a><input class="toctree-checkbox" id="toctree-checkbox-31" name="toctree-checkbox-31" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-31"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Funktioner_af_to_variabler/grafer-i-rummet.html">31.1. Grafer i rummet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Funktioner_af_to_variabler/snitfunktioner-og-snitkurver.html">31.2. Snitfunktioner og snitkurver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Funktioner_af_to_variabler/niveaukurver.html">31.3. Niveaukurver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Funktioner_af_to_variabler/partielle-afledede.html">31.4. Partielle afledede</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Funktioner_af_to_variabler/gradienten.html">31.5. Gradienten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Funktioner_af_to_variabler/tangentplan.html">31.6. Tangentplan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Funktioner_af_to_variabler/stationaere-punkter.html">31.7. Stationære punkter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Funktioner_af_to_variabler/hesse-matricen.html">31.8. Hesse-matricen</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Del_3/Differentialligninger/differentialligninger.html">32. Differentialligninger</a><input class="toctree-checkbox" id="toctree-checkbox-32" name="toctree-checkbox-32" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-32"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Differentialligninger/hvorfor-differentialligninger.html">32.1. Hvorfor differentialligninger?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Differentialligninger/partikulaere-og-fuldstaendige-loesninger.html">32.2. Partikulære og fuldstændige løsninger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Differentialligninger/at-goere-proeve.html">32.3. At gøre prøve</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Differentialligninger/tangent-og-haeldningsfelter.html">32.4. Tangent og hældningsfelter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Differentialligninger/vaeksthastighed-ii.html">32.5. Væksthastighed II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Differentialligninger/linjeelementer.html">32.6. Linjeelementer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Differentialligninger/separable-differentialligninger.html">32.7. Separable differentialligninger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Differentialligninger/lineaere-foerste-ordens-differentialligninger.html">32.8. Lineære første ordens differentialligninger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Differentialligninger/anden-ordens-differentialligninger.html">32.9. Anden ordens differentialligninger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Differentialligninger/numeriske-loesningsmetoder.html">32.10. Numeriske løsningsmetoder</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Del_3/Stokastiske_variabler_II/stokastiske-variabler-ii.html">33. Stokastiske variabler II</a><input class="toctree-checkbox" id="toctree-checkbox-33" name="toctree-checkbox-33" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-33"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Stokastiske_variabler_II/et-abstrakt-begreb.html">33.1. Et abstrakt begreb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Stokastiske_variabler_II/kontinuerte-og-diskrete-sandsynlighedsfordelinger.html">33.2. Kontinuerte og diskrete sandsynlighedsfordelinger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Stokastiske_variabler_II/sandsynlighedsrum-ii.html">33.3. Sandsynlighedsrum II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Stokastiske_variabler_II/momenter.html">33.4. Momenter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Stokastiske_variabler_II/introtilintegral.html">33.5. En kort introduktion til integralregning</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../Del_3/Regression_II/regression-ii.html">34. Regression II</a><input class="toctree-checkbox" id="toctree-checkbox-34" name="toctree-checkbox-34" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-34"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Regression_II/korrelationskoefficienten.html">34.1. Korrelationskoefficienten II</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Regression_II/forklaringsgrad-ii.html">34.3. Forklaringsgrad II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Regression_II/mindste-kvadraters-metode.html">34.4. Mindste kvadraters metode II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Regression_II/tabsfunktioner.html">34.5. Tabsfunktioner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Regression_II/multipel-lineaer-regression.html">34.6. Multiple lineær regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Regression_II/parametrenes-konfidensintervaller.html">34.7. Parametrenes konfidensintervaller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Regression_II/matematisk-modellering-ii.html">34.8. Matematisk modellering II</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Regression_II/korrelation-og-kausalitet.html">34.9. Korrelation og kausalitet</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Værktøjer</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../Vaerktoejer/symboler.html">Symboler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../Vaerktoejer/gloser.html">Gloser</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fuldskærmstilstand"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Søg" aria-label="Søg" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Binomialkoefficienten</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="binomialkoefficienten">
+<h1><span class="section-number">22.2. </span>Binomialkoefficienten<a class="headerlink" href="#binomialkoefficienten" title="Permalink til denne overskrift">#</a></h1>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chapters\Del_2\Binomialfordelingen"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="bernoulli-og-binomialforsoeg.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">forrige</p>
+        <p class="prev-next-title"><span class="section-number">22.1. </span>Bernoulli- og binomialforsøg</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="binomialfordelingen.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">næste</p>
+        <p class="prev-next-title"><span class="section-number">22.3. </span>Binomialfordelingen</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Ved MatAkademiet
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

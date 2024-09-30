@@ -1,0 +1,1 @@
+# Kontinuerte og diskrete sandsynlighedsfordelinger

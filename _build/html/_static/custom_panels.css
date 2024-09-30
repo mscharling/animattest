@@ -1,0 +1,30 @@
+/*********************************************
+* Variables *
+*********************************************/
+:root {
+  --panel-color: rgba(201,181,2,.2);
+}
+
+/*********************************************
+* Panels *
+*********************************************/
+
+.bg-primary {
+    background-color: var(--panel-color) !important;
+}
+.card {
+    background-color: var(--panel-color);
+}
+.card-body {
+    background-color: var(--panel-color);
+}
+.container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    padding-bottom: 1.5rem;
+}
+
+p.card-text {
+    color: #222832
+}
+
+
+

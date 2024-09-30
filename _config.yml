@@ -3,13 +3,22 @@
 
 title: AniMAT
 author: MatAkademiet
-logo: animat.png
+#logo: animat-black.png
 
 sphinx:
+  extra_extensions:
+    - sphinx_proof
+    - sphinx_exercise
+    - sphinx_panels
+    - sphinx_autorun
+    - sphinx_tippy
   config:
     language: da
     html_theme: sphinx_book_theme
     html_theme_options:
+      logo:
+        image_light: 'animat-black.png'
+        image_dark: 'animat-white.png'
       use_download_button: false
       repository_url: https://github.com/sphinx-doc/sphinx
       use_issues_button: false
@@ -18,34 +27,26 @@ sphinx:
     html_static_path: ['_static']
     html_css_files:
       - 'custom.css'
-    hoverxref_roles: term
-    hoverxref_role_types: term
-    #mathjax_config:
-     # "HTML-CSS": {
-     #   matchFontHeight: true,
-     #   scale: 80
-     # }
-  extra_extensions:
-    - sphinx_proof
-    #- sphinx_multitoc_numbering
-    - sphinx_exercise
-    - sphinx_panels
-    - hoverxref.extension
+      - 'custom_proof.css'
+      - 'custom_exercise.css'
+      - 'custom_panels.css'
+      - 'custom_tippy.css'
+    tippy_enable_mathjax: true
+    tippy_tip_selector: 'figure, table, img, p, aside, div.admonition, div.literal-block-wrapper, div.math'
+    html_js_files:
+      - 'custom.js'
 
-#extra_css:
-  #- _static/custom.css
-
-#parse:
-  #myst_enable_extensions:
-    # don't forget to list any other extensions you want enabled,
-    # including those that are enabled by default!
-    #- amsmath
-
+#html:
+#  theme:
+#    options:
+#      logo:
+#        image_light: animat-black.png
+#        image_dark: animat-white.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: off
+  execute_notebooks: force
 
 # Define the name of the latex output file for PDF builds
 latex:
@@ -64,17 +65,7 @@ repository:
 
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
-html:
-  use_issues_button: true
-  use_repository_button: true
 
-#html_static_path:
-  #- _static
 
-#html_css_files:
-  #- custom.css
-
-#html_context:
-  #css_files: _static/custom.css
 
 

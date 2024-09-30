@@ -1,0 +1,1 @@
+# Grafen for en funktion

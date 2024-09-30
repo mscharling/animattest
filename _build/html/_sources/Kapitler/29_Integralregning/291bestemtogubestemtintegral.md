@@ -1,1 +1,0 @@
-# Bestemt og ubestemt integral

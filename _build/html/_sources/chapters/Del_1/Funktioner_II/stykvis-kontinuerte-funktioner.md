@@ -1,0 +1,1 @@
+# Stykvis kontinuerte funktioner

@@ -2,222 +2,315 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: forord
+root: chapters/forord
 
 #options:
   #numbered: 4
 
 parts:
-  - caption:
+  - caption: Indledning
+    numbered: false
     chapters:
-      - file: indledning
+      - file: chapters/Indledning/til-dig-som-elev
+      - file: chapters/Indledning/til-dig-som-laerer
   - caption: Del 1
     numbered: true
     chapters:
-      - file: Kapitler/1_Tal_og_algebra/1talogalgebra
+      - file: chapters/Del_1/Tal_og_algebra/tal-og-algebra
         sections:
-          - file: Kapitler/1_Tal_og_algebra/11tallene
-          - file: Kapitler/1_Tal_og_algebra/12approksimationer
-          - file: Kapitler/1_Tal_og_algebra/13regnearterne
-          - file: Kapitler/1_Tal_og_algebra/14kvadratsaetninger
-          - file: Kapitler/1_Tal_og_algebra/15faktoriseringogkvadratkomplettering
-          - file: Kapitler/1_Tal_og_algebra/16broeker
-          - file: Kapitler/1_Tal_og_algebra/17potenser
-          - file: Kapitler/1_Tal_og_algebra/18roedder
-          - file: Kapitler/1_Tal_og_algebra/19logaritmer
+          - file: chapters/Del_1/Tal_og_algebra/tallene
+          - file: chapters/Del_1/Tal_og_algebra/approksimationer
+          - file: chapters/Del_1/Tal_og_algebra/regnearterne
+          - file: chapters/Del_1/Tal_og_algebra/kvadratsaetninger
+          - file: chapters/Del_1/Tal_og_algebra/faktorisering-og-kvadratkomplettering
+          - file: chapters/Del_1/Tal_og_algebra/broeker
+          - file: chapters/Del_1/Tal_og_algebra/potenser
+          - file: chapters/Del_1/Tal_og_algebra/roedder
+          - file: chapters/Del_1/Tal_og_algebra/logaritmer
+          - file: chapters/Del_1/Tal_og_algebra/summer-og-produkter
           - file: notebooktest/test
-      - file: Kapitler/2_Maengdeteori/2maengdeteori_i
+      - file: chapters/Del_1/Maengdeteori/maengdeteori
         sections:
-          - file: Kapitler/2_Maengdeteori/21symbolerimaengdeteorien
-          - file: Kapitler/2_Maengdeteori/22talmaengder
-          - file: Kapitler/2_Maengdeteori/23maengdeoperationer
-          - file: Kapitler/2_Maengdeteori/24intervaller
-      - file: Kapitler/3_Ligninger_og_uligheder/3ligninger
+          - file: chapters/Del_1/Maengdeteori/symboler-i-maengdeteorien
+          - file: chapters/Del_1/Maengdeteori/talmaengder
+          - file: chapters/Del_1/Maengdeteori/maengdeoperationer
+          - file: chapters/Del_1/Maengdeteori/intervaller
+      - file: chapters/Del_1/Ligninger_og_uligheder/ligninger-og-uligheder
         sections:
-          - file: Kapitler/3_Ligninger_og_uligheder/31lighedogligevaegt
-          - file: Kapitler/3_Ligninger_og_uligheder/32grundmaengder
-          - file: Kapitler/3_Ligninger_og_uligheder/33enligningenubekendt
-          - file: Kapitler/3_Ligninger_og_uligheder/34toligningertoubekendte
-          - file: Kapitler/3_Ligninger_og_uligheder/35grafernesmuligheder
-          - file: Kapitler/3_Ligninger_og_uligheder/36andengradsligninger
-          - file: Kapitler/3_Ligninger_og_uligheder/37uligheder
-          - file: Kapitler/3_Ligninger_og_uligheder/38numeriskeligninger
-      - file: Kapitler/4_Klassisk_geometri/4klassiskgeometri
+          - file: chapters/Del_1/Ligninger_og_uligheder/lighed-og-ligevaegt
+          - file: chapters/Del_1/Ligninger_og_uligheder/grundmaengder
+          - file: chapters/Del_1/Ligninger_og_uligheder/en-ligning-med-en-ubekendt
+          - file: chapters/Del_1/Ligninger_og_uligheder/to-ligninger-med-to-ubekendte
+          - file: chapters/Del_1/Ligninger_og_uligheder/grafernes-muligheder
+          - file: chapters/Del_1/Ligninger_og_uligheder/andengradsligninger
+          - file: chapters/Del_1/Ligninger_og_uligheder/uligheder
+          - file: chapters/Del_1/Ligninger_og_uligheder/numeriske-ligninger
+      - file: chapters/Del_1/Klassisk_geometri/klassisk-geometri
         sections:
-          - file: Kapitler/4_Klassisk_geometri/41omkreds
-          - file: Kapitler/4_Klassisk_geometri/42areal
-          - file: Kapitler/4_Klassisk_geometri/43overfladeareal
-          - file: Kapitler/4_Klassisk_geometri/44rumfang
-      - file: Kapitler/5_Trigonometri/5trigonometri
+          - file: chapters/Del_1/Klassisk_geometri/euklid
+          - file: chapters/Del_1/Klassisk_geometri/de-tre-dimensioner
+          - file: chapters/Del_1/Klassisk_geometri/polygoner
+          - file: chapters/Del_1/Klassisk_geometri/cirklen
+          - file: chapters/Del_1/Klassisk_geometri/rumlige-figurer
+      - file: chapters/Del_1/Trigonometri/trigonometri
         sections:
-          - file: Kapitler/5_Trigonometri/51sinusogcosinus
-          - file: Kapitler/5_Trigonometri/52enhedscirklen
-          - file: Kapitler/5_Trigonometri/53tangens
-          - file: Kapitler/5_Trigonometri/54sinusrelationen
-          - file: Kapitler/5_Trigonometri/55cosinusrelationen
-          - file: Kapitler/5_Trigonometri/56arealberegning
-      - file: Kapitler/6_Analytisk_plangeometri/6analytiskplangeometri
+          - file: chapters/Del_1/Trigonometri/sinus-og-cosinus
+          - file: chapters/Del_1/Trigonometri/enhedscirklen
+          - file: chapters/Del_1/Trigonometri/tangens
+          - file: chapters/Del_1/Trigonometri/sinusrelationen
+          - file: chapters/Del_1/Trigonometri/cosinusrelationen
+          - file: chapters/Del_1/Trigonometri/arealberegning
+      - file: chapters/Del_1/Analytisk_plangeometri/analytisk-plangeometri
         sections:
-          - file: Kapitler/6_Analytisk_plangeometri/61laengdeogafstandsformlen
-          - file: Kapitler/6_Analytisk_plangeometri/62linjensligning
-          - file: Kapitler/6_Analytisk_plangeometri/63skaeringmellemtolinjer
-          - file: Kapitler/6_Analytisk_plangeometri/64vinkelmellemtolinjer
-          - file: Kapitler/6_Analytisk_plangeometri/65ortogonalelinjer
-          - file: Kapitler/6_Analytisk_plangeometri/66cirklensligning
-          - file: Kapitler/6_Analytisk_plangeometri/67cirklenoglinjer_i
-      - file: Kapitler/7_Vektorer_i_planen/7vektoreriplanet
+          - file: chapters/Del_1/Analytisk_plangeometri/laengde-og-afstandsformlen-i
+          - file: chapters/Del_1/Analytisk_plangeometri/linjens-ligning
+          - file: chapters/Del_1/Analytisk_plangeometri/skaering-mellem-to-linjer
+          - file: chapters/Del_1/Analytisk_plangeometri/vinkel-mellem-to-linjer
+          - file: chapters/Del_1/Analytisk_plangeometri/ortogonale-linjer
+          - file: chapters/Del_1/Analytisk_plangeometri/cirklens-ligning
+          - file: chapters/Del_1/Analytisk_plangeometri/cirklen-og-linjer-i
+      - file: chapters/Del_1/Vektorer_i_planen/vektorer-i-planen
         sections:
-          - file: Kapitler/7_Vektorer_i_planen/71vektorer
-          - file: Kapitler/7_Vektorer_i_planen/72laengdeogafstandsformlen
-          - file: Kapitler/7_Vektorer_i_planen/73sumvektorer
-          - file: Kapitler/7_Vektorer_i_planen/74regnearternesegenskaberforvektorer
-          - file: Kapitler/7_Vektorer_i_planen/75modsatrettedevektorer
-          - file: Kapitler/7_Vektorer_i_planen/76komposanter
-          - file: Kapitler/7_Vektorer_i_planen/77enhedsvektorer
-          - file: Kapitler/7_Vektorer_i_planen/78skalarproduktet
-          - file: Kapitler/7_Vektorer_i_planen/79vektorprojektion
-          - file: Kapitler/7_Vektorer_i_planen/710determinanter
-          - file: Kapitler/7_Vektorer_i_planen/711normalvektoreroglinjensligning
-          - file: Kapitler/7_Vektorer_i_planen/712linjensparameterfremstilling
-          - file: Kapitler/7_Vektorer_i_planen/713afstandmellempunktoglinje
-          - file: Kapitler/7_Vektorer_i_planen/714cirklenoglinjer_ii
-      - file: Kapitler/8_Funktioner_I/8funktioner_i
-      - file: Kapitler/9_Den_lineære_funktion/9denlineaerefunktion
+          - file: chapters/Del_1/Vektorer_i_planen/vektorer
+          - file: chapters/Del_1/Vektorer_i_planen/laengde-og-afstandsformlen-ii
+          - file: chapters/Del_1/Vektorer_i_planen/sum-vektorer
+          - file: chapters/Del_1/Vektorer_i_planen/regnearternes-egenskaber-for-vektorer
+          - file: chapters/Del_1/Vektorer_i_planen/modsatrettede-vektorer
+          - file: chapters/Del_1/Vektorer_i_planen/komposanter
+          - file: chapters/Del_1/Vektorer_i_planen/enhedsvektorer
+          - file: chapters/Del_1/Vektorer_i_planen/skalarproduktet
+          - file: chapters/Del_1/Vektorer_i_planen/vektorprojektion
+          - file: chapters/Del_1/Vektorer_i_planen/determinanter
+          - file: chapters/Del_1/Vektorer_i_planen/normal-vektorer-og-linjens-ligning
+          - file: chapters/Del_1/Vektorer_i_planen/linjens-parameterfremstilling
+          - file: chapters/Del_1/Vektorer_i_planen/afstand-mellem-punkt-og-linje
+          - file: chapters/Del_1/Vektorer_i_planen/cirklen-og-linjer-ii
+      - file: chapters/Del_1/Funktioner_I/funktioner-i
         sections:
-          - file: Kapitler/9_Den_lineære_funktion/91funktionsforskrift
-          - file: Kapitler/9_Den_lineære_funktion/92denkonstantefunktion
-          - file: Kapitler/9_Den_lineære_funktion/93topunkter
-          - file: Kapitler/9_Den_lineære_funktion/94proportionalitet
-      - file: Kapitler/10_Polynomier/10polynomier
+          - file: chapters/Del_1/Funktioner_I/koordinatsystemet
+          - file: chapters/Del_1/Funktioner_I/funktionsbegrebet
+          - file: chapters/Del_1/Funktioner_I/grafen-for-en-funktion
+          - file: chapters/Del_1/Funktioner_I/definitionsmaengde-og-vaerdimaengde
+          - file: chapters/Del_1/Funktioner_I/minimumspunkter-og-maksimumspunkter
+          - file: chapters/Del_1/Funktioner_I/monotoniforhold
+          - file: chapters/Del_1/Funktioner_I/parallelforskydninger-langs-akserne
+      - file: chapters/Del_1/Den_lineaere_funktion/den-lineaere-funktion
         sections:
-          - file: Kapitler/10_Polynomier/101andengradspolynomiet
-          - file: Kapitler/10_Polynomier/102parablen
-          - file: Kapitler/10_Polynomier/103ntegradspolynomiet
-          - file: Kapitler/10_Polynomier/104kurvetilpasning
-      - file: Kapitler/11_Funktioner_II/11funktioner_ii
+          - file: chapters/Del_1/Den_lineaere_funktion/funktionsforskriften
+          - file: chapters/Del_1/Den_lineaere_funktion/den-konstante-funktion
+          - file: chapters/Del_1/Den_lineaere_funktion/to-punkter
+          - file: chapters/Del_1/Den_lineaere_funktion/proportionalitet
+          - file: chapters/Del_1/Den_lineaere_funktion/stykvis-lineaer-funktion
+      - file: chapters/Del_1/Polynomier/polynomier
         sections:
-          - file: Kapitler/11_Funktioner_II/111uendelighedsbegrebet
-          - file: Kapitler/11_Funktioner_II/112graensevaerdier
-          - file: Kapitler/11_Funktioner_II/113asymptoter
-          - file: Kapitler/11_Funktioner_II/114kontinuitet
-      - file: Kapitler/12_Deskriptiv_statistik/12deskriptivstatistik
+          - file: chapters/Del_1/Polynomier/andengradspolynomiet
+          - file: chapters/Del_1/Polynomier/parablen
+          - file: chapters/Del_1/Polynomier/ntegradspolynomiet
+          - file: chapters/Del_1/Polynomier/kurvetilpasning
+      - file: chapters/Del_1/Funktioner_II/funktioner-ii
         sections:
-          - file: Kapitler/12_Deskriptiv_statistik/121grundlaeggendebegreber
-          - file: Kapitler/12_Deskriptiv_statistik/122grupperet
-          - file: Kapitler/12_Deskriptiv_statistik/123statistiskedeskriptorer
-          - file: Kapitler/12_Deskriptiv_statistik/124deskriptiveplots
-          - file: Kapitler/12_Deskriptiv_statistik/125outliers
-          - file: Kapitler/12_Deskriptiv_statistik/126estimationafpopulationen
-          - file: Kapitler/12_Deskriptiv_statistik/127bias
-      - file: Kapitler/13_Sandsynlighedsregning_I/13sandsynlighedsregning_i
+          - file: chapters/Del_1/Funktioner_II/uendelighedsbegrebet
+          - file: chapters/Del_1/Funktioner_II/graensevaerdier
+          - file: chapters/Del_1/Funktioner_II/grafers-asymptoter
+          - file: chapters/Del_1/Funktioner_II/kontinuerte-funktioner
+          - file: chapters/Del_1/Funktioner_II/stykvis-kontinuerte-funktioner
+      - file: chapters/Del_1/Deskriptiv_statistik/deskriptiv-statistik
         sections:
-          - file: Kapitler/13_Sandsynlighedsregning_I/131grundlaeggendebegreber
-          - file: Kapitler/13_Sandsynlighedsregning_I/132sandsynlighedsrum
-          - file: Kapitler/13_Sandsynlighedsregning_I/133multiplikationogadditionsprincip
-          - file: Kapitler/13_Sandsynlighedsregning_I/134fakultetsfunktionen
-          - file: Kapitler/13_Sandsynlighedsregning_I/135kombinationerogpermutationer
-          - file: Kapitler/13_Sandsynlighedsregning_I/136tilbagelaegning
+          - file: chapters/Del_1/Deskriptiv_statistik/grundlaeggende-begreber-deskriptiv-statistik
+          - file: chapters/Del_1/Deskriptiv_statistik/ugrupperede-og-grupperede-observationer
+          - file: chapters/Del_1/Deskriptiv_statistik/statistiske-deskriptorer
+          - file: chapters/Del_1/Deskriptiv_statistik/deskriptive-plots
+          - file: chapters/Del_1/Deskriptiv_statistik/outliers
+          - file: chapters/Del_1/Deskriptiv_statistik/estimation-af-populationen
+          - file: chapters/Del_1/Deskriptiv_statistik/bias
+      - file: chapters/Del_1/Sandsynlighedsregning_I/sandsynlighedsregning-i
+        sections:
+          - file: chapters/Del_1/Sandsynlighedsregning_I/grundlaeggende-begreber
+          - file: chapters/Del_1/Sandsynlighedsregning_I/sandsynlighedsrum-i
+          - file: chapters/Del_1/Sandsynlighedsregning_I/additionsprincippet-og-multiplikationsprincippet
+          - file: chapters/Del_1/Sandsynlighedsregning_I/fakultetsfunktionen
+          - file: chapters/Del_1/Sandsynlighedsregning_I/kombinationer-og-permutationer
+          - file: chapters/Del_1/Sandsynlighedsregning_I/tilbagelaegning
   - caption: Del 2
     numbered: true
     chapters:
-      - file: Kapitler/14_Potensfunktionen/14potensfunktionen
+      - file: chapters/Del_2/Potensfunktionen/potensfunktionen
         sections:
-          - file: Kapitler/14_Potensfunktionen/141potensfunktionen
-          - file: Kapitler/14_Potensfunktionen/142heltalligeeksponenter
-          - file: Kapitler/14_Potensfunktionen/143ikkeheltalligeeksponenter
-      - file: Kapitler/15_Eksponentialfunktionen/15eksponentialfunktionen
+          - file: chapters/Del_2/Potensfunktionen/funktionsforskriften
+          - file: chapters/Del_2/Potensfunktionen/heltallige-eksponenter
+          - file: chapters/Del_2/Potensfunktionen/ikke-heltallige-eksponenter
+      - file: chapters/Del_2/Eksponentialfunktionen/eksponentialfunktionen
         sections:
-          - file: Kapitler/15_Eksponentialfunktionen/151eksponentialet
-          - file: Kapitler/15_Eksponentialfunktionen/152tallete
-          - file: Kapitler/15_Eksponentialfunktionen/153logaritmefunktionen
-          - file: Kapitler/15_Eksponentialfunktionen/154dennaturligelogaritme
-          - file: Kapitler/15_Eksponentialfunktionen/155halveringsogfordoblingskonstant
-          - file: Kapitler/15_Eksponentialfunktionen/156vaekst
-      - file: Kapitler/16_Opsparing_og_annuiteter/16opsparingogannuiteter
+          - file: chapters/Del_2/Eksponentialfunktionen/funktionsforskriften
+          - file: chapters/Del_2/Eksponentialfunktionen/eksponentialet
+          - file: chapters/Del_2/Eksponentialfunktionen/tallet-e
+          - file: chapters/Del_2/Eksponentialfunktionen/logaritmefunktionen
+          - file: chapters/Del_2/Eksponentialfunktionen/den-naturlige-logaritme
+          - file: chapters/Del_2/Eksponentialfunktionen/halverings-og-fordoblingskonstant
+          - file: chapters/Del_2/Eksponentialfunktionen/vaekst
+      - file: chapters/Del_2/Opsparing_og_annuiteter/opsparing-og-annuiteter
         sections:
-          - file: Kapitler/16_Opsparing_og_annuiteter/161procentogpromille
-          - file: Kapitler/16_Opsparing_og_annuiteter/162rentesregning
-          - file: Kapitler/16_Opsparing_og_annuiteter/163opsparingsannuitet
-          - file: Kapitler/16_Opsparing_og_annuiteter/164gaeldsannuitet
-      - file: Kapitler/17_Trigonometriske_funktioner/17trigonometriskefunktioner
+          - file: chapters/Del_2/Opsparing_og_annuiteter/procent-og-promille
+          - file: chapters/Del_2/Opsparing_og_annuiteter/rentesregning
+          - file: chapters/Del_2/Opsparing_og_annuiteter/opsparingsannuitet
+          - file: chapters/Del_2/Opsparing_og_annuiteter/gaeldsannuitet
+      - file: chapters/Del_2/Trigonometriske_funktioner/trigonometriske-funktioner
         sections:
-          - file: Kapitler/17_Trigonometriske_funktioner/171sinuscosinusogtangens
-          - file: Kapitler/17_Trigonometriske_funktioner/172enhedscirklen
-          - file: Kapitler/17_Trigonometriske_funktioner/173radianerogvinkler
-          - file: Kapitler/17_Trigonometriske_funktioner/174trigonometriskegrundligninger
-          - file: Kapitler/17_Trigonometriske_funktioner/175trigonometriskeuligheder
-          - file: Kapitler/17_Trigonometriske_funktioner/176trigonometriskerelationer
-          - file: Kapitler/17_Trigonometriske_funktioner/177periodicitet
-          - file: Kapitler/17_Trigonometriske_funktioner/178harmonisksvingning
-      - file: Kapitler/18_Funktioner_III/18funktioner_iii
+          - file: chapters/Del_2/Trigonometriske_funktioner/sinus-cosinus-og-tangens-som-funktion
+          - file: chapters/Del_2/Trigonometriske_funktioner/enhedscirklen-ii
+          - file: chapters/Del_2/Trigonometriske_funktioner/radianer-og-vinkler
+          - file: chapters/Del_2/Trigonometriske_funktioner/trigonometriske-grundligninger
+          - file: chapters/Del_2/Trigonometriske_funktioner/trigonometriske-uligheder
+          - file: chapters/Del_2/Trigonometriske_funktioner/trigonometriske-relationer
+          - file: chapters/Del_2/Trigonometriske_funktioner/periodicitet
+          - file: chapters/Del_2/Trigonometriske_funktioner/harmoniske-svingninger
+      - file: chapters/Del_2/Funktioner_III/funktioner-iii
         sections:
-          - file: Kapitler/18_Funktioner_III/181sammensattefunktioner
-          - file: Kapitler/18_Funktioner_III/182omvendtefunktioner
-          - file: Kapitler/18_Funktioner_III/183injektivitet
-      - file: Kapitler/19_Differentialregning/19differentialregning_i
+          - file: chapters/Del_2/Funktioner_III/sammensatte-funktioner
+          - file: chapters/Del_2/Funktioner_III/omvendte-funktioner
+          - file: chapters/Del_2/Funktioner_III/injektivitet-surjektivitet-og-bijektivitet
+          - file: chapters/Del_2/Funktioner_III/lige-og-ulige-funktioner
+      - file: chapters/Del_2/Differentialregning/differentialregning-i
         sections:
-          - file: Kapitler/19_Differentialregning/191vaeksthastighed
-          - file: Kapitler/19_Differentialregning/192infinitesimaler
-          - file: Kapitler/19_Differentialregning/193sekantogtangent
-          - file: Kapitler/19_Differentialregning/194tretrinsreglen
-          - file: Kapitler/19_Differentialregning/195afledtefunktioner
-          - file: Kapitler/19_Differentialregning/196sumproduktogkvotientreglen
-          - file: Kapitler/19_Differentialregning/197differentiationafsammensatfunktion
-          - file: Kapitler/19_Differentialregning/198optimering
-      - file: Kapitler/20_Sandsynlighedsregning_II/20sandsynlighedsregning_ii
+          - file: chapters/Del_2/Differentialregning/vaeksthastighed-i
+          - file: chapters/Del_2/Differentialregning/infinitesimaler
+          - file: chapters/Del_2/Differentialregning/sekant-og-tangent
+          - file: chapters/Del_2/Differentialregning/tre-trinsreglen
+          - file: chapters/Del_2/Differentialregning/afledte-funktioner
+          - file: chapters/Del_2/Differentialregning/sumreglen-produktreglen-og-kvotientreglen
+          - file: chapters/Del_2/Differentialregning/differentiation-af-en-sammensat-funktion
+          - file: chapters/Del_2/Differentialregning/differentiabilitet-og-kontinuitet
+          - file: chapters/Del_2/Differentialregning/optimering
+      - file: chapters/Del_2/Sandsynlighedsregning_II/sandsynlighedsregning-ii
         sections:
-          - file: Kapitler/20_Sandsynlighedsregning_II/201stokvar
-          - file: Kapitler/20_Sandsynlighedsregning_II/202uafhaengighed
-          - file: Kapitler/20_Sandsynlighedsregning_II/203introtilintegral
-          - file: Kapitler/20_Sandsynlighedsregning_II/204sandsynlighedsfordeling
-          - file: Kapitler/20_Sandsynlighedsregning_II/205momenter
-      - file: Kapitler/21_Binomialfordelingen/21binomialfordelingen
+          - file: chapters/Del_2/Sandsynlighedsregning_II/haendelser
+          - file: chapters/Del_2/Sandsynlighedsregning_II/regneregler-for-sandsynligheder
+          - file: chapters/Del_2/Sandsynlighedsregning_II/betingede-sandsynligheder
+          - file: chapters/Del_2/Sandsynlighedsregning_II/bayes-saetning
+          - file: chapters/Del_2/Sandsynlighedsregning_II/uafhaengige-haendelser
+      - file: chapters/Del_2/Stokastiske_variabler_I/stokastiske-variabler-i
         sections:
-          - file: Kapitler/21_Binomialfordelingen/211bernoulliogbinomialforsoeg
-          - file: Kapitler/21_Binomialfordelingen/212binomialkoefficient
-          - file: Kapitler/21_Binomialfordelingen/213binomialfordelingen
-          - file: Kapitler/21_Binomialfordelingen/214binomialfordelingensmomenter
-      - file: Kapitler/22_Normalfordelingen/22normalfordelingen
+          - file: chapters/Del_2/Stokastiske_variabler_I/stokastiske-variabler
+          - file: chapters/Del_2/Stokastiske_variabler_I/variablernes-sandsynlighedsfordeling
+          - file: chapters/Del_2/Stokastiske_variabler_I/empiriske-estimatorer
+          - file: chapters/Del_2/Stokastiske_variabler_I/uafhaengighed-mellem-variabler
+      - file: chapters/Del_2/Binomialfordelingen/0binomialfordelingen
         sections:
-          - file: Kapitler/22_Normalfordelingen/221taethedsfunktion
-          - file: Kapitler/22_Normalfordelingen/222normalfordelingensparametre
-          - file: Kapitler/22_Normalfordelingen/223sandsynlighedsberegning
-          - file: Kapitler/22_Normalfordelingen/224normalfordeltdata
-          - file: Kapitler/22_Normalfordelingen/225normalfordelingensrelationtilbinomialfordelingen
-      - file: Kapitler/23_Statistiske_test/23statistiske_test
+          - file: chapters/Del_2/Binomialfordelingen/bernoulli-og-binomialforsoeg
+          - file: chapters/Del_2/Binomialfordelingen/binomialkoefficienten
+          - file: chapters/Del_2/Binomialfordelingen/binomialfordelingen
+          - file: chapters/Del_2/Binomialfordelingen/middelvaerdi-og-varians
+      - file: chapters/Del_2/Normalfordelingen/normalfordelingen
         sections:
-          - file: Kapitler/23_Statistiske_test/231stikproeveroghyptest
-          - file: Kapitler/23_Statistiske_test/232signifikansogkonfint
-          - file: Kapitler/23_Statistiske_test/233binomialtest
-          - file: Kapitler/23_Statistiske_test/234chitestgof
-          - file: Kapitler/23_Statistiske_test/235chitestuafh
-          - file: Kapitler/23_Statistiske_test/236ttest
-          - file: Kapitler/23_Statistiske_test/237korrelationogaarsagssammenhaeng
-      - file: Kapitler/24_Regression/24regression
+          - file: chapters/Del_2/Normalfordelingen/taethedsfunktionen-og-gauss-kurven
+          - file: chapters/Del_2/Normalfordelingen/normalfordelingens-parametre
+          - file: chapters/Del_2/Normalfordelingen/sandsynlighedsberegning
+          - file: chapters/Del_2/Normalfordelingen/normalfordelte-data
+          - file: chapters/Del_2/Normalfordelingen/binomialfordelingens-relation-til-normalfordelingen
+      - file: chapters/Del_2/Statistiske_test/statistiske-test
+        sections:
+          - file: chapters/Del_2/Statistiske_test/stikproever-og-hypotesetest
+          - file: chapters/Del_2/Statistiske_test/signifikans-og-konfidensintervaller
+          - file: chapters/Del_2/Statistiske_test/binomialtest
+          - file: chapters/Del_2/Statistiske_test/chi-test-for-godness-of-fit
+          - file: chapters/Del_2/Statistiske_test/chi-test-for-uafhaengighed
+          - file: chapters/Del_2/Statistiske_test/t-test-for-en-og-to-stikproever
+      - file: chapters/Del_2/Regression_I/regression-i
+        sections:
+          - file: chapters/Del_2/Regression_I/datamaessige-sammenhaenge
+          - file: chapters/Del_2/Regression_I/simpel-lineaer-regression
+          - file: chapters/Del_2/Regression_I/residualer
+          - file: chapters/Del_2/Regression_I/forklaringsgrad-i
+          - file: chapters/Del_2/Regression_I/simpel-ikke-lineaer-regression
+          - file: chapters/Del_2/Regression_I/logistisk-regression
+          - file: chapters/Del_2/Regression_I/matematisk-modellering-i
   - caption: Del 3
     numbered: true
     chapters:
-      - file: Kapitler/25_Ikke-euklidisk_geometri/25ikkeeuklidisk
-      - file: Kapitler/26_Vektorer_i_rummet/26vektorirummet
-      - file: Kapitler/27_Vektorfunktioner/27vektorfunktioner
-      - file: Kapitler/28_Differentialregning_II/28differentialregning_ii
+      - file: chapters/Del_3/Ikke-euklidisk_geometri/ikke-euklidisk-geometri
         sections:
-          - file: Kapitler/28_Differentialregning_II/281implicitdifferentiation
-          - file: Kapitler/28_Differentialregning_II/282skraavendetangenter
-          - file: Kapitler/28_Differentialregning_II/283konveksitetogkonkavitet
-      - file: Kapitler/29_Integralregning/29integralregning
+          - file: chapters/Del_3/Ikke-euklidisk_geometri/euklids-femte-postulat
+          - file: chapters/Del_3/Ikke-euklidisk_geometri/elliptisk-geometri
+          - file: chapters/Del_3/Ikke-euklidisk_geometri/hyperbolsk-geometri
+      - file: chapters/Del_3/Vektorer_i_rummet/vektorer-i-rummet
         sections:
-          - file: Kapitler/29_Integralregning/291bestemtogubestemtintegral
-          - file: Kapitler/29_Integralregning/292stamfunktioner
-          - file: Kapitler/29_Integralregning/293regnereglerforintegraler
-          - file: Kapitler/29_Integralregning/294integrationvedsubstitution
-          - file: Kapitler/29_Integralregning/295partielintegration
-          - file: Kapitler/29_Integralregning/296arealberegning
-          - file: Kapitler/29_Integralregning/297rotationslegemer
-      - file: Kapitler/30_Funktioner_af_to_variable/30funktioneritovar
-      - file: Kapitler/31_Differentialligninger/31diffligninger
+          - file: chapters/Del_3/Vektorer_i_rummet/rummets-koordinatsystem
+          - file: chapters/Del_3/Vektorer_i_rummet/tre-dimensionelle-vektorer
+          - file: chapters/Del_3/Vektorer_i_rummet/den-euklidiske-norm
+          - file: chapters/Del_3/Vektorer_i_rummet/regneregler
+          - file: chapters/Del_3/Vektorer_i_rummet/krydsproduktet
+          - file: chapters/Del_3/Vektorer_i_rummet/linjer-i-rummet
+          - file: chapters/Del_3/Vektorer_i_rummet/planer-i-rummet
+          - file: chapters/Del_3/Vektorer_i_rummet/planens-ligning
+          - file: chapters/Del_3/Vektorer_i_rummet/planens-parameterfremstilling
+      - file: chapters/Del_3/Vektorfunktioner/vektorfunktioner
+        sections:
+          - file: chapters/Del_3/Vektorfunktioner/hvorfor-vektorfunktioner
+          - file: chapters/Del_3/Vektorfunktioner/parameterfremstillingen
+          - file: chapters/Del_3/Vektorfunktioner/skaering-med-akserne
+          - file: chapters/Del_3/Vektorfunktioner/differentiation-af-en-vektorfunktion
+          - file: chapters/Del_3/Vektorfunktioner/lodrette-og-vandrette-tangenter
+          - file: chapters/Del_3/Vektorfunktioner/afstand-mellem-kurve-og-punkt
+          - file: chapters/Del_3/Vektorfunktioner/fra-vektorfunktion-til-almindelig-funktion
+          - file: chapters/Del_3/Vektorfunktioner/kurvelaengde
+          - file: chapters/Del_3/Vektorfunktioner/banekurve-hastighedsvektor-og-accelerationsvektor
+      - file: chapters/Del_3/Differentialregning_II/differentialregning-ii
+        sections:
+          - file: chapters/Del_3/Differentialregning_II/implicit-differentiation
+          - file: chapters/Del_3/Differentialregning_II/dobbeldifferentiation
+          - file: chapters/Del_3/Differentialregning_II/skraa-vendetangenter
+          - file: chapters/Del_3/Differentialregning_II/konveksitet-og-konkavitet
+      - file: chapters/Del_3/Integralregning/integralregning
+        sections:
+          - file: chapters/Del_3/Integralregning/bestemte-og-ubestemte-integraler
+          - file: chapters/Del_3/Integralregning/stamfunktioner
+          - file: chapters/Del_3/Integralregning/regneregler-for-integraler
+          - file: chapters/Del_3/Integralregning/integration-ved-substitution
+          - file: chapters/Del_3/Integralregning/partiel-integration
+          - file: chapters/Del_3/Integralregning/arealberegning
+          - file: chapters/Del_3/Integralregning/rotationslegemer
+          - file: chapters/Del_3/Integralregning/kurvelaengde
+      - file: chapters/Del_3/Funktioner_af_to_variabler/funktioner-af-to-variabler
+        sections:
+          - file: chapters/Del_3/Funktioner_af_to_variabler/grafer-i-rummet
+          - file: chapters/Del_3/Funktioner_af_to_variabler/snitfunktioner-og-snitkurver
+          - file: chapters/Del_3/Funktioner_af_to_variabler/niveaukurver
+          - file: chapters/Del_3/Funktioner_af_to_variabler/partielle-afledede
+          - file: chapters/Del_3/Funktioner_af_to_variabler/gradienten
+          - file: chapters/Del_3/Funktioner_af_to_variabler/tangentplan
+          - file: chapters/Del_3/Funktioner_af_to_variabler/stationaere-punkter
+          - file: chapters/Del_3/Funktioner_af_to_variabler/hesse-matricen
+      - file: chapters/Del_3/Differentialligninger/differentialligninger
+        sections:
+          - file: chapters/Del_3/Differentialligninger/hvorfor-differentialligninger
+          - file: chapters/Del_3/Differentialligninger/partikulaere-og-fuldstaendige-loesninger
+          - file: chapters/Del_3/Differentialligninger/at-goere-proeve
+          - file: chapters/Del_3/Differentialligninger/tangent-og-haeldningsfelter
+          - file: chapters/Del_3/Differentialligninger/vaeksthastighed-ii
+          - file: chapters/Del_3/Differentialligninger/linjeelementer
+          - file: chapters/Del_3/Differentialligninger/separable-differentialligninger
+          - file: chapters/Del_3/Differentialligninger/lineaere-foerste-ordens-differentialligninger
+          - file: chapters/Del_3/Differentialligninger/anden-ordens-differentialligninger
+          - file: chapters/Del_3/Differentialligninger/numeriske-loesningsmetoder
+      - file: chapters/Del_3/Stokastiske_variabler_II/stokastiske-variabler-ii
+        sections:
+          - file: chapters/Del_3/Stokastiske_variabler_II/et-abstrakt-begreb
+          - file: chapters/Del_3/Stokastiske_variabler_II/kontinuerte-og-diskrete-sandsynlighedsfordelinger
+          - file: chapters/Del_3/Stokastiske_variabler_II/sandsynlighedsrum-ii
+          - file: chapters/Del_3/Stokastiske_variabler_II/momenter
+          - file: chapters/Del_3/Stokastiske_variabler_II/introtilintegral
+      - file: chapters/Del_3/Regression_II/regression-ii
+        sections:
+          - file: chapters/Del_3/Regression_II/korrelationskoefficienten
+          - file: chapters/Del_3/Regression_II/forklaringsgrad-ii
+          - file: chapters/Del_3/Regression_II/mindste-kvadraters-metode
+          - file: chapters/Del_3/Regression_II/tabsfunktioner
+          - file: chapters/Del_3/Regression_II/multipel-lineaer-regression
+          - file: chapters/Del_3/Regression_II/parametrenes-konfidensintervaller
+          - file: chapters/Del_3/Regression_II/matematisk-modellering-ii
+          - file: chapters/Del_3/Regression_II/korrelation-og-kausalitet
   - caption: Værktøjer
     numbered: false
     chapters:
-      - file: symboler
-      - file: hoverrefs
+      - file: chapters/Vaerktoejer/symboler
+      - file: chapters/Vaerktoejer/gloser

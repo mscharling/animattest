@@ -1,0 +1,3 @@
+# Regneregler for sandsynligheder
+
+

@@ -12,7 +12,6 @@
   --caution-border-color: #fd7e14;
   --grey-title-color: rgba(204,204,204,.2);
   --grey-border-color: #ccc;
-  --black-border-color: #000;
 }
 
 /*********************************************
@@ -20,11 +19,8 @@
 *********************************************/
 
 /* Remove content box */
-div.proof .admonition-title::before {
-    content: none;
-}
-div.proof .admonition-title::after {
-    content: none;
+div.proof p.admonition-title::before {
+	content: none;
 }
 
 /*********************************************
@@ -287,7 +283,7 @@ div#bevis{
 }
 
 /*********************************************
-* Korollary *
+* Korollar *
 *********************************************/
 div.korollar {
 	border-color: var(--caution-border-color);

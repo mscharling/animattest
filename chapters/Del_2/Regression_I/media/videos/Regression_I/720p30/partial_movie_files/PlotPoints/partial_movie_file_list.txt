@@ -1,0 +1,7 @@
+# This file is used internally by FFMPEG.
+file 'file:C:/Users/ms/Documents/Zedus Company/matakademiet/jupyter/animat/chapters/Del_2/Regression_I/media/videos/Regression_I/720p30/partial_movie_files/PlotPoints/151669302_1310482374_223132457.mp4'
+file 'file:C:/Users/ms/Documents/Zedus Company/matakademiet/jupyter/animat/chapters/Del_2/Regression_I/media/videos/Regression_I/720p30/partial_movie_files/PlotPoints/1959534363_1272636010_3115735206.mp4'
+file 'file:C:/Users/ms/Documents/Zedus Company/matakademiet/jupyter/animat/chapters/Del_2/Regression_I/media/videos/Regression_I/720p30/partial_movie_files/PlotPoints/1959534363_3941392960_3199464093.mp4'
+file 'file:C:/Users/ms/Documents/Zedus Company/matakademiet/jupyter/animat/chapters/Del_2/Regression_I/media/videos/Regression_I/720p30/partial_movie_files/PlotPoints/1959534363_2303905056_4227516557.mp4'
+file 'file:C:/Users/ms/Documents/Zedus Company/matakademiet/jupyter/animat/chapters/Del_2/Regression_I/media/videos/Regression_I/720p30/partial_movie_files/PlotPoints/1959534363_967097962_3912604229.mp4'
+file 'file:C:/Users/ms/Documents/Zedus Company/matakademiet/jupyter/animat/chapters/Del_2/Regression_I/media/videos/Regression_I/720p30/partial_movie_files/PlotPoints/1959534363_21501459_1082973903.mp4'

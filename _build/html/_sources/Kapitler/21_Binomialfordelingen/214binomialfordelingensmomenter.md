@@ -1,1 +1,0 @@
-# Binomialfordelingens momenter

@@ -1,0 +1,1 @@
+# Snitfunktioner og snitkurver
