@@ -1,0 +1,49 @@
+/*********************************************
+* Variables *
+*********************************************/
+:root {
+  --exercise-title-color: rgba(201,181,2,.2);
+  --exercise-border-color: #c9b502;
+  --grey-border-color: #ccc;
+  --black-border-color: #000;
+}
+
+/*********************************************
+* Exercise *
+*********************************************/
+div.exercise {
+  border-color: var(--exercise-border-color);
+  background-color: var(--exercise-title-color);
+}
+
+div.exercise p.admonition-title {
+  background-color: var(--exercise-title-color);
+}
+
+/* Remove content box */
+div.exercise p.admonition-title::before {
+  content: none;
+  color: var(--black-border-color);
+}
+div.exercise p.admonition-title::after {
+  content: none;
+  color: var(--black-border-color);
+}
+
+/*********************************************
+* Solution *
+*********************************************/
+div.solution{
+  border-color: var(--grey-border-color);
+  background-color: none;
+}
+
+div.solution p.admonition-title {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+/* Remove content box */
+div.solution p.admonition-title::before {
+  content: none;
+}

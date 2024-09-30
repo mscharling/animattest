@@ -1,0 +1,1 @@
+# Partikulære og fuldstændige løsninger

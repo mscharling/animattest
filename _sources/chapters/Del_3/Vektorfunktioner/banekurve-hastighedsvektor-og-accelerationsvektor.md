@@ -1,0 +1,1 @@
+# Banekurve, hastighedsvektor og accelerationsvektor

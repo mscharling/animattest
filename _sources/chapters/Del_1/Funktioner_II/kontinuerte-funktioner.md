@@ -1,0 +1,1 @@
+# Kontinuerte funktioner

@@ -1,0 +1,1 @@
+# Stationære punkter
