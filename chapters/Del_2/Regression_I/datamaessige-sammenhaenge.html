@@ -93,7 +93,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <script defer="defer" src="https://unpkg.com/@popperjs/core@2"></script>
     <script defer="defer" src="https://unpkg.com/tippy.js@6"></script>
-    <script defer="defer" src="../../../_static/tippy\chapters\Del_2\Regression_I\datamaessige-sammenhaenge.0aacf8d8-74ee-409a-bffa-8fbfa01c37ef.js"></script>
+    <script defer="defer" src="../../../_static/tippy\chapters\Del_2\Regression_I\datamaessige-sammenhaenge.8f7540e8-2aa0-4d4f-9113-4b00f3977855.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/Del_2/Regression_I/datamaessige-sammenhaenge';</script>
@@ -428,9 +428,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="simpel-lineaer-regression.html">25.2. Simpel lineær regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="residualer.html">25.3. Residualer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="forklaringsgrad-i.html">25.4. Forklaringsgrad I</a></li>
-<li class="toctree-l2"><a class="reference internal" href="simpel-ikke-lineaer-regression.html">25.5. Simpel ikke-lineær regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="logistisk-regression.html">25.6. Logistisk regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="matematisk-modellering-i.html">25.7. Matematisk modellering I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tid-som-forklarende-variabel.html">25.5. Tid som forklarende variabel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simpel-ikke-lineaer-regression.html">25.6. Simpel ikke-lineær regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logistisk-regression.html">25.7. Logistisk regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matematisk-modellering-i.html">25.8. Matematisk modellering I</a></li>
 </ul>
 </li>
 </ul>
@@ -524,8 +525,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../Del_3/Regression_II/tabsfunktioner.html">34.5. Tabsfunktioner</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Del_3/Regression_II/multipel-lineaer-regression.html">34.6. Multiple lineær regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Del_3/Regression_II/parametrenes-konfidensintervaller.html">34.7. Parametrenes konfidensintervaller</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Regression_II/matematisk-modellering-ii.html">34.8. Matematisk modellering II</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Regression_II/korrelation-og-kausalitet.html">34.9. Korrelation og kausalitet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Regression_II/korrelation-og-kausalitet.html">34.8. Korrelation og kausalitet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Regression_II/matematisk-modellering-ii.html">34.9. Matematisk modellering II</a></li>
 </ul>
 </li>
 </ul>
@@ -712,7 +713,7 @@ document.write(`
 </table>
 <p>Vi lader nu Højde i cm være variablen langs <span class="math notranslate nohighlight">\(x\)</span>-aksen og Skostørrelse være variablen langs <span class="math notranslate nohighlight">\(y\)</span>-aksen.</p>
 <figure class="align-default">
-<img alt="../../../_images/e47eb10edf7e204f4e2f0d92ba596c1627779bb7270ab27e0dc46f67f63d2dff.png" src="../../../_images/e47eb10edf7e204f4e2f0d92ba596c1627779bb7270ab27e0dc46f67f63d2dff.png" />
+<img alt="../../../_images/189b6b2f32221091d10ecd4f57a1e12a14e58a406c7a034b1c7b0ec8571c0e50.png" src="../../../_images/189b6b2f32221091d10ecd4f57a1e12a14e58a406c7a034b1c7b0ec8571c0e50.png" />
 </figure>
 <p>Af scatterplottet bliver det tydeligt, at der er en tendens: Elever, der er højere, bruger også større sko.</p>
 </section>
@@ -720,10 +721,10 @@ document.write(`
 </section>
 <section id="korrelationskoefficienten-i">
 <span id="ch-korrelationskoefficienten-i"></span><h2><span class="section-number">25.1.2. </span>Korrelationskoefficienten I<a class="headerlink" href="#korrelationskoefficienten-i" title="Permalink til denne overskrift">#</a></h2>
-<p>Sammenhæng i vores data kan også kvantificeres gennem korrelation. Korrelationskoefficienten er et tal, der siger noget om, hvordan den ene variabel opfører sig i forhold til den anden variabel. Tallet benævnes ofte med det græske bogstav <span class="math notranslate nohighlight">\(\rho\)</span> (udtales »rho«).</p>
+<p>Sammenhæng i vores data kan også <a class="reference internal" href="../../Vaerktoejer/gloser.html#term-kvantificere"><span class="xref std std-term">kvantificere</span></a>s gennem korrelation. Korrelationskoefficienten er et tal, der siger noget om, hvordan den ene variabel opfører sig i forhold til den anden variabel. Tallet benævnes ofte med det græske bogstav <span class="math notranslate nohighlight">\(\rho\)</span> (udtales »rho«).</p>
 <p>I vores eksempel fra før havde vi, at når den ene variabel var større, så var den anden variabel også større. Vi siger, at de to variabler er <em>positivt korrelerede</em>. Det modsatte tilfælde kan du også støde på. Når en variabel bliver mindre, mens den anden variabel bliver større, så er de to variabler <em>negativt korrelerede</em>. Hvis to variabler udvikler uden en tendens med hinanden, så vil de to variabler være <em>ukorrelerede</em>.</p>
 <p>Korrelationskoefficienten <span class="math notranslate nohighlight">\(\rho\)</span> forsøger at kvantificere dette. Koefficienten kan være et tal mellem -1 og 1, altså <span class="math notranslate nohighlight">\(\rho\in[-1,1]\)</span>. Det er en størrelse, som dit CAS-værktøj kan regne for dig.</p>
-<div class="proof eksempel admonition" id="hoejde-og-skostoerrelse-korrelation">
+<div class="proof eksempel admonition" id="positiv-korrelation">
 <p class="admonition-title"><span class="caption-number">Eksempel 25.2 </span></p>
 <section class="eksempel-content" id="proof-content">
 <p>Lad os også prøve at regne korrelationskoefficienten for vores indsamlet data fra <a class="reference internal" href="#hoejde-og-skostoerrelse-scatter">Eksempel 25.1</a>.</p>
@@ -739,18 +740,53 @@ document.write(`
 <div class="math notranslate nohighlight">
 \[    \rho = \text{Corr}(X,Y),\]</div>
 <p>hvor <span class="math notranslate nohighlight">\(\text{Corr}\)</span> står for »correlation«, det engelske for korrelation. For denne størrelse har vi følgende tommelfingerregler: Opfylder korrelationskoefficienten at…</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\rho = 1\)</span>, da er <span class="math notranslate nohighlight">\(X\)</span> og <span class="math notranslate nohighlight">\(Y\)</span> perfekt positivt korrelerede.</p></li>
-<li><p><span class="math notranslate nohighlight">\(0{,}8 \leq \rho &lt; 1\)</span>, da er <span class="math notranslate nohighlight">\(X\)</span> og <span class="math notranslate nohighlight">\(Y\)</span> meget positivt korrelerede.</p></li>
-<li><p><span class="math notranslate nohighlight">\(0{,}5 \leq \rho &lt; 0{,}8\)</span>, da er <span class="math notranslate nohighlight">\(X\)</span> og <span class="math notranslate nohighlight">\(Y\)</span> moderat positivt korrelerede.</p></li>
-<li><p><span class="math notranslate nohighlight">\(0{,}2 \leq \rho &lt; 0{,}5\)</span>, da er <span class="math notranslate nohighlight">\(X\)</span> og <span class="math notranslate nohighlight">\(Y\)</span> svagt positivt korrelerede.</p></li>
-<li><p><span class="math notranslate nohighlight">\(-0{,}2 &lt; \rho &lt; 0{,}2\)</span>, da er <span class="math notranslate nohighlight">\(X\)</span> og <span class="math notranslate nohighlight">\(Y\)</span> ukorrelerede.</p></li>
-<li><p><span class="math notranslate nohighlight">\(-0{,}5 &lt; \rho \leq 0{,}2\)</span>, da er <span class="math notranslate nohighlight">\(X\)</span> og <span class="math notranslate nohighlight">\(Y\)</span> svagt negativt korrelerede.</p></li>
-<li><p><span class="math notranslate nohighlight">\(-0{,}8 &lt; \rho \leq 0{,}5\)</span>, da er <span class="math notranslate nohighlight">\(X\)</span> og <span class="math notranslate nohighlight">\(Y\)</span> moderat negativt korrelerede.</p></li>
-<li><p><span class="math notranslate nohighlight">\(-1 &lt; \rho \leq 0{,}8\)</span>, da er <span class="math notranslate nohighlight">\(X\)</span> og <span class="math notranslate nohighlight">\(Y\)</span> meget negativt korrelerede.</p></li>
-<li><p><span class="math notranslate nohighlight">\(\rho = -1\)</span>, da er <span class="math notranslate nohighlight">\(X\)</span> og <span class="math notranslate nohighlight">\(Y\)</span> perfekt negativt korrelerede.</p></li>
-</ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Korrelationskoefficient</p></th>
+<th class="head"><p>Grad af korrelation mellem <span class="math notranslate nohighlight">\(X\)</span> og <span class="math notranslate nohighlight">\(Y\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\rho = 1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(X\)</span> og <span class="math notranslate nohighlight">\(Y\)</span> er perfekt korrelerede.</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(0{,}8 \leq \rho &lt; 1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(X\)</span> og <span class="math notranslate nohighlight">\(Y\)</span> er meget positivt korrelerede.</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(0{,}5 \leq \rho &lt; 0{,}8\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(X\)</span> og <span class="math notranslate nohighlight">\(Y\)</span> er moderat positivt korrelerede.</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(0{,}2 \leq \rho &lt; 0{,}5\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(X\)</span> og <span class="math notranslate nohighlight">\(Y\)</span> er svagt positivt korrelerede.</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(-0{,}2 &lt; \rho &lt; 0{,}2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(X\)</span> og <span class="math notranslate nohighlight">\(Y\)</span> er ukorrelerede.</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(-0{,}5 &lt; \rho \leq 0{,}2\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(X\)</span> og <span class="math notranslate nohighlight">\(Y\)</span> er svagt negativt korrelerede.</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(-0{,}8 &lt; \rho \leq 0{,}5\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(X\)</span> og <span class="math notranslate nohighlight">\(Y\)</span> er moderat negativt korrelerede.</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(-1 &lt; \rho \leq 0{,}8\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(X\)</span> og <span class="math notranslate nohighlight">\(Y\)</span> er meget negativt korrelerede.</p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\rho = -1\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(X\)</span> og <span class="math notranslate nohighlight">\(Y\)</span> er perfekt negativt korrelerede.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="proof eksempel admonition" id="negativ-korrelation">
+<p class="admonition-title"><span class="caption-number">Eksempel 25.3 </span></p>
+<section class="eksempel-content" id="proof-content">
+<p>Negativ korrelation</p>
+</section>
+</div><div class="proof eksempel admonition" id="ingen-korrelation">
+<p class="admonition-title"><span class="caption-number">Eksempel 25.4 </span></p>
+<section class="eksempel-content" id="proof-content">
+<p>Ingen korrelation (kan godt være men meget støj?)</p>
+</section>
+</div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </section>

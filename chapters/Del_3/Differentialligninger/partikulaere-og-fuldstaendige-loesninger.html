@@ -93,7 +93,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <script defer="defer" src="https://unpkg.com/@popperjs/core@2"></script>
     <script defer="defer" src="https://unpkg.com/tippy.js@6"></script>
-    <script defer="defer" src="../../../_static/tippy\chapters\Del_3\Differentialligninger\partikulaere-og-fuldstaendige-loesninger.8c92ee1a-6028-4df2-9d9c-a71c3b0b66d2.js"></script>
+    <script defer="defer" src="../../../_static/tippy\chapters\Del_3\Differentialligninger\partikulaere-og-fuldstaendige-loesninger.e612b53c-8526-4b6f-9093-7a3aa28f513b.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/Del_3/Differentialligninger/partikulaere-og-fuldstaendige-loesninger';</script>
@@ -428,9 +428,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/simpel-lineaer-regression.html">25.2. Simpel lineær regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/residualer.html">25.3. Residualer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/forklaringsgrad-i.html">25.4. Forklaringsgrad I</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/simpel-ikke-lineaer-regression.html">25.5. Simpel ikke-lineær regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/logistisk-regression.html">25.6. Logistisk regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/matematisk-modellering-i.html">25.7. Matematisk modellering I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/tid-som-forklarende-variabel.html">25.5. Tid som forklarende variabel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/simpel-ikke-lineaer-regression.html">25.6. Simpel ikke-lineær regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/logistisk-regression.html">25.7. Logistisk regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/matematisk-modellering-i.html">25.8. Matematisk modellering I</a></li>
 </ul>
 </li>
 </ul>
@@ -524,8 +525,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Regression_II/tabsfunktioner.html">34.5. Tabsfunktioner</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Regression_II/multipel-lineaer-regression.html">34.6. Multiple lineær regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Regression_II/parametrenes-konfidensintervaller.html">34.7. Parametrenes konfidensintervaller</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Regression_II/matematisk-modellering-ii.html">34.8. Matematisk modellering II</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Regression_II/korrelation-og-kausalitet.html">34.9. Korrelation og kausalitet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Regression_II/korrelation-og-kausalitet.html">34.8. Korrelation og kausalitet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Regression_II/matematisk-modellering-ii.html">34.9. Matematisk modellering II</a></li>
 </ul>
 </li>
 </ul>
@@ -637,6 +638,10 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="partikulaere-og-fuldstaendige-losninger">
 <h1><span class="section-number">32.2. </span>Partikulære og fuldstændige løsninger<a class="headerlink" href="#partikulaere-og-fuldstaendige-losninger" title="Permalink til denne overskrift">#</a></h1>
+<p>Når vi løser differentialligninger, kan det være under givne <em>bibetingelser</em>. En bibetingelse er noget, som funktionen også skal opfylde, når vi finder funktionen, der løser differentialligningen. Et eksempel kunne være, at funktionen skal skære <span class="math notranslate nohighlight">\(y\)</span>-aksen i et bestemt punkt.</p>
+<p>Løser vi en differentialligning uden at tage hensyn til bibetingelser, får vi en familie af funktioner, der alle kan opfylde differentialligningen. Denne kalder vi den <em>fuldstændige løsning</em>. Når vi derimod tilføjer bibetingelser og bruger dem til at finde én specifik funktion i denne familie, kalder vi det en <em>partikulær løsning</em>.</p>
+<p>Du kan sammenligne det med integralregning: Når vi finder samtlige stamfunktioner til en funktion, lægger vi en vilkårlig konstant <span class="math notranslate nohighlight">\(k\)</span> til. Men hvis vi for eksempel kender en bestemt værdi, som funktionen skal have i et givet punkt, kan vi finde den præcise stamfunktion, der opfylder denne betingelse – altså en specifik løsning.</p>
+<p>Lad os kigge på et eksempel:</p>
 </section>
 
     <script type="text/x-thebe-config">

@@ -93,7 +93,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <script defer="defer" src="https://unpkg.com/@popperjs/core@2"></script>
     <script defer="defer" src="https://unpkg.com/tippy.js@6"></script>
-    <script defer="defer" src="../../../_static/tippy\chapters\Del_3\Regression_II\korrelationskoefficienten.6358ce55-9cc5-48ee-96f2-02204f1eaae0.js"></script>
+    <script defer="defer" src="../../../_static/tippy\chapters\Del_3\Regression_II\korrelationskoefficienten.1b0d2a23-5e1c-444b-bbcb-61b26710d375.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/Del_3/Regression_II/korrelationskoefficienten';</script>
@@ -428,9 +428,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/simpel-lineaer-regression.html">25.2. Simpel lineær regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/residualer.html">25.3. Residualer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/forklaringsgrad-i.html">25.4. Forklaringsgrad I</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/simpel-ikke-lineaer-regression.html">25.5. Simpel ikke-lineær regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/logistisk-regression.html">25.6. Logistisk regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/matematisk-modellering-i.html">25.7. Matematisk modellering I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/tid-som-forklarende-variabel.html">25.5. Tid som forklarende variabel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/simpel-ikke-lineaer-regression.html">25.6. Simpel ikke-lineær regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/logistisk-regression.html">25.7. Logistisk regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/matematisk-modellering-i.html">25.8. Matematisk modellering I</a></li>
 </ul>
 </li>
 </ul>
@@ -524,8 +525,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="tabsfunktioner.html">34.5. Tabsfunktioner</a></li>
 <li class="toctree-l2"><a class="reference internal" href="multipel-lineaer-regression.html">34.6. Multiple lineær regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="parametrenes-konfidensintervaller.html">34.7. Parametrenes konfidensintervaller</a></li>
-<li class="toctree-l2"><a class="reference internal" href="matematisk-modellering-ii.html">34.8. Matematisk modellering II</a></li>
-<li class="toctree-l2"><a class="reference internal" href="korrelation-og-kausalitet.html">34.9. Korrelation og kausalitet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="korrelation-og-kausalitet.html">34.8. Korrelation og kausalitet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matematisk-modellering-ii.html">34.9. Matematisk modellering II</a></li>
 </ul>
 </li>
 </ul>
@@ -669,7 +670,7 @@ document.write(`
 <p>Den sande korrelation mellem de to variabler er altså bestemt af momenterne for de underliggende fordelinger.</p>
 <section id="estimation-af-korrelationskoefficient">
 <h2><span class="section-number">34.2.1. </span>Estimation af korrelationskoefficient<a class="headerlink" href="#estimation-af-korrelationskoefficient" title="Permalink til denne overskrift">#</a></h2>
-<p>Som vi lærte i Kapitel ??.?, så kan vi estimere vores momenter for stokastiske variabler empirisk.</p>
+<p>Som vi lærte i Kapitel ??.?, så kan vi estimere vores momenter for stokastiske variabler <a class="reference internal" href="../../Vaerktoejer/gloser.html#term-empirisk"><span class="xref std std-term">empirisk</span></a>.</p>
 <p>Lad <span class="math notranslate nohighlight">\(x_1,x_2,\dots,x_n\)</span> være realiserede observationer fra en stokastisk variabel <span class="math notranslate nohighlight">\(X\)</span>. Da har vi følgende estimatorer for momenterne for <span class="math notranslate nohighlight">\(X\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq-foerste-moment-est">
 <span class="eqno">(34.4)<a class="headerlink" href="#equation-eq-foerste-moment-est" title="Permalink til denne ligning">#</a></span>\[    \mathbb{E}[X]:\qquad \bar{x} = \frac{1}{n}\sum_{i=1}^n x_i,\]</div>

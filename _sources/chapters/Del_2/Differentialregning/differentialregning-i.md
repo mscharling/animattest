@@ -1,3 +1,4 @@
+(ch-differentialregning-i)=
 # Differentialregning I
 
 En meget vigtig disciplin inden for matematikken er differentialregningen. Differentialregning går ud på at undersøge, hvor hurtigt en funktion vokser eller aftager i et bestemt punkt. Det bruges især til funktionsanalyse. Her er vi interesseret i at sige noget om en funktions udvikling, som indebærer

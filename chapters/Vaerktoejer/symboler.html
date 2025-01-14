@@ -93,14 +93,14 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script defer="defer" src="https://unpkg.com/@popperjs/core@2"></script>
     <script defer="defer" src="https://unpkg.com/tippy.js@6"></script>
-    <script defer="defer" src="../../_static/tippy\chapters\Vaerktoejer\symboler.0092f6b9-701d-4b47-bc50-18bff0b1e624.js"></script>
+    <script defer="defer" src="../../_static/tippy\chapters\Vaerktoejer\symboler.0855a63b-0c99-464f-ae3a-578a19c8e85d.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/Vaerktoejer/symboler';</script>
     <link rel="index" title="Indeks" href="../../genindex.html" />
     <link rel="search" title="Søg" href="../../search.html" />
     <link rel="next" title="Gloser" href="gloser.html" />
-    <link rel="prev" title="34.9. Korrelation og kausalitet" href="../Del_3/Regression_II/korrelation-og-kausalitet.html" />
+    <link rel="prev" title="34.9. Matematisk modellering II" href="../Del_3/Regression_II/matematisk-modellering-ii.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="da"/>
   </head>
@@ -428,9 +428,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Del_2/Regression_I/simpel-lineaer-regression.html">25.2. Simpel lineær regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Del_2/Regression_I/residualer.html">25.3. Residualer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Del_2/Regression_I/forklaringsgrad-i.html">25.4. Forklaringsgrad I</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Del_2/Regression_I/simpel-ikke-lineaer-regression.html">25.5. Simpel ikke-lineær regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Del_2/Regression_I/logistisk-regression.html">25.6. Logistisk regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Del_2/Regression_I/matematisk-modellering-i.html">25.7. Matematisk modellering I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Del_2/Regression_I/tid-som-forklarende-variabel.html">25.5. Tid som forklarende variabel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Del_2/Regression_I/simpel-ikke-lineaer-regression.html">25.6. Simpel ikke-lineær regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Del_2/Regression_I/logistisk-regression.html">25.7. Logistisk regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Del_2/Regression_I/matematisk-modellering-i.html">25.8. Matematisk modellering I</a></li>
 </ul>
 </li>
 </ul>
@@ -524,8 +525,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Del_3/Regression_II/tabsfunktioner.html">34.5. Tabsfunktioner</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Del_3/Regression_II/multipel-lineaer-regression.html">34.6. Multiple lineær regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Del_3/Regression_II/parametrenes-konfidensintervaller.html">34.7. Parametrenes konfidensintervaller</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Del_3/Regression_II/matematisk-modellering-ii.html">34.8. Matematisk modellering II</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Del_3/Regression_II/korrelation-og-kausalitet.html">34.9. Korrelation og kausalitet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Del_3/Regression_II/korrelation-og-kausalitet.html">34.8. Korrelation og kausalitet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Del_3/Regression_II/matematisk-modellering-ii.html">34.9. Matematisk modellering II</a></li>
 </ul>
 </li>
 </ul>
@@ -610,9 +611,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -628,16 +627,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Indhold </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tal-og-algebra">Tal og algebra</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maengdeteori-i">Mængdeteori I</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ligninger-og-uligheder">Ligninger og uligheder</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -650,8 +639,6 @@ document.write(`
   <section class="tex2jax_ignore mathjax_ignore" id="symboler">
 <h1>Symboler<a class="headerlink" href="#symboler" title="Permalink til denne overskrift">#</a></h1>
 <p>Nedenfor finder du en liste over samtlige symboler tilknyttet de forskellige emner.</p>
-<section id="tal-og-algebra">
-<h2>Tal og algebra<a class="headerlink" href="#tal-og-algebra" title="Permalink til denne overskrift">#</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Symbol</p></th>
@@ -694,7 +681,7 @@ document.write(`
 </tr>
 <tr class="row-even"><td><p><span class="math notranslate nohighlight">\(a^n\)</span></p></td>
 <td><p><span class="math notranslate nohighlight">\(n\)</span>’te potens. Det at gange et tal med sig selv <span class="math notranslate nohighlight">\(n\)</span> gange.</p></td>
-<td><p></p></td>
+<td><p><span class="math notranslate nohighlight">\(10^4\)</span> = 10\cdot 10\cdot 10 \cdot 10</p></td>
 </tr>
 <tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\sqrt{a}\)</span></p></td>
 <td><p>Kvadratroden. Det at tage den anden rod af et tal.</p></td>
@@ -708,19 +695,38 @@ document.write(`
 <td><p><span class="math notranslate nohighlight">\(n\)</span>’te rod. Det at finde det tal, der ganget med sig selv <span class="math notranslate nohighlight">\(n\)</span> gange, giver radikanden.</p></td>
 <td><p></p></td>
 </tr>
-</tbody>
-</table>
-</section>
-<section id="maengdeteori-i">
-<h2>Mængdeteori I<a class="headerlink" href="#maengdeteori-i" title="Permalink til denne overskrift">#</a></h2>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Symbol</p></th>
-<th class="head"><p>Betydning</p></th>
-<th class="head"><p>Eksempel</p></th>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\pi\)</span></p></td>
+<td><p>Pi, forholdet mellem en cirkels omkreds og diameter, <span class="math notranslate nohighlight">\(\pi=3{,}14152965...\)</span></p></td>
+<td><p></p></td>
 </tr>
-</thead>
-<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\log_{10}(a)\)</span></p></td>
+<td><p>10-tals logaritmen. Det at finde det tal, der opfylder ligningen <span class="math notranslate nohighlight">\(10^x = a\)</span>.</p></td>
+<td><p><span class="math notranslate nohighlight">\(\log_{10}(100) = 2\)</span>, da <span class="math notranslate nohighlight">\(10^2 = 100\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\log_{n}(a)\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(n\)</span>’te logaritme. Det at finde det tal, der opfylder ligningen <span class="math notranslate nohighlight">\(n^x = a\)</span>.</p></td>
+<td><p><span class="math notranslate nohighlight">\(\log_{4}(64) = 3\)</span>, da <span class="math notranslate nohighlight">\(4^3 = 64\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\text{e}\)</span></p></td>
+<td><p>Eulers konstant, <span class="math notranslate nohighlight">\(\text{e}=2{,}71828182...\)</span></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\ln(a)\)</span></p></td>
+<td><p>Naturlig logaritme. Det at finde det tal, der opfylder ligningen <span class="math notranslate nohighlight">\(\text{e}^x = a\)</span></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\sum\)</span></p></td>
+<td><p>Sum. Kan bruges til at forkorte sumforskrifter.</p></td>
+<td><p><span class="math notranslate nohighlight">\(1^2+2^2+3^2+4^2+5^2 = \sum_{n=1}^5 n^2\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\prod\)</span></p></td>
+<td><p>Produkt. Kan bruges til at forkorte produktforskrifter.</p></td>
+<td><p><span class="math notranslate nohighlight">\(2\cdot1+2\cdot2+2\cdot3+2\cdot4 = \prod_{n=1}^4 2n\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\lvert a \rvert\)</span></p></td>
+<td><p>Numerisk værdi. Det at finde den absolutte værdi af et tal.</p></td>
+<td><p><span class="math notranslate nohighlight">\(\lvert -4 \rvert = 4\)</span></p></td>
+</tr>
 <tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\{a,b\}\)</span></p></td>
 <td><p>Mængde. Her en mængde af to elementer <span class="math notranslate nohighlight">\(a\)</span> og <span class="math notranslate nohighlight">\(b\)</span>.</p></td>
 <td><p></p></td>
@@ -777,19 +783,6 @@ document.write(`
 <td><p>Komplimentær mængde. Her komplimentær mængden af <span class="math notranslate nohighlight">\(A\)</span>.</p></td>
 <td><p></p></td>
 </tr>
-</tbody>
-</table>
-</section>
-<section id="ligninger-og-uligheder">
-<h2>Ligninger og uligheder<a class="headerlink" href="#ligninger-og-uligheder" title="Permalink til denne overskrift">#</a></h2>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Symbol</p></th>
-<th class="head"><p>Betydning</p></th>
-<th class="head"><p>Eksempel</p></th>
-</tr>
-</thead>
-<tbody>
 <tr class="row-even"><td><p><span class="math notranslate nohighlight">\(a&gt;b\)</span></p></td>
 <td><p>Skarp ulighed. Her er <span class="math notranslate nohighlight">\(a\)</span> skarp større end <span class="math notranslate nohighlight">\(b\)</span>.</p></td>
 <td><p></p></td>
@@ -810,9 +803,57 @@ document.write(`
 <td><p>Logisk og. Kan bruges til at angive to simultane løsninger.</p></td>
 <td><p><span class="math notranslate nohighlight">\(x = 2 \wedge y = 1\)</span></p></td>
 </tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\Rightarrow\)</span></p></td>
+<td><p>Implikation. Det at noget medfører noget andet.</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\Leftrightarrow\)</span></p></td>
+<td><p>Biimplikation. Det at noget er ækvivalent.</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\infty\)</span></p></td>
+<td><p>Uendelig.</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\lim\)</span></p></td>
+<td><p>Grænseværdi. Kan bruges til at undersøge et udtryk i grænsen.</p></td>
+<td><p><span class="math notranslate nohighlight">\(\lim_{x\rightarrow\infty} \frac{1}{x} = 0\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\frac{\text{d}}{\text{d}x}\)</span></p></td>
+<td><p>Differentialkvotient. Bruges til at finde tangenthældninger. Leibniz notation.</p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{\text{d}y}{\text{d}x}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\('\)</span></p></td>
+<td><p>Differentialkvotient. Bruges til at finde tangenthældninger. Lagranges notation.</p></td>
+<td><p><span class="math notranslate nohighlight">\(f'(x)\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\frac{\text{d}^2}{\text{d}x^2}\)</span></p></td>
+<td><p>Dobbelt afledte. Bruges til at finde den dobbelt afledte.</p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{\text{d}^2y}{\text{d}x^2}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\int\)</span></p></td>
+<td><p>Integralet. Bruges til at finde stamfunktioner.</p></td>
+<td><p><span class="math notranslate nohighlight">\(\int f(x)\,\text{d}x\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\frac{\partial}{\partial x}\)</span></p></td>
+<td><p>Partiel afledet. Bruges til at finde den partielle afledede med hensyn til den ene variabel.</p></td>
+<td><p><span class="math notranslate nohighlight">\(\frac{\partial f(x,y)}{\partial x}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\nabla\)</span></p></td>
+<td><p>Gradienten. Bruges til at finde de partielle afledede af en funktion.</p></td>
+<td><p><span class="math notranslate nohighlight">\(\nabla f\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\forall\)</span></p></td>
+<td><p>For alle. Kan bruges i et logisk udtryk.</p></td>
+<td><p><span class="math notranslate nohighlight">\(\forall \varepsilon &gt; 0 \)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(\exists\)</span></p></td>
+<td><p>Eksisterer. Kan bruges i et logisk udtryk.</p></td>
+<td><p><span class="math notranslate nohighlight">\(\exists \delta &gt; 0\)</span></p></td>
+</tr>
 </tbody>
 </table>
-</section>
+<p>Mangler sandsynlighed, momenter og statistiske deskriptorer.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -846,12 +887,12 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../Del_3/Regression_II/korrelation-og-kausalitet.html"
+       href="../Del_3/Regression_II/matematisk-modellering-ii.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">forrige</p>
-        <p class="prev-next-title"><span class="section-number">34.9. </span>Korrelation og kausalitet</p>
+        <p class="prev-next-title"><span class="section-number">34.9. </span>Matematisk modellering II</p>
       </div>
     </a>
     <a class="right-next"
@@ -869,22 +910,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Indhold
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tal-og-algebra">Tal og algebra</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maengdeteori-i">Mængdeteori I</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ligninger-og-uligheder">Ligninger og uligheder</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

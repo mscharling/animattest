@@ -16,6 +16,7 @@
   --white1: #fff; 
   --pst-color-primary: rgba(165,199,67,1);
   --animat-color-primary: rgba(165,199,67,1);
+  --pst-color-link-hover: rgba(165,199,67,1);
 }
 
 /* ======================================= */
@@ -62,6 +63,19 @@ a.headerlink {
     color: var(--animat-color-primary);
 }
 a:visited:hover {
+    color: var(--animat-color-primary);
+}
+.prev-next-area a p.prev-next-title:hover {
+    color: var(--animat-color-primary);
+}
+.prev-next-area a p.prev-next-title:active, .prev-next-area a p.prev-next-title:visited {
+    color: var(--animat-color-primary);
+}
+.prev-next-area a:hover p.prev-next-title:hover {
+    color: var(--animat-color-primary);
+}
+
+.toc-entry a.nav-link.active:hover {
     color: var(--animat-color-primary);
 }
 
@@ -115,6 +129,15 @@ img {
     pointer-events: none;
 }
 
+/* Videos */
+element.style {
+    max-width: 100%;
+}
+
+html[data-theme=dark] .bd-content div.cell_output .text_html, html[data-theme=dark] .bd-content div.cell_output img {
+    background-color: var(--pst-color-background);
+}
+
 
 /* Details to use for proof and hints */
 details {
@@ -159,6 +182,15 @@ summary::before {
 
 details[open]>summary::before {
   transform: rotate(90deg);
+}
+
+/* Geogebra iframe */
+iframe {    
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    border-radius: 4px;
+    background-color: transparent; 
 }
 
 

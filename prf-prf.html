@@ -427,9 +427,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="chapters/Del_2/Regression_I/simpel-lineaer-regression.html">25.2. Simpel lineær regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapters/Del_2/Regression_I/residualer.html">25.3. Residualer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapters/Del_2/Regression_I/forklaringsgrad-i.html">25.4. Forklaringsgrad I</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapters/Del_2/Regression_I/simpel-ikke-lineaer-regression.html">25.5. Simpel ikke-lineær regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapters/Del_2/Regression_I/logistisk-regression.html">25.6. Logistisk regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapters/Del_2/Regression_I/matematisk-modellering-i.html">25.7. Matematisk modellering I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/Del_2/Regression_I/tid-som-forklarende-variabel.html">25.5. Tid som forklarende variabel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/Del_2/Regression_I/simpel-ikke-lineaer-regression.html">25.6. Simpel ikke-lineær regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/Del_2/Regression_I/logistisk-regression.html">25.7. Logistisk regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/Del_2/Regression_I/matematisk-modellering-i.html">25.8. Matematisk modellering I</a></li>
 </ul>
 </li>
 </ul>
@@ -523,8 +524,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="chapters/Del_3/Regression_II/tabsfunktioner.html">34.5. Tabsfunktioner</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapters/Del_3/Regression_II/multipel-lineaer-regression.html">34.6. Multiple lineær regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="chapters/Del_3/Regression_II/parametrenes-konfidensintervaller.html">34.7. Parametrenes konfidensintervaller</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapters/Del_3/Regression_II/matematisk-modellering-ii.html">34.8. Matematisk modellering II</a></li>
-<li class="toctree-l2"><a class="reference internal" href="chapters/Del_3/Regression_II/korrelation-og-kausalitet.html">34.9. Korrelation og kausalitet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/Del_3/Regression_II/korrelation-og-kausalitet.html">34.8. Korrelation og kausalitet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapters/Del_3/Regression_II/matematisk-modellering-ii.html">34.9. Matematisk modellering II</a></li>
 </ul>
 </li>
 </ul>
@@ -652,14 +653,16 @@ document.write(`
    <a href="#cap-eksempel-9"><strong>eksempel-9</strong></a> | 
    <a href="#cap-endeligt-sandsynlighedsrum"><strong>endeligt-sandsynlighedsrum</strong></a> | 
    <a href="#cap-enligningenubekendteks1"><strong>enligningenubekendteks1</strong></a> | 
+   <a href="#cap-ex-eksponentiel-regression"><strong>ex-eksponentiel-regression</strong></a> | 
+   <a href="#cap-ex-potens-regression"><strong>ex-potens-regression</strong></a> | 
    <a href="#cap-gange-ind-i-parentes"><strong>gange-ind-i-parentes</strong></a> | 
-   <a href="#cap-hoejde-og-skostoerrelse-korrelation"><strong>hoejde-og-skostoerrelse-korrelation</strong></a> | 
    <a href="#cap-hoejde-og-skostoerrelse-scatter"><strong>hoejde-og-skostoerrelse-scatter</strong></a> | 
    <a href="#cap-hypotesetest_moent"><strong>hypotesetest_moent</strong></a> | 
    <a href="#cap-hypotesetest_moent_fortsat"><strong>hypotesetest_moent_fortsat</strong></a> | 
    <a href="#cap-hypotesetest_moent_fortsat2"><strong>hypotesetest_moent_fortsat2</strong></a> | 
    <a href="#cap-hypotesetest_moent_fortsat3"><strong>hypotesetest_moent_fortsat3</strong></a> | 
    <a href="#cap-infinitesimalregningenshovedsaetning"><strong>infinitesimalregningenshovedsaetning</strong></a> | 
+   <a href="#cap-ingen-korrelation"><strong>ingen-korrelation</strong></a> | 
    <a href="#cap-inteksempel1"><strong>inteksempel1</strong></a> | 
    <a href="#cap-inteksempel2"><strong>inteksempel2</strong></a> | 
    <a href="#cap-k0"><strong>k0</strong></a> | 
@@ -688,6 +691,7 @@ document.write(`
    <a href="#cap-minus-er-ikke-kommutativ"><strong>minus-er-ikke-kommutativ</strong></a> | 
    <a href="#cap-minus-og-plusparenteser"><strong>minus-og-plusparenteser</strong></a> | 
    <a href="#cap-modsattal"><strong>modsattal</strong></a> | 
+   <a href="#cap-negativ-korrelation"><strong>negativ-korrelation</strong></a> | 
    <a href="#cap-negativegrundtal"><strong>negativegrundtal</strong></a> | 
    <a href="#cap-negativegrundtalthm"><strong>negativegrundtalthm</strong></a> | 
    <a href="#cap-negativetalmogd"><strong>negativetalmogd</strong></a> | 
@@ -724,6 +728,7 @@ document.write(`
    <a href="#cap-opgave-9"><strong>opgave-9</strong></a> | 
    <a href="#cap-p7"><strong>p7</strong></a> | 
    <a href="#cap-plus-og-gange-er-kommutative"><strong>plus-og-gange-er-kommutative</strong></a> | 
+   <a href="#cap-positiv-korrelation"><strong>positiv-korrelation</strong></a> | 
    <a href="#cap-reciproktal"><strong>reciproktal</strong></a> | 
    <a href="#cap-regneregler-0"><strong>regneregler-0</strong></a> | 
    <a href="#cap-regneregler-1"><strong>regneregler-1</strong></a> | 
@@ -799,7 +804,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="chapters/Del_1/Tal_og_algebra/faktorisering-og-kvadratkomplettering.html#eksempel-0"><code class="xref">eksempel-0</code></a> <em>(chapters/Del_1/Tal_og_algebra/faktorisering-og-kvadratkomplettering)</em></td><td>
+       <a href="chapters/Del_2/Regression_I/tid-som-forklarende-variabel.html#eksempel-0"><code class="xref">eksempel-0</code></a> <em>(chapters/Del_2/Regression_I/tid-som-forklarende-variabel)</em></td><td>
        <em>eksempel</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-eksempel-1"><td></td><td>
@@ -858,20 +863,28 @@ document.write(`
        <a href="chapters/Del_1/Ligninger_og_uligheder/en-ligning-med-en-ubekendt.html#enligningenubekendteks1"><code class="xref">enligningenubekendteks1</code></a> <em>(chapters/Del_1/Ligninger_og_uligheder/en-ligning-med-en-ubekendt)</em></td><td>
        <em>eksempel</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-ex-eksponentiel-regression"><td></td><td>
+       <strong>ex-eksponentiel-regression</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="chapters/Del_2/Regression_I/simpel-ikke-lineaer-regression.html#ex-eksponentiel-regression"><code class="xref">ex-eksponentiel-regression</code></a> <em>(chapters/Del_2/Regression_I/simpel-ikke-lineaer-regression)</em></td><td>
+       <em>eksempel</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-ex-potens-regression"><td></td><td>
+       <strong>ex-potens-regression</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="chapters/Del_2/Regression_I/simpel-ikke-lineaer-regression.html#ex-potens-regression"><code class="xref">ex-potens-regression</code></a> <em>(chapters/Del_2/Regression_I/simpel-ikke-lineaer-regression)</em></td><td>
+       <em>eksempel</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-gange-ind-i-parentes"><td></td><td>
        <strong>gange-ind-i-parentes</strong></td><td></td></tr>
      <tr>
        <td></td>
        <td>
        <a href="chapters/Del_1/Tal_og_algebra/regnearterne.html#gange-ind-i-parentes"><code class="xref">gange-ind-i-parentes</code></a> <em>(chapters/Del_1/Tal_og_algebra/regnearterne)</em></td><td>
-       <em>eksempel</em></td></tr>
-     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
-     <tr class="cap" id="cap-hoejde-og-skostoerrelse-korrelation"><td></td><td>
-       <strong>hoejde-og-skostoerrelse-korrelation</strong></td><td></td></tr>
-     <tr>
-       <td></td>
-       <td>
-       <a href="chapters/Del_2/Regression_I/datamaessige-sammenhaenge.html#hoejde-og-skostoerrelse-korrelation"><code class="xref">hoejde-og-skostoerrelse-korrelation</code></a> <em>(chapters/Del_2/Regression_I/datamaessige-sammenhaenge)</em></td><td>
        <em>eksempel</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-hoejde-og-skostoerrelse-scatter"><td></td><td>
@@ -921,6 +934,14 @@ document.write(`
        <td>
        <a href="chapters/Del_3/Stokastiske_variabler_II/introtilintegral.html#infinitesimalregningenshovedsaetning"><code class="xref">infinitesimalregningenshovedsaetning</code></a> <em>(chapters/Del_3/Stokastiske_variabler_II/introtilintegral)</em></td><td>
        <em>sætning</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-ingen-korrelation"><td></td><td>
+       <strong>ingen-korrelation</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="chapters/Del_2/Regression_I/datamaessige-sammenhaenge.html#ingen-korrelation"><code class="xref">ingen-korrelation</code></a> <em>(chapters/Del_2/Regression_I/datamaessige-sammenhaenge)</em></td><td>
+       <em>eksempel</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-inteksempel1"><td></td><td>
        <strong>inteksempel1</strong></td><td></td></tr>
@@ -1146,6 +1167,14 @@ document.write(`
        <a href="chapters/Del_1/Tal_og_algebra/tallene.html#modsattal"><code class="xref">modsattal</code></a> <em>(chapters/Del_1/Tal_og_algebra/tallene)</em></td><td>
        <em>definition</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-negativ-korrelation"><td></td><td>
+       <strong>negativ-korrelation</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="chapters/Del_2/Regression_I/datamaessige-sammenhaenge.html#negativ-korrelation"><code class="xref">negativ-korrelation</code></a> <em>(chapters/Del_2/Regression_I/datamaessige-sammenhaenge)</em></td><td>
+       <em>eksempel</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-negativegrundtal"><td></td><td>
        <strong>negativegrundtal</strong></td><td></td></tr>
      <tr>
@@ -1231,7 +1260,7 @@ document.write(`
      <tr>
        <td></td>
        <td>
-       <a href="chapters/Del_1/Tal_og_algebra/approksimationer.html#opgave-1"><code class="xref">opgave-1</code></a> <em>(chapters/Del_1/Tal_og_algebra/approksimationer)</em></td><td>
+       <a href="chapters/Del_2/Regression_I/tid-som-forklarende-variabel.html#opgave-1"><code class="xref">opgave-1</code></a> <em>(chapters/Del_2/Regression_I/tid-som-forklarende-variabel)</em></td><td>
        <em>opgave</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-opgave-10"><td></td><td>
@@ -1432,6 +1461,14 @@ document.write(`
        <td></td>
        <td>
        <a href="chapters/Del_1/Tal_og_algebra/regnearterne.html#plus-og-gange-er-kommutative"><code class="xref">plus-og-gange-er-kommutative</code></a> <em>(chapters/Del_1/Tal_og_algebra/regnearterne)</em></td><td>
+       <em>eksempel</em></td></tr>
+     <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
+     <tr class="cap" id="cap-positiv-korrelation"><td></td><td>
+       <strong>positiv-korrelation</strong></td><td></td></tr>
+     <tr>
+       <td></td>
+       <td>
+       <a href="chapters/Del_2/Regression_I/datamaessige-sammenhaenge.html#positiv-korrelation"><code class="xref">positiv-korrelation</code></a> <em>(chapters/Del_2/Regression_I/datamaessige-sammenhaenge)</em></td><td>
        <em>eksempel</em></td></tr>
      <tr class="pcap"><td></td><td>&#160;</td><td></td></tr>
      <tr class="cap" id="cap-reciproktal"><td></td><td>
