@@ -93,7 +93,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <script defer="defer" src="https://unpkg.com/@popperjs/core@2"></script>
     <script defer="defer" src="https://unpkg.com/tippy.js@6"></script>
-    <script defer="defer" src="../../../_static/tippy\chapters\Del_2\Regression_I\datamaessige-sammenhaenge.8f7540e8-2aa0-4d4f-9113-4b00f3977855.js"></script>
+    <script defer="defer" src="../../../_static/tippy\chapters\Del_2\Regression_I\datamaessige-sammenhaenge.cb411c44-3bca-4edd-a75b-1cdfc73a8dad.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/Del_2/Regression_I/datamaessige-sammenhaenge';</script>
@@ -426,7 +426,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="regression-i.html">25. Regression I</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">25.1. Datamæssige sammenhænge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="simpel-lineaer-regression.html">25.2. Simpel lineær regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="residualer.html">25.3. Residualer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="residuals.html">25.3. Residualer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="forklaringsgrad-i.html">25.4. Forklaringsgrad I</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tid-som-forklarende-variabel.html">25.5. Tid som forklarende variabel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="simpel-ikke-lineaer-regression.html">25.6. Simpel ikke-lineær regression</a></li>
@@ -656,7 +656,7 @@ document.write(`
 <div class="proof eksempel admonition" id="hoejde-og-skostoerrelse-scatter">
 <p class="admonition-title"><span class="caption-number">Eksempel 25.1 </span></p>
 <section class="eksempel-content" id="proof-content">
-<p>Vi får til opgave at undersøge, om der er en sammenhæng mellem højder og skostørrelser på elever i en klasse på et gymnasium. Vi indsamler følgende data</p>
+<p>Vi får til opgave at undersøge, om der er en sammenhæng mellem højder og skostørrelser på elever i en klasse på et gymnasium. Vi indsamler følgende data, som er gemt i filen <a class="reference download internal" download="" href="../../../_downloads/59274044c1ba5dd6441448be2ab53ef3/eks_hoejde-og-skostoerrelse.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">eks_hoejde-og-skostoerrelse.xlsx</span></code></a></p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Højde i cm</p></th>
@@ -673,47 +673,14 @@ document.write(`
 <tr class="row-even"><td><p>168.1</p></td>
 <td><p>39</p></td>
 </tr>
-<tr class="row-odd"><td><p>165.4</p></td>
-<td><p>37</p></td>
-</tr>
-<tr class="row-even"><td><p>164.7</p></td>
-<td><p>37</p></td>
-</tr>
-<tr class="row-odd"><td><p>172.1</p></td>
-<td><p>40</p></td>
-</tr>
-<tr class="row-even"><td><p>191.4</p></td>
-<td><p>46</p></td>
-</tr>
-<tr class="row-odd"><td><p>197.8</p></td>
-<td><p>46</p></td>
-</tr>
-<tr class="row-even"><td><p>187.9</p></td>
-<td><p>44</p></td>
-</tr>
-<tr class="row-odd"><td><p>182.1</p></td>
-<td><p>42</p></td>
-</tr>
-<tr class="row-even"><td><p>182.6</p></td>
-<td><p>43</p></td>
-</tr>
-<tr class="row-odd"><td><p>188.2</p></td>
-<td><p>44</p></td>
-</tr>
-<tr class="row-even"><td><p>190.0</p></td>
-<td><p>45</p></td>
-</tr>
-<tr class="row-odd"><td><p>181.7</p></td>
-<td><p>42</p></td>
-</tr>
-<tr class="row-even"><td><p>169.4</p></td>
-<td><p>39</p></td>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\vdots\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\vdots\)</span></p></td>
 </tr>
 </tbody>
 </table>
-<p>Vi lader nu Højde i cm være variablen langs <span class="math notranslate nohighlight">\(x\)</span>-aksen og Skostørrelse være variablen langs <span class="math notranslate nohighlight">\(y\)</span>-aksen.</p>
+<p>Vi lader nu <em>Højde i cm</em> være variablen langs <span class="math notranslate nohighlight">\(x\)</span>-aksen og <em>Skostørrelse være variablen</em> langs <span class="math notranslate nohighlight">\(y\)</span>-aksen.</p>
 <figure class="align-default">
-<img alt="../../../_images/189b6b2f32221091d10ecd4f57a1e12a14e58a406c7a034b1c7b0ec8571c0e50.png" src="../../../_images/189b6b2f32221091d10ecd4f57a1e12a14e58a406c7a034b1c7b0ec8571c0e50.png" />
+<img alt="../../../_images/68fd8fcebaef63ae5b85c015778c7d4424d88cfeb5fe1ab08729fbf8e072e9d6.png" src="../../../_images/68fd8fcebaef63ae5b85c015778c7d4424d88cfeb5fe1ab08729fbf8e072e9d6.png" />
 </figure>
 <p>Af scatterplottet bliver det tydeligt, at der er en tendens: Elever, der er højere, bruger også større sko.</p>
 </section>
@@ -776,17 +743,83 @@ document.write(`
 </tr>
 </tbody>
 </table>
+<p>For at få en forståelse for de tilfælde, hvor vi har med negativ korrelation at gøre, gennemgår vi følgende eksempel:</p>
 <div class="proof eksempel admonition" id="negativ-korrelation">
 <p class="admonition-title"><span class="caption-number">Eksempel 25.3 </span></p>
 <section class="eksempel-content" id="proof-content">
-<p>Negativ korrelation</p>
+<p>Vi ønsker at undersøge sammenhængen mellem <em>daglig gennemsnitstemperatur</em> (i °C) og <em>dagligt fjernvarmeforbrug</em> (i kWh). Vi indsamler data for 10 dage i vinterhalvåret, som er gemt i filen <a class="reference download internal" download="" href="../../../_downloads/3b12bf195ef36aa50f5747e60d50eb45/eks_temperatur-og-fjernvarme.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">eks_temperatur-og-fjernvarme.xlsx</span></code></a>:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Gennemsnitstemperatur (°C)</p></th>
+<th class="head"><p>Fjernvarmeforbrug (kWh)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>100</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>90</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>80</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\vdots\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\vdots\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Her er <span class="math notranslate nohighlight">\(x\)</span>-variablen »Gennemsnitstemperatur i °C« og <span class="math notranslate nohighlight">\(y\)</span>-variablen »Fjernvarmeforbrug i kWh«.</p>
+<p>Hvis vi plottede disse datapunkter i et scatterplot, ville vi visuelt se en tydelig tendens til, at når temperaturen stiger, så falder fjernvarmeforbruget.</p>
+<figure class="align-default">
+<img alt="../../../_images/710a8fbbbb815310824eb71331619fe5fc1a0baf486671ad14284e92f2d9944a.png" src="../../../_images/710a8fbbbb815310824eb71331619fe5fc1a0baf486671ad14284e92f2d9944a.png" />
+</figure>
+<p>Vi beregner korrelationskoefficienten vha. et CAS-værktøj:</p>
+<div class="math notranslate nohighlight">
+\[
+    \rho = -0{,}994.
+\]</div>
+<p>Korrelationskoefficienten ligger tæt på -1, hvilket bekræfter, at vi har en negativ korrelation mellem de to variabler. Når den ene variabel (temperaturen) øges, falder den anden (fjernvarmeforbrug).</p>
 </section>
-</div><div class="proof eksempel admonition" id="ingen-korrelation">
+</div><p>Oftest har vi en idé om opførselen af det data, som vi ønsker at undersøge, inden vi har lavet undersøgelsen. For eksempel, så giver det god mening, at der ikke er sammenhæng mellem hvor, du bor, og hvor store sko, du bruger. Du kan dog godt komme ud for, at du indsamler noget data, der ikke udviser den tendens, som du forventede. Det kan skyldes støj i din indsamling eller at du bare har en uheldig stikprøve. Lad os kigge på et eksempel, hvor vi ikke med data kan konkludere, at der er en sammenhæng mellem de to variabler.</p>
+<div class="proof eksempel admonition" id="ingen-korrelation">
 <p class="admonition-title"><span class="caption-number">Eksempel 25.4 </span></p>
 <section class="eksempel-content" id="proof-content">
-<p>Ingen korrelation (kan godt være men meget støj?)</p>
+<p>Vi ønsker at undersøge sammenhængen mellem <em>skærmtid per dag</em> (målt i timer) og <em>karaktergennemsnit</em> hos en gruppe gymnasieelever. Vi indsamler data for 12 elever, gemt i filen <a class="reference download internal" download="" href="../../../_downloads/68e1297efd6924024cbe0e44c6b63192/eks_skaermtid-og-karakterer.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">eks_skaermtid-og-karakterer.xlsx</span></code></a>:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Skærmtid pr. dag (timer)</p></th>
+<th class="head"><p>Karaktergennemsnit</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>7,1</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>10,5</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>4,2</p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\vdots\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(\vdots\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>Her lader vi <em>Skærmtid pr. dag</em> være <span class="math notranslate nohighlight">\(x\)</span>-aksen og <em>Karaktergennemsnit</em> være <span class="math notranslate nohighlight">\(y\)</span>-aksen. Vores hypotese kunne have været, at mere skærmtid ville give lavere karakterer (negativ korrelation), men lad os se, hvad data viser.</p>
+<figure class="align-default">
+<img alt="../../../_images/493648493bac50d6ca74305f3b171f5734e2f7eef612a8088cf530c1f5527ab5.png" src="../../../_images/493648493bac50d6ca74305f3b171f5734e2f7eef612a8088cf530c1f5527ab5.png" />
+</figure>
+<p>CAS-beregningen viser, at korrelationskoefficienten</p>
+<div class="math notranslate nohighlight">
+\[
+    \rho = 0{,}031,
+\]</div>
+<p>som er meget tæt på nul. Det betyder, at der ikke er nogen entydig lineær sammenhæng mellem skærmtid og karaktergennemsnit i dette datasæt. Det er et eksempel på, at man godt kan forvente en effekt, men at ens reelle data kan være for støjfyldte eller baseret på en for lille (eller uheldig) stikprøve til at bekræfte hypotesen.</p>
 </section>
-</div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</div><p>Som det fremgår, kan selv en umiddelbart <em>logisk</em> forventning om en korrelation ende med en resultatværdi af <span class="math notranslate nohighlight">\(\rho\)</span> nær 0, hvis data er for spredte eller ikke indsamlet på en måde, der afspejler den forventede effekt.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </section>

@@ -101,7 +101,9 @@ a:hover {
 a:active, a:visited {
     color: var(--animat-color-primary);
 }
-
+a>code {
+    color: var(--animat-color-primary);
+}
 
 /* Notebook blocks */
 .cell_output .output.stderr {

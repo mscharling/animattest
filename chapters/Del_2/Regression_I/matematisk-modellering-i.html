@@ -93,7 +93,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <script defer="defer" src="https://unpkg.com/@popperjs/core@2"></script>
     <script defer="defer" src="https://unpkg.com/tippy.js@6"></script>
-    <script defer="defer" src="../../../_static/tippy\chapters\Del_2\Regression_I\matematisk-modellering-i.5f3e7551-c5a5-41aa-8d19-0efdae1820dc.js"></script>
+    <script defer="defer" src="../../../_static/tippy\chapters\Del_2\Regression_I\matematisk-modellering-i.aab68117-a655-41bd-93fb-12d461cf0f90.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/Del_2/Regression_I/matematisk-modellering-i';</script>
@@ -426,7 +426,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="regression-i.html">25. Regression I</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="datamaessige-sammenhaenge.html">25.1. Datamæssige sammenhænge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="simpel-lineaer-regression.html">25.2. Simpel lineær regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="residualer.html">25.3. Residualer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="residuals.html">25.3. Residualer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="forklaringsgrad-i.html">25.4. Forklaringsgrad I</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tid-som-forklarende-variabel.html">25.5. Tid som forklarende variabel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="simpel-ikke-lineaer-regression.html">25.6. Simpel ikke-lineær regression</a></li>
@@ -611,7 +611,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -627,6 +629,18 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Indhold </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#undersog-din-data">25.8.1. Undersøg din data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#handtering-af-outliers-og-manglende-vaerdier">25.8.2. Håndtering af outliers og manglende værdier</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-den-bedst-passende-model">25.8.3. Find den bedst passende model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluer-modellen-med-forklaringsgraden-og-residualerne">25.8.4. Evaluér modellen med forklaringsgraden og residualerne</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vurder-modellens-praediktive-vaerdi">25.8.5. Vurdér modellens prædiktive værdi</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -638,6 +652,43 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="matematisk-modellering-i">
 <h1><span class="section-number">25.8. </span>Matematisk modellering I<a class="headerlink" href="#matematisk-modellering-i" title="Permalink til denne overskrift">#</a></h1>
+<p>En disciplin, der foretages i mange sammenhænge, er matematisk modellering. Som vi også introducerede dette emne med, så handler matematisk modellering om at bruge den data, som du har tilgængelig, til at sige noget prædiktivt. Det kan både være at komme med bud på, hvordan din data kunne udvikle sig uden for det område, som du har observeret. For eksempel, hvordan udvikler befolkningen sig de næste par år? Det kan også være noget, der er afledt af den model, som du har estimeret. For eksempel, hvilke faktorer der har størst indflydelse på udviklingen, eller hvordan din model vil reagere, hvis visse parametre ændres. Dette gør det muligt at forstå sammenhænge, forsøge at forudsige fremtidige tendenser og træffe mere informerede beslutninger baseret på modellens resultater.</p>
+<p>Så skal du lave en matematisk model, så kan det være sundt at have overvejet følgende elementer.</p>
+<section id="undersog-din-data">
+<h2><span class="section-number">25.8.1. </span>Undersøg din data<a class="headerlink" href="#undersog-din-data" title="Permalink til denne overskrift">#</a></h2>
+<p>Hvordan ser din data ud? Det er vigtigt, at du forstår dit data, inden du laver en model. Det kan derfor være sundt, at du laver deskriptiv statistisk på dit data, både din forklarende variabel (<span class="math notranslate nohighlight">\(x\)</span>) og din responsvariabel (<span class="math notranslate nohighlight">\(y\)</span>).</p>
+<p>Har du fået en god fornemmelse for, hvordan dine variabler ser ud individuelt, så er det tid til at kigge på, hvordan de opfører sig i forhold til hinanden. Ser vi en tydelig sammenhæng? Er de korrelerede? Det er oftest ikke nok kun at beregne korrelationskoefficienten for at kunne vurdere en god model. For eksempel, en positiv korrelation kan sagtens opstå for data, der udvikler sig eksponentielt. Her har vi brug for at se dataets udvikling visuelt. Undersøgelser i et scatterplot kan være meget indsigtsfulde. Måske, du også har brug for at prøve at plotte dine datapunkter i et enkelt- og/eller dobbeltlogaritmisk koordinatsystem.</p>
+</section>
+<section id="handtering-af-outliers-og-manglende-vaerdier">
+<h2><span class="section-number">25.8.2. </span>Håndtering af outliers og manglende værdier<a class="headerlink" href="#handtering-af-outliers-og-manglende-vaerdier" title="Permalink til denne overskrift">#</a></h2>
+<p>I din diskriptive statistik vil du også se, hvis du mangler data eller har outliers. Disse observationer skal håndteres. I de fleste sammenhænge ignoreres hele datapunktet. Der findes dog andre måder at håndtere dem på. Prøv at overveje følgende:</p>
+<ul class="simple">
+<li><p>Hvad ville det betyde for vores matematiske model, at der er en outlier?</p></li>
+<li><p>Hvad ville det betyde for vores matematiske model, at der er områder i vores data, der mangler observationer?</p></li>
+</ul>
+<p>For at håndtere manglende værdier kunne vi erstatte dem med gennemsnittet for vores data. På den måde ændrer vi ikke i den deskriptive statistisk. Ville vi kunne erstatte dem med 0? Ikke nødvendigvis! At mangle en værdi er ikke det samme som værdien 0. Hvis der stod 0, så ville det tælle med i den deskriptive statistik. Det er helt klart nogle ting, du skal overveje.</p>
+</section>
+<section id="find-den-bedst-passende-model">
+<h2><span class="section-number">25.8.3. </span>Find den bedst passende model<a class="headerlink" href="#find-den-bedst-passende-model" title="Permalink til denne overskrift">#</a></h2>
+<p>Vi har nu fået en forståelse af data, og kan på baggrund af den indsigt give et bud på hvilken model, der kunne være oplagt.</p>
+<p>Ser vi en lineær tendens i et almindeligt scatterplot, så kan en simpel lineær regressionsmodel være et godt bud på en model. Er den lineære tendens synlig i et enkeltlogaritmisk koordinatsystem, så er en eksponentiel model et godt bud. Hvis det er i et dobbeltlogaritmisk koordinatsystem, så en potens model.</p>
+</section>
+<section id="evaluer-modellen-med-forklaringsgraden-og-residualerne">
+<h2><span class="section-number">25.8.4. </span>Evaluér modellen med forklaringsgraden og residualerne<a class="headerlink" href="#evaluer-modellen-med-forklaringsgraden-og-residualerne" title="Permalink til denne overskrift">#</a></h2>
+<p>Som et led i at finde en passende model, skal residualerne vurderes. Opfører de sig pænt?</p>
+<ul class="simple">
+<li><p>Er de så små som mulige? Har du brugt mindste kvadraters metode for at finde modellen?</p></li>
+<li><p>Er de tilfældigt spredt omkrind <span class="math notranslate nohighlight">\(x\)</span>-aksen? Indeholder de et mønster?</p></li>
+<li><p>Har de konstant varians? Ser du en tragt-form i dine residualer?</p></li>
+</ul>
+<p>Residualerne siger rigtig meget om din model, og du kan derfor ikke komme udenom at skulle kigge på dem.</p>
+<p>Et andet tal, som du også bør have med i din evaluering af modellen, er forklaringsgraden. Er den tæt på 1, er det et udtryk for, at din model fanger al udviklingen i din data. Er den tæt på 0, er det et udtryk for, at din model ikke forklarer udviklingen i din data.</p>
+</section>
+<section id="vurder-modellens-praediktive-vaerdi">
+<h2><span class="section-number">25.8.5. </span>Vurdér modellens prædiktive værdi<a class="headerlink" href="#vurder-modellens-praediktive-vaerdi" title="Permalink til denne overskrift">#</a></h2>
+<p>Afslutningsvis, bør du vurdere, om modellen giver mening og overveje, hvad dens begrænsninger er. Det er en sund øvelse at forstå, hvad din model kan. Din model bør selvfølgelig være dit bedste bud på en model for dit data. Men, giver den også mening over tid? Hvad hvis du indsamlede mere data, ville det så stadig være den samme model, du havde gået med? Kan du komme i tanke om begrænsninger ved din model? Hvis du bruger en lineær model, giver det så mening, at din data skulle udvikle sig lineært?</p>
+<p>Det er sådanne overvejelser, der er med til at vurdere modellens prædiktive værdi. Det kan være en svær øvelse, men meget indsigtsfuld!</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -694,6 +745,24 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Indhold
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#undersog-din-data">25.8.1. Undersøg din data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#handtering-af-outliers-og-manglende-vaerdier">25.8.2. Håndtering af outliers og manglende værdier</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#find-den-bedst-passende-model">25.8.3. Find den bedst passende model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#evaluer-modellen-med-forklaringsgraden-og-residualerne">25.8.4. Evaluér modellen med forklaringsgraden og residualerne</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vurder-modellens-praediktive-vaerdi">25.8.5. Vurdér modellens prædiktive værdi</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

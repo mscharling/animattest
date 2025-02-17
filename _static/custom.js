@@ -16,52 +16,70 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Autoplay video on full visible
 document.addEventListener("DOMContentLoaded", function() {
-    // Select all video elements on the page
-    const videos = document.querySelectorAll('video');
-
-    // Function to handle visibility and play/pause behavior
-    function handleVideoVisibility(entries, observer) {
-        entries.forEach(entry => {
-            const video = entry.target;
-
-            // Check if the video is fully visible
-            if (entry.isIntersecting) {
-                // Mute and play video when fully visible
-                video.muted = true;  // Mute the video to allow autoplay
-                video.play();
-            } else {
-                // Pause video when not fully visible
-                video.pause();
-            }
-        });
+    // 1) Only run auto-play logic on larger screens
+    if (window.innerWidth < 768) {
+      return; // Do nothing on small screens (phones)
     }
-
-    // Create the IntersectionObserver to observe when the video is fully visible
+  
+    // 2) IntersectionObserver callback
+    function handleVideoVisibility(entries) {
+      entries.forEach(entry => {
+        const video = entry.target;
+        const fullyVisible = entry.isIntersecting && entry.intersectionRatio === 1;
+  
+        if (fullyVisible) {
+          // If the user hasn't manually paused, auto‐play the video
+          if (video.dataset.userPaused !== "true") {
+            video.dataset.autoPlaying = "true"; // Mark that *we* are causing the play
+            video.muted = true;                // Mute for auto‐play policies
+            video.play();
+          }
+        } else {
+          // If not fully visible, force a pause
+          video.dataset.autoPausing = "true"; // Mark that *we* are causing the pause
+          video.pause();
+        }
+      });
+    }
+  
+    // Create the IntersectionObserver (play/pause only when 100% visible)
     const observer = new IntersectionObserver(handleVideoVisibility, {
-        threshold: 1.0  // Only play when the video is 100% visible in the viewport
+      threshold: 1.0
     });
-
-    // Loop through each video element, pause initially, and start observing
+  
+    // 3) Select all videos and initialize
+    const videos = document.querySelectorAll("video");
     videos.forEach(video => {
-        video.pause();  // Ensure the video is paused initially to prevent default autoplay
-        observer.observe(video);  // Observe the video for visibility
+      // Start in paused state
+      video.pause();
+      // Assume user has not paused yet
+      video.dataset.userPaused = "false";
+  
+      // 4) Distinguish auto‐pause vs. user‐pause
+      video.addEventListener("pause", () => {
+        // If we set 'autoPausing', then this pause was triggered by the observer
+        if (video.dataset.autoPausing === "true") {
+          video.dataset.autoPausing = "";
+        } else {
+          // Otherwise, the user pressed pause => do not auto‐play again
+          video.dataset.userPaused = "true";
+        }
+      });
+  
+      // 5) Distinguish auto‐play vs. user‐play
+      video.addEventListener("play", () => {
+        // If we set 'autoPlaying', then this play was triggered by the observer
+        if (video.dataset.autoPlaying === "true") {
+          video.dataset.autoPlaying = "";
+        } else {
+          // Otherwise, the user pressed play => userPaused should become false
+          video.dataset.userPaused = "false";
+        }
+      });
+  
+      // Finally, observe each video
+      observer.observe(video);
     });
-
-    // Add scroll listener to ensure videos respond correctly to scrolling
-    window.addEventListener('scroll', () => {
-        videos.forEach(video => {
-            // Check if the video is fully visible in the viewport (like IntersectionObserver)
-            const rect = video.getBoundingClientRect();
-            if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-                // Mute and play the video when fully visible
-                video.muted = true;  // Mute the video for autoplay
-                video.play();
-            } else {
-                // Pause the video if it's not fully visible
-                video.pause();
-            }
-        });
-    });
-});
-
+  });
+  
 // Reading plotly plots

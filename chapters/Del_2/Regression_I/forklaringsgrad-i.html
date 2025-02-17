@@ -93,14 +93,14 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <script defer="defer" src="https://unpkg.com/@popperjs/core@2"></script>
     <script defer="defer" src="https://unpkg.com/tippy.js@6"></script>
-    <script defer="defer" src="../../../_static/tippy\chapters\Del_2\Regression_I\forklaringsgrad-i.2b0c89fb-c22d-427f-bdff-2d85310670e6.js"></script>
+    <script defer="defer" src="../../../_static/tippy\chapters\Del_2\Regression_I\forklaringsgrad-i.4357bdc0-4af8-48d0-a55b-a2552c660696.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/Del_2/Regression_I/forklaringsgrad-i';</script>
     <link rel="index" title="Indeks" href="../../../genindex.html" />
     <link rel="search" title="Søg" href="../../../search.html" />
     <link rel="next" title="25.5. Tid som forklarende variabel" href="tid-som-forklarende-variabel.html" />
-    <link rel="prev" title="25.3. Residualer" href="residualer.html" />
+    <link rel="prev" title="25.3. Residualer" href="residuals.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="da"/>
   </head>
@@ -426,7 +426,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="regression-i.html">25. Regression I</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="datamaessige-sammenhaenge.html">25.1. Datamæssige sammenhænge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="simpel-lineaer-regression.html">25.2. Simpel lineær regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="residualer.html">25.3. Residualer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="residuals.html">25.3. Residualer</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">25.4. Forklaringsgrad I</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tid-som-forklarende-variabel.html">25.5. Tid som forklarende variabel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="simpel-ikke-lineaer-regression.html">25.6. Simpel ikke-lineær regression</a></li>
@@ -642,10 +642,7 @@ document.write(`
 <p>Forklaringsgraden er et mål for modellens GOF (Goodness Of Fit). Der er flere måder at definere denne størrelse på. Den måde, som vi vil beskæftige os med, relaterer summen af de kvadrerede residualer, <span class="math notranslate nohighlight">\(\text{RSS}\)</span>, og den totale kvadratsum, <span class="math notranslate nohighlight">\(\text{TSS}\)</span> (Total Sum of Squares), med hinanden. Den totale kvadratsum er defineret ved</p>
 <div class="math notranslate nohighlight" id="equation-eq-total-sum-of-squares">
 <span class="eqno">(25.6)<a class="headerlink" href="#equation-eq-total-sum-of-squares" title="Permalink til denne ligning">#</a></span>\[    \text{TSS} = (y_1 - \bar{y})^2 + (y_2 - \bar{y})^2 + \cdots + (y_n - \bar{y})^2 = \sum_{i=1}^n (y_i - \bar{y})^2,\]</div>
-<p>hvor <span class="math notranslate nohighlight">\(\bar{y}\)</span> er gennemsnittet af <span class="math notranslate nohighlight">\(y_i\)</span>-værdierne, se <a class="reference internal" href="../../Del_1/Deskriptiv_statistik/statistiske-deskriptorer.html#equation-eq-gennemsnit">(12.10)</a>. Du kan måske genkende den totale kvadratsum fra formlen for stikprøvevarians <a class="reference internal" href="../../Del_1/Deskriptiv_statistik/statistiske-deskriptorer.html#equation-eq-stikproevevarians">(12.16)</a>, da</p>
-<div class="math notranslate nohighlight">
-\[    s^2 = \frac{1}{n}\text{TSS}.\]</div>
-<p>Forklaringsgraden er givet ved</p>
+<p>hvor <span class="math notranslate nohighlight">\(\bar{y}\)</span> er gennemsnittet af <span class="math notranslate nohighlight">\(y_i\)</span>-værdierne, se <a class="reference internal" href="../../Del_1/Deskriptiv_statistik/statistiske-deskriptorer.html#equation-eq-gennemsnit">(12.10)</a>. Forklaringsgraden er givet ved</p>
 <div class="math notranslate nohighlight" id="equation-eq-forklaringsgrad">
 <span class="eqno">(25.7)<a class="headerlink" href="#equation-eq-forklaringsgrad" title="Permalink til denne ligning">#</a></span>\[    R^2 = 1 - \frac{\text{RSS}}{\text{TSS}}\]</div>
 <p>og giver en værdi mellem 0 og 1. Desto tættere modellens forklaringsgrad er på 1, desto bedre passer modellen på vores data. De to yderpunkter svarer til:</p>
@@ -686,7 +683,7 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="residualer.html"
+       href="residuals.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">

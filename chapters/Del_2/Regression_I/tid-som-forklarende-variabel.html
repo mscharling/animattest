@@ -93,7 +93,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <script defer="defer" src="https://unpkg.com/@popperjs/core@2"></script>
     <script defer="defer" src="https://unpkg.com/tippy.js@6"></script>
-    <script defer="defer" src="../../../_static/tippy\chapters\Del_2\Regression_I\tid-som-forklarende-variabel.55e0a6a8-89b7-4b70-ba5b-33794929bfe2.js"></script>
+    <script defer="defer" src="../../../_static/tippy\chapters\Del_2\Regression_I\tid-som-forklarende-variabel.353494b0-34d9-4102-a2b7-9c425f8f1bd9.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/Del_2/Regression_I/tid-som-forklarende-variabel';</script>
@@ -426,7 +426,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="regression-i.html">25. Regression I</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="datamaessige-sammenhaenge.html">25.1. Datamæssige sammenhænge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="simpel-lineaer-regression.html">25.2. Simpel lineær regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="residualer.html">25.3. Residualer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="residuals.html">25.3. Residualer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="forklaringsgrad-i.html">25.4. Forklaringsgrad I</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">25.5. Tid som forklarende variabel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="simpel-ikke-lineaer-regression.html">25.6. Simpel ikke-lineær regression</a></li>
@@ -611,9 +611,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -629,14 +627,6 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Indhold </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgaver">25.5.1. Opgaver</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -648,13 +638,13 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="tid-som-forklarende-variabel">
 <h1><span class="section-number">25.5. </span>Tid som forklarende variabel<a class="headerlink" href="#tid-som-forklarende-variabel" title="Permalink til denne overskrift">#</a></h1>
-<p>Rigtig mange datasæt går ud på at undersøge, hvordan vores responsvariabel <span class="math notranslate nohighlight">\(y_i\)</span> udvikler sig over tid. Det kunne for eksempel være, hvordan befolkningstilvæksten udvikler sig for hvert år, der går. Uden at røbe for meget, så er en eksponentiel model god til at beskrive en sådan udvikling. Det vil vi se på i <code class="xref std std-numref docutils literal notranslate"><span class="pre">Kapitel</span> <span class="pre">%s</span></code>.</p>
+<p>Rigtig mange datasæt går ud på at undersøge, hvordan vores responsvariabel <span class="math notranslate nohighlight">\(y_i\)</span> udvikler sig over tid. Det kunne for eksempel være, hvordan befolkningstilvæksten udvikler sig for hvert år, der går. Uden at røbe for meget, så er en eksponentiel model god til at beskrive en sådan udvikling. Det vil vi se på i <a class="reference internal" href="simpel-ikke-lineaer-regression.html#simpel-ikke-lineaer-regression"><span class="std std-numref">Kapitel 25.6</span></a>.</p>
 <p>Vi vil benævne tid med <span class="math notranslate nohighlight">\(t\)</span>. Undersøger vi et sådan datasæt, kan vi forestille os, at det har formen</p>
 <div class="math notranslate nohighlight">
 \[    (t_1,y_1),(t_2,y_2),\dots,(t_n,y_n).\]</div>
 <p>Det kan være en god idé at indeksere vores tidsvariabel, hvis den er angivet i årstal. Hvis den er angivet i sekunder, minutter eller timer, så er det ikke nødvendigt. Grunden til dette er, at med årstal som forklarende variabel vil give estimater for modellen, der ser meget voldsomme ud. Derfor kan vi bedre lide at benævne første årstal med 0, andet årstal med 1 og så videre.</p>
 <div class="proof eksempel admonition" id="eksempel-0">
-<p class="admonition-title"><span class="caption-number">Eksempel 25.6 </span></p>
+<p class="admonition-title"><span class="caption-number">Eksempel 25.5 </span></p>
 <section class="eksempel-content" id="proof-content">
 <p>Vi får til opgave at hjælpe en virksomhed med at prognosticere salgstal for 2024, 2025 og 2026. De giver os følgende datasæt over deres omsætning over de seneste seks år:</p>
 <table class="colwidths-auto table">
@@ -714,7 +704,7 @@ document.write(`
 </table>
 <p>Ved at betragte data i et scatterplot med indekseret år langs <span class="math notranslate nohighlight">\(x\)</span>-aksen og omsætning langs <span class="math notranslate nohighlight">\(y\)</span>-aksen bliver det tydeligt, at virksomhedens omsætning udvikler sig lineært. Vi estimerer derfor en lineær model:</p>
 <figure class="align-default">
-<img alt="../../../_images/b072fa298fbb157e2389e511a1e6a3878732ba8d72396bd1b380547867c5cbd1.png" src="../../../_images/b072fa298fbb157e2389e511a1e6a3878732ba8d72396bd1b380547867c5cbd1.png" />
+<img alt="../../../_images/564e43bb9eb414f544469fec6f53abce8b5f94c73c38b3fff777ac7815a00d6d.png" src="../../../_images/564e43bb9eb414f544469fec6f53abce8b5f94c73c38b3fff777ac7815a00d6d.png" />
 </figure>
 <div class="pasted-math math notranslate nohighlight">
 \[\displaystyle f(t) = 19288{,}09 t + 23513{,}29\]</div>
@@ -723,15 +713,7 @@ document.write(`
 \[    f(6) = 19288.09\cdot 6 + 23513.29 \approx 139242\]</div>
 <p>På samme måde får vi prædiktionerne for 2025 til 158.530 kr. og for 2026 til 177.818 kr.</p>
 </section>
-</div><section id="opgaver">
-<h2><span class="section-number">25.5.1. </span>Opgaver<a class="headerlink" href="#opgaver" title="Permalink til denne overskrift">#</a></h2>
-<div class="proof opgave admonition" id="opgave-1">
-<p class="admonition-title"><span class="caption-number">Opgave 25.1 </span></p>
-<section class="opgave-content" id="proof-content">
-<p>Lineær regression, hvor vi godt kunne tænke os tidligere årgange med indeks (-1)?</p>
-</section>
 </div></section>
-</section>
 
     <script type="text/x-thebe-config">
     {
@@ -787,20 +769,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Indhold
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opgaver">25.5.1. Opgaver</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
