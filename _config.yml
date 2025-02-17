@@ -6,6 +6,7 @@ author: MatAkademiet
 #logo: animat-black.png
 
 sphinx:
+  #recursive_update: true
   extra_extensions:
     - sphinx_proof
     - sphinx_exercise
@@ -34,8 +35,11 @@ sphinx:
     tippy_enable_mathjax: true
     tippy_tip_selector: 'figure, table, img, p, aside, div.admonition, div.literal-block-wrapper, div.math'
     html_js_files:
+      #- https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
+      #- https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.0/dist/loading-attribute-polyfill.min.js
       - 'custom.js'
-
+      
+      
 #html:
 #  theme:
 #    options:
@@ -46,7 +50,8 @@ sphinx:
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: force
+  execute_notebooks: force #cache # set to force 
+  timeout: -1
 
 # Define the name of the latex output file for PDF builds
 latex:

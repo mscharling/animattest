@@ -1,0 +1,9 @@
+## Opgaver
+
+```{prf:opgave}
+
+1. &nbsp; 
+
+```
+
+{numref}`Kapitel %s<ch-simpel-ikke-lineaer-regression>`

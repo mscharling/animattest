@@ -13,3 +13,14 @@ redundant
     Når noget er lige gyldigt.
 ```
 
+```{glossary}
+kvantificere
+
+    At omsætte noget så det kan tælles eller måles.
+```
+
+```{glossary}
+empirisk
+
+    Når noget er bygget på faktiske observationer.
+```

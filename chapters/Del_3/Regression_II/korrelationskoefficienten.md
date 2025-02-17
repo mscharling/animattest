@@ -34,7 +34,7 @@ Den sande korrelation mellem de to variabler er altså bestemt af momenterne for
 
 ## Estimation af korrelationskoefficient
 
-Som vi lærte i Kapitel ??.?, så kan vi estimere vores momenter for stokastiske variabler empirisk.
+Som vi lærte i Kapitel ??.?, så kan vi estimere vores momenter for stokastiske variabler {term}`empirisk`.
 
 Lad $x_1,x_2,\dots,x_n$ være realiserede observationer fra en stokastisk variabel $X$. Da har vi følgende estimatorer for momenterne for $X$:
 

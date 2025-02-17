@@ -219,8 +219,9 @@ parts:
         sections:
           - file: chapters/Del_2/Regression_I/datamaessige-sammenhaenge
           - file: chapters/Del_2/Regression_I/simpel-lineaer-regression
-          - file: chapters/Del_2/Regression_I/residualer
+          - file: chapters/Del_2/Regression_I/residuals
           - file: chapters/Del_2/Regression_I/forklaringsgrad-i
+          - file: chapters/Del_2/Regression_I/tid-som-forklarende-variabel
           - file: chapters/Del_2/Regression_I/simpel-ikke-lineaer-regression
           - file: chapters/Del_2/Regression_I/logistisk-regression
           - file: chapters/Del_2/Regression_I/matematisk-modellering-i
@@ -307,8 +308,8 @@ parts:
           - file: chapters/Del_3/Regression_II/tabsfunktioner
           - file: chapters/Del_3/Regression_II/multipel-lineaer-regression
           - file: chapters/Del_3/Regression_II/parametrenes-konfidensintervaller
-          - file: chapters/Del_3/Regression_II/matematisk-modellering-ii
           - file: chapters/Del_3/Regression_II/korrelation-og-kausalitet
+          - file: chapters/Del_3/Regression_II/matematisk-modellering-ii
   - caption: Værktøjer
     numbered: false
     chapters:

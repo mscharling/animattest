@@ -13,3 +13,7 @@ Særlig fokus på sammenhængen mellem arealer og stamfunktioner, og integration
 Anvendelser af Integralregning
 
 Anvendelse af integraler i praktiske problemstillinger, som beregning af arealer afgrænset af funktioner, rumfang af omdrejningslegemer, og bestemmelse af kurvelængder.
+
+https://da.wikipedia.org/wiki/Logaritme
+
+logaritmen kan defineres med ln

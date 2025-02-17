@@ -93,7 +93,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <script defer="defer" src="https://unpkg.com/@popperjs/core@2"></script>
     <script defer="defer" src="https://unpkg.com/tippy.js@6"></script>
-    <script defer="defer" src="../../../_static/tippy\chapters\Del_3\Differentialligninger\hvorfor-differentialligninger.2d9f8e5e-1c82-4492-b455-cfc260167917.js"></script>
+    <script defer="defer" src="../../../_static/tippy\chapters\Del_3\Differentialligninger\hvorfor-differentialligninger.f2943518-d589-450c-bc18-2e80ab07d859.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/Del_3/Differentialligninger/hvorfor-differentialligninger';</script>
@@ -424,13 +424,15 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../Del_2/Regression_I/regression-i.html">25. Regression I</a><input class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/datamaessige-sammenhaenge.html">25.1. Datamæssige sammenhænge</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/simpel-lineaer-regression.html">25.2. Simpel lineær regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/residualer.html">25.3. Residualer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/forklaringsgrad-i.html">25.4. Forklaringsgrad I</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/simpel-ikke-lineaer-regression.html">25.5. Simpel ikke-lineær regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/logistisk-regression.html">25.6. Logistisk regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/matematisk-modellering-i.html">25.7. Matematisk modellering I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/datamaessige-sammenhaenge.html">25.1. Scatterplot</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/simpel-lineaer-regression.html">25.3. Simpel lineær regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/residuals.html">25.4. Residualer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/forklaringsgrad-i.html">25.5. Forklaringsgrad I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/tid-som-forklarende-variabel.html">25.6. Tid som forklarende variabel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/simpel-ikke-lineaer-regression.html">25.7. Simpel ikke-lineær regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/logistisk-regression.html">25.8. Logistisk regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_2/Regression_I/matematisk-modellering-i.html">25.9. Matematisk modellering I</a></li>
 </ul>
 </li>
 </ul>
@@ -524,8 +526,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../Regression_II/tabsfunktioner.html">34.5. Tabsfunktioner</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Regression_II/multipel-lineaer-regression.html">34.6. Multiple lineær regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Regression_II/parametrenes-konfidensintervaller.html">34.7. Parametrenes konfidensintervaller</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Regression_II/matematisk-modellering-ii.html">34.8. Matematisk modellering II</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../Regression_II/korrelation-og-kausalitet.html">34.9. Korrelation og kausalitet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Regression_II/korrelation-og-kausalitet.html">34.8. Korrelation og kausalitet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Regression_II/matematisk-modellering-ii.html">34.9. Matematisk modellering II</a></li>
 </ul>
 </li>
 </ul>
@@ -610,7 +612,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -626,6 +630,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Indhold </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamikker">32.1.1. Dynamikker</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -637,6 +649,22 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="hvorfor-differentialligninger">
 <h1><span class="section-number">32.1. </span>Hvorfor differentialligninger?<a class="headerlink" href="#hvorfor-differentialligninger" title="Permalink til denne overskrift">#</a></h1>
+<p>Vi har jo egentlig allerede været lidt inde på titlens spørgsmål i introduktionen til dette kapitel. Vi vil bruge differentialligningerne til at opstille ligninger for, hvordan ændringer i en variabel afhænger af ændringer i en anden variabel.</p>
+<p>En differentialligning er en ligning, hvor den ukendte størrelse ikke er et tal, men en funktion. Det nye i differentialligninger er, at vi ikke blot er interesserede i selve funktionen, men også i, hvordan funktionen ændrer sig. Denne ændring beskrives ved hjælp af funktionens afledede.</p>
+<p>I <a class="reference internal" href="../../Del_2/Differentialregning/differentialregning-i.html#ch-differentialregning-i"><span class="std std-numref">Kapitel 19</span></a> og <a class="reference internal" href="../Differentialregning_II/differentialregning-ii.html#ch-differentialregning-ii"><span class="std std-numref">Kapitel 29</span></a> mødte vi størrelsen <span class="math notranslate nohighlight">\(\frac{\text{d}y}{\text{d}x}\)</span>, kaldet differentialkvotienten. Denne størrelse angiver tangenthældningen i et bestemt punkt <span class="math notranslate nohighlight">\(x_0\)</span> ved brug af en grænseværdi-betragtning. Husk, tangenthældningen er jo et udtryk for den infinitesimale ændring i <span class="math notranslate nohighlight">\(y\)</span>-værdien, <span class="math notranslate nohighlight">\(\text{d}y\)</span>, pr. infinitesimal ændring i <span class="math notranslate nohighlight">\(x\)</span>-værdien, <span class="math notranslate nohighlight">\(\text{d}x\)</span>. Regner vi denne for samtlige punkter på grafen for en funktion, så har vi den afledte funktion.</p>
+<section id="dynamikker">
+<h2><span class="section-number">32.1.1. </span>Dynamikker<a class="headerlink" href="#dynamikker" title="Permalink til denne overskrift">#</a></h2>
+<p>Når vi arbejder med differentialligninger, vil vi ofte bruge notationen <span class="math notranslate nohighlight">\(y\prime\)</span> i stedet for <span class="math notranslate nohighlight">\(\frac{\text{d}y}{\text{d}x}\)</span>. Det er dog vigtigt at huske, at <span class="math notranslate nohighlight">\(y\prime\)</span> og <span class="math notranslate nohighlight">\(\frac{\text{d}y}{\text{d}x}\)</span> angiver det samme, nemlig den afledede af <span class="math notranslate nohighlight">\(y\)</span> med hensyn til <span class="math notranslate nohighlight">\(x\)</span>. For eksempel:</p>
+<div class="math notranslate nohighlight">
+\[    y\prime = 2x.\]</div>
+<p>Dette er et simpelt eksempel på en differentialligning. Her ser vi, at ændringen i <span class="math notranslate nohighlight">\(y\)</span>-variablen afhænger af <span class="math notranslate nohighlight">\(x\)</span>-variablen. Hvordan ved vi det? Lad os omskrive ligningen ved at bruge notationen <span class="math notranslate nohighlight">\(\frac{\text{d}y}{\text{d}x}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[    \frac{\text{d}y}{\text{d}x} = 2x.\]</div>
+<p>Vi kan nu tænke på differentialligningen på en mere intuitiv måde. Ved at multiplicere begge sider af ligningen med <span class="math notranslate nohighlight">\(\text{d}x\)</span> får vi:</p>
+<div class="math notranslate nohighlight" id="equation-eq-dynamik">
+<span class="eqno">(32.1)<a class="headerlink" href="#equation-eq-dynamik" title="Permalink til denne ligning">#</a></span>\[    $\text{d}y = 2x\,\text{d}x.\]</div>
+<p>Dette udtryk kan vi læse som: »Ændringen i <span class="math notranslate nohighlight">\(y\)</span>-variablen, <span class="math notranslate nohighlight">\(\text{d}y\)</span>, er lig med 2 gange <span class="math notranslate nohighlight">\(x\)</span>-variablen gange ændringen i <span class="math notranslate nohighlight">\(x\)</span>-variablen, <span class="math notranslate nohighlight">\(\text{d}x\)</span>. Dette er en mere praktisk måde at forstå differentialligninger på - som beskrivelser af, hvordan små ændringer i en variabel hænger sammen med små ændringer i en anden variabel. Differentialligninger på formen <a class="reference internal" href="#equation-eq-dynamik">(32.1)</a> kaldes en <em>dynamik</em>. Finder vi funktionen, der løser differentialligningen, da siges den funktion af have dynamikken angivet i <a class="reference internal" href="#equation-eq-dynamik">(32.1)</a>.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -693,6 +721,20 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Indhold
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamikker">32.1.1. Dynamikker</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

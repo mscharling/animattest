@@ -1,0 +1,4 @@
+animat_green = "#aecc55"
+animat_red = "#cc5241"
+animat_yellow = "#d9c750"
+animat_blue = "#6a90cc"

@@ -93,14 +93,14 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <script defer="defer" src="https://unpkg.com/@popperjs/core@2"></script>
     <script defer="defer" src="https://unpkg.com/tippy.js@6"></script>
-    <script defer="defer" src="../../../_static/tippy\chapters\Del_2\Regression_I\forklaringsgrad-i.76fabcec-96b8-483e-86f3-fa94d16325a8.js"></script>
+    <script defer="defer" src="../../../_static/tippy\chapters\Del_2\Regression_I\forklaringsgrad-i.4357bdc0-4af8-48d0-a55b-a2552c660696.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/Del_2/Regression_I/forklaringsgrad-i';</script>
     <link rel="index" title="Indeks" href="../../../genindex.html" />
     <link rel="search" title="Søg" href="../../../search.html" />
-    <link rel="next" title="25.5. Simpel ikke-lineær regression" href="simpel-ikke-lineaer-regression.html" />
-    <link rel="prev" title="25.3. Residualer" href="residualer.html" />
+    <link rel="next" title="25.5. Tid som forklarende variabel" href="tid-som-forklarende-variabel.html" />
+    <link rel="prev" title="25.3. Residualer" href="residuals.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="da"/>
   </head>
@@ -426,11 +426,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="regression-i.html">25. Regression I</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="datamaessige-sammenhaenge.html">25.1. Datamæssige sammenhænge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="simpel-lineaer-regression.html">25.2. Simpel lineær regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="residualer.html">25.3. Residualer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="residuals.html">25.3. Residualer</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">25.4. Forklaringsgrad I</a></li>
-<li class="toctree-l2"><a class="reference internal" href="simpel-ikke-lineaer-regression.html">25.5. Simpel ikke-lineær regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="logistisk-regression.html">25.6. Logistisk regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="matematisk-modellering-i.html">25.7. Matematisk modellering I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tid-som-forklarende-variabel.html">25.5. Tid som forklarende variabel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simpel-ikke-lineaer-regression.html">25.6. Simpel ikke-lineær regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="logistisk-regression.html">25.7. Logistisk regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matematisk-modellering-i.html">25.8. Matematisk modellering I</a></li>
 </ul>
 </li>
 </ul>
@@ -524,8 +525,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../Del_3/Regression_II/tabsfunktioner.html">34.5. Tabsfunktioner</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Del_3/Regression_II/multipel-lineaer-regression.html">34.6. Multiple lineær regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Del_3/Regression_II/parametrenes-konfidensintervaller.html">34.7. Parametrenes konfidensintervaller</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Regression_II/matematisk-modellering-ii.html">34.8. Matematisk modellering II</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Regression_II/korrelation-og-kausalitet.html">34.9. Korrelation og kausalitet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Regression_II/korrelation-og-kausalitet.html">34.8. Korrelation og kausalitet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Regression_II/matematisk-modellering-ii.html">34.9. Matematisk modellering II</a></li>
 </ul>
 </li>
 </ul>
@@ -637,6 +638,18 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="forklaringsgrad-i">
 <h1><span class="section-number">25.4. </span>Forklaringsgrad I<a class="headerlink" href="#forklaringsgrad-i" title="Permalink til denne overskrift">#</a></h1>
+<p>Skal vi evaluere en model, kan vi bruge <em>forklaringsgraden</em> eller <em>R-i-anden værdien</em>, <span class="math notranslate nohighlight">\(R^2\)</span>. Nogle steder vil du også møde denne størrelse under navnet <em>determinationskoefficienten</em>.</p>
+<p>Forklaringsgraden er et mål for modellens GOF (Goodness Of Fit). Der er flere måder at definere denne størrelse på. Den måde, som vi vil beskæftige os med, relaterer summen af de kvadrerede residualer, <span class="math notranslate nohighlight">\(\text{RSS}\)</span>, og den totale kvadratsum, <span class="math notranslate nohighlight">\(\text{TSS}\)</span> (Total Sum of Squares), med hinanden. Den totale kvadratsum er defineret ved</p>
+<div class="math notranslate nohighlight" id="equation-eq-total-sum-of-squares">
+<span class="eqno">(25.6)<a class="headerlink" href="#equation-eq-total-sum-of-squares" title="Permalink til denne ligning">#</a></span>\[    \text{TSS} = (y_1 - \bar{y})^2 + (y_2 - \bar{y})^2 + \cdots + (y_n - \bar{y})^2 = \sum_{i=1}^n (y_i - \bar{y})^2,\]</div>
+<p>hvor <span class="math notranslate nohighlight">\(\bar{y}\)</span> er gennemsnittet af <span class="math notranslate nohighlight">\(y_i\)</span>-værdierne, se <a class="reference internal" href="../../Del_1/Deskriptiv_statistik/statistiske-deskriptorer.html#equation-eq-gennemsnit">(12.10)</a>. Forklaringsgraden er givet ved</p>
+<div class="math notranslate nohighlight" id="equation-eq-forklaringsgrad">
+<span class="eqno">(25.7)<a class="headerlink" href="#equation-eq-forklaringsgrad" title="Permalink til denne ligning">#</a></span>\[    R^2 = 1 - \frac{\text{RSS}}{\text{TSS}}\]</div>
+<p>og giver en værdi mellem 0 og 1. Desto tættere modellens forklaringsgrad er på 1, desto bedre passer modellen på vores data. De to yderpunkter svarer til:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(R^2 = 1\)</span> forekommer, når <span class="math notranslate nohighlight">\(\text{RSS}=0\)</span>, hvilket betyder, at modellen gennemskærer datapunkterne perfekt. Alle residualer er 0.</p></li>
+<li><p><span class="math notranslate nohighlight">\(R^2 = 0\)</span> forekommer, når <span class="math notranslate nohighlight">\(\text{RSS}=\text{TSS}\)</span>, hvilket betyder, at modellen blot er den konstante linje lig gennemsnittet <span class="math notranslate nohighlight">\(\bar{y}\)</span>. Dette kaldes også <em>baseline</em>-modellen.</p></li>
+</ul>
 </section>
 
     <script type="text/x-thebe-config">
@@ -670,7 +683,7 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="residualer.html"
+       href="residuals.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
@@ -679,11 +692,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="simpel-ikke-lineaer-regression.html"
+       href="tid-som-forklarende-variabel.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">næste</p>
-        <p class="prev-next-title"><span class="section-number">25.5. </span>Simpel ikke-lineær regression</p>
+        <p class="prev-next-title"><span class="section-number">25.5. </span>Tid som forklarende variabel</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

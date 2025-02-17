@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>25.6. Logistisk regression &#8212; AniMAT</title>
+    <title>25.7. Logistisk regression &#8212; AniMAT</title>
   
   
   
@@ -93,14 +93,14 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <script defer="defer" src="https://unpkg.com/@popperjs/core@2"></script>
     <script defer="defer" src="https://unpkg.com/tippy.js@6"></script>
-    <script defer="defer" src="../../../_static/tippy\chapters\Del_2\Regression_I\logistisk-regression.896837f2-de6b-4e3c-92ef-ef3a495416c4.js"></script>
+    <script defer="defer" src="../../../_static/tippy\chapters\Del_2\Regression_I\logistisk-regression.071a8720-f7cc-4333-9a78-d1fd4c50604f.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/Del_2/Regression_I/logistisk-regression';</script>
     <link rel="index" title="Indeks" href="../../../genindex.html" />
     <link rel="search" title="Søg" href="../../../search.html" />
-    <link rel="next" title="25.7. Matematisk modellering I" href="matematisk-modellering-i.html" />
-    <link rel="prev" title="25.5. Simpel ikke-lineær regression" href="simpel-ikke-lineaer-regression.html" />
+    <link rel="next" title="25.8. Matematisk modellering I" href="matematisk-modellering-i.html" />
+    <link rel="prev" title="25.6. Simpel ikke-lineær regression" href="simpel-ikke-lineaer-regression.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="da"/>
   </head>
@@ -426,11 +426,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="regression-i.html">25. Regression I</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-25" name="toctree-checkbox-25" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-25"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="datamaessige-sammenhaenge.html">25.1. Datamæssige sammenhænge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="simpel-lineaer-regression.html">25.2. Simpel lineær regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="residualer.html">25.3. Residualer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="residuals.html">25.3. Residualer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="forklaringsgrad-i.html">25.4. Forklaringsgrad I</a></li>
-<li class="toctree-l2"><a class="reference internal" href="simpel-ikke-lineaer-regression.html">25.5. Simpel ikke-lineær regression</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">25.6. Logistisk regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="matematisk-modellering-i.html">25.7. Matematisk modellering I</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tid-som-forklarende-variabel.html">25.5. Tid som forklarende variabel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="simpel-ikke-lineaer-regression.html">25.6. Simpel ikke-lineær regression</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">25.7. Logistisk regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matematisk-modellering-i.html">25.8. Matematisk modellering I</a></li>
 </ul>
 </li>
 </ul>
@@ -524,8 +525,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../Del_3/Regression_II/tabsfunktioner.html">34.5. Tabsfunktioner</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Del_3/Regression_II/multipel-lineaer-regression.html">34.6. Multiple lineær regression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../Del_3/Regression_II/parametrenes-konfidensintervaller.html">34.7. Parametrenes konfidensintervaller</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Regression_II/matematisk-modellering-ii.html">34.8. Matematisk modellering II</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Regression_II/korrelation-og-kausalitet.html">34.9. Korrelation og kausalitet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Regression_II/korrelation-og-kausalitet.html">34.8. Korrelation og kausalitet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Del_3/Regression_II/matematisk-modellering-ii.html">34.9. Matematisk modellering II</a></li>
 </ul>
 </li>
 </ul>
@@ -636,8 +637,80 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="logistisk-regression">
-<h1><span class="section-number">25.6. </span>Logistisk regression<a class="headerlink" href="#logistisk-regression" title="Permalink til denne overskrift">#</a></h1>
+<h1><span class="section-number">25.7. </span>Logistisk regression<a class="headerlink" href="#logistisk-regression" title="Permalink til denne overskrift">#</a></h1>
+<p>I dette afsnit vil vi betragte en slags eksponentiel model med en øvre grænse. En normal eksponentiel regression antager, at din responsvariabel bliver ved med at udvikle sig eksponentielt. Det vil nok i en række tilfælde ikke være korrekt. Lad os tage udgangspunkt i et eksempel.</p>
+<p>I 2020 kom COVID-19 til Danmark og smitten med corona-virussen spredte sig hurtigt. For at lægge en dæmper på smitten, lukkede man landet ned og holdte folket hjemme i videst muligt omfang. Det hele handlede om at få det danske sundhedsvæsen til at kunne følge med - på samme tid med, at vi passede på de udsatte borgere. Under tiden kunne vaccinen færdigudviklet. Den måde, som man så smitten sprede sig på, fulgte eksponentiel vækst. Men, ville det give mening at modellere det som eksponentiel vækst? Nej, ikke rigtigt. Vi er jo ikke en ubegrænset menneskeskare, så på et tidspunkt vil der ikke være flere at kunne smitte. Der er jo en naturligt øvre grænse på smitten, nemlig antallet af indbyggere i Danmark. Derfor giver det mere mening at kigge på en logistisk vækst, der ligner eksponentiel vækst til et punkt, hvorefter den begynder at flade ud - meget som vi ville forvente en kurve over antal smittede ville se ud, hvis ikke regeringen kom med tiltag for at dæmpe smitten.</p>
+<p>En logistisk regression følger formen:</p>
+<div class="math notranslate nohighlight">
+\[    f(x) = \frac{c}{1 + b\text{e}^{-kx}}.\]</div>
+<figure class="align-default">
+<img alt="../../../_images/24111c98944de4168d5b873f745fb51837ec31243f278001a3965ec9b08f866b.png" src="../../../_images/24111c98944de4168d5b873f745fb51837ec31243f278001a3965ec9b08f866b.png" />
+</figure>
+<p>Betragter vi grafen for den logistiske funktion, så vil vi have at:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\frac{c}{1+b}\)</span> er startværdien for vores model (skæringen på <span class="math notranslate nohighlight">\(y\)</span>-aksen).</p></li>
+<li><p><span class="math notranslate nohighlight">\(k\)</span> bestemmer, hvor hurtigt modellen vokser. Et større <span class="math notranslate nohighlight">\(k\)</span> betyder, at modellen vokser hurtigere mod den øvre grænse <span class="math notranslate nohighlight">\(c\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(c\)</span> er modellens øvre grænse og kaldes nogle gange for modellens <em>bæreevne</em>. Linjen <span class="math notranslate nohighlight">\(y=c\)</span> er asymptote til modellens graf.</p></li>
+<li><p>Alle logistiske modeller vil vokse hurtigt til at starte med og opnå en maksimum vækstrate ved punktet <span class="math notranslate nohighlight">\(\left(\frac{\ln(k)}{b},\frac{c}{2}\right)\)</span>. Efter dette punkt vil modellen vokse langsommere og begynde at nærme sig den øvre grænse.</p></li>
+</ul>
+<p>Lad os kigge på et eksempel, der illustrerer, hvordan en logistisk model kan være mere passende end en eksponentiel model, når der er en naturlig øvre grænse for, hvor meget vores responsvariabel kan vokse.</p>
+<div class="proof eksempel admonition" id="logistisk-regression-eksempel">
+<p class="admonition-title"><span class="caption-number">Eksempel 25.8 </span></p>
+<section class="eksempel-content" id="proof-content">
+<p>Vi vil gerne modellere, hvor mange tusinde personer <span class="math notranslate nohighlight">\(y\)</span>, der er blevet smittet med en ny fiktiv virus, som spreder sig i befolkningen. Vi måler antal smittede på bestemte tidspunkter, <span class="math notranslate nohighlight">\(t\)</span>, målt i dage fra udbruddets start. Data kan findes i filen <a class="reference download internal" download="" href="../../../_downloads/6e2282e9d208c4ea6d21487d39b418c4/eks_smitte-udvikling.xlsx"><code class="xref download docutils literal notranslate"><span class="pre">eks_smitte-udvikling.xlsx</span></code></a>:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Dage</p></th>
+<th class="head"><p>Antal smittede (i tusinde)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>1.2</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>2.5</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>5.1</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>10.5</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>19.2</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>35.4</p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>52.6</p></td>
+</tr>
+<tr class="row-odd"><td><p>14</p></td>
+<td><p>70.8</p></td>
+</tr>
+<tr class="row-even"><td><p>16</p></td>
+<td><p>82.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>18</p></td>
+<td><p>90.3</p></td>
+</tr>
+<tr class="row-even"><td><p>20</p></td>
+<td><p>93.1</p></td>
+</tr>
+</tbody>
+</table>
+<p>I starten af udbruddet kan smitten ligne en eksponentiel udvikling, men i realiteten kan virussen <em>ikke</em> inficere et uendeligt antal personer. På et tidspunkt løber den tør for værter, fordi enten er de allerede blevet smittet, eller også er de immune/vaccinerede. Derfor giver det mere mening at antage, at kurven gradvist flader ud. Denne form for udvikling beskrives typisk godt af en logistisk model.</p>
+<figure class="align-default">
+<img alt="../../../_images/a689bcab7b1cbf93cab9dc2620d6a138369bd05999f6b18a04d7ad50dbd512f7.png" src="../../../_images/a689bcab7b1cbf93cab9dc2620d6a138369bd05999f6b18a04d7ad50dbd512f7.png" />
+</figure>
+<p>Af grafen ses, at den logistiske model passer væsentligt bedre end en simpel eksponentiel model, når der er et naturligt loft for, hvor meget smitten kan nå at sprede sig. Den estimerede model har forskriften:</p>
+<div class="math notranslate nohighlight">
+\[    f(t) = \frac{96{,}904}{1 + 87{,}956\text{e}^{-0{,}390t}}.\]</div>
+<p>Den estimerede øvre grænse for, hvor mange der i sidste ende kan ende med at blive smittet (i tusinder) er ca. 97, altså 97.000.</p>
+<p>Som du kan se, opfører kurven sig eksponentielt i starten, men begynder siden at flade ud i takt med, at antallet af potentielle nye smittede falder – nøjagtigt som vi vil forvente i et lukket system, hvor befolkningens størrelse udgør en naturlig grænse.</p>
 </section>
+</div></section>
 
     <script type="text/x-thebe-config">
     {
@@ -675,7 +748,7 @@ document.write(`
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">forrige</p>
-        <p class="prev-next-title"><span class="section-number">25.5. </span>Simpel ikke-lineær regression</p>
+        <p class="prev-next-title"><span class="section-number">25.6. </span>Simpel ikke-lineær regression</p>
       </div>
     </a>
     <a class="right-next"
@@ -683,7 +756,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">næste</p>
-        <p class="prev-next-title"><span class="section-number">25.7. </span>Matematisk modellering I</p>
+        <p class="prev-next-title"><span class="section-number">25.8. </span>Matematisk modellering I</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

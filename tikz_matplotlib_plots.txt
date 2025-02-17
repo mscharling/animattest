@@ -1,0 +1,32 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Data
+# Insert here
+
+# Initialize plot mimicing manim/TikZ
+# Enable LaTeX for all text
+plt.rc('text', usetex=True)
+plt.rc('font', family='serif')
+
+# Begin plot
+fig, ax = plt.subplots()
+
+# Remove top and right spines
+ax.spines[['top', 'right']].set_visible(False)
+
+# Draw axis arrow tips
+ax.plot(1, 0, ">k", transform=ax.transAxes, clip_on=False, markersize=15)  
+ax.plot(0, 1, "^k", transform=ax.transAxes, clip_on=False, markersize=15) 
+
+# Draw ticks
+ax.tick_params(direction='inout', length=8, labelsize=12)
+
+# Write x and y labels
+plt.xlabel(r'\textit{x}', fontsize=14)
+plt.ylabel(r'\textit{y}', fontsize=14, rotation=0)
+ax.xaxis.set_label_coords(1.025, 0.075)
+ax.yaxis.set_label_coords(0.035, 1.025)
+
+# Show plot
+plt.show()

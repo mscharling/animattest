@@ -1,1 +1,0 @@
-# Simpel ikke-lineær regression
